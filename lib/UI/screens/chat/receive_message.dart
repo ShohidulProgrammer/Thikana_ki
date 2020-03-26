@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../widgets/avater/app_circle_avater.dart';
-import '../../../models/model_message.dart';
+import '../../../cores/models/model_message.dart';
 
 class ReceiveMessage extends StatelessWidget {
   final MessageModel item;

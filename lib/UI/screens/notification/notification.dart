@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import '../../../utils/language/translate.dart';
+import '../../../cores/utils/language/translate.dart';
 import '../../widgets/notification/app_notification_item.dart';
-import '../../../models/model_result_api.dart';
-import '../../../api/api.dart';
-import '../../../models/screen_models/screen_models.dart';
+import '../../../cores/models/model_result_api.dart';
+import '../../../cores/api/api.dart';
+import '../../../cores/models/screen_models/screen_models.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 class NotificationList extends StatefulWidget {

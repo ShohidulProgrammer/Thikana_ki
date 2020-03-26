@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:thikana_ki/models/model_notification.dart';
+import 'package:thikana_ki/cores/models/model_notification.dart';
 
 class AppNotificationItem extends StatelessWidget {
   final NotificationModel item;

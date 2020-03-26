@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/models/model_message.dart';
+import 'package:thikana_ki/cores/models/model_message.dart';
 import 'receive_message.dart';
 import 'send_message.dart';
 

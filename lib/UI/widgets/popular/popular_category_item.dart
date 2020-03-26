@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/configs/router/router_path_constants.dart';
-import 'package:thikana_ki/models/model_location.dart';
+import '../../../cores/configs/router/router_path_constants.dart';
+import '../../../cores/models/model_location.dart';
 
 class PopularCategoryIem extends StatelessWidget {
   final String title;

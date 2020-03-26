@@ -2,12 +2,13 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:thikana_ki/cores/configs/image.dart';
 
-import '../../../utils/import_utility_path.dart';
+import '../../../cores/utils/import_utility_path.dart';
 import '../../widgets/button/app_button.dart';
-import '../../widgets/keyboard_input/app_text_input.dart';
-import '../../../blocs/bloc.dart';
-import '../../../configs/config.dart';
+import '../../components/keyboard_input/app_text_input.dart';
+import '../../../cores/blocs/bloc.dart';
+import '../../../cores/configs/config.dart';
 
 class EditProfile extends StatefulWidget {
   EditProfile({Key key}) : super(key: key);
@@ -181,7 +182,7 @@ class _EditProfileState extends State<EditProfile> {
                         );
                       });
                     },
-                    icon: Icon(Icons.clear),
+                    suffixIcon: Icon(Icons.clear),
                     controller: _textNameController,
                   ),
                   Padding(
@@ -217,7 +218,7 @@ class _EditProfileState extends State<EditProfile> {
                         );
                       });
                     },
-                    icon: Icon(Icons.clear),
+                    suffixIcon: Icon(Icons.clear),
                     controller: _textEmailController,
                     keyboardType: TextInputType.emailAddress,
                   ),
@@ -256,7 +257,7 @@ class _EditProfileState extends State<EditProfile> {
                         );
                       });
                     },
-                    icon: Icon(Icons.clear),
+                    suffixIcon: Icon(Icons.clear),
                     controller: _textAddressController,
                   ),
                   Padding(
@@ -294,7 +295,7 @@ class _EditProfileState extends State<EditProfile> {
                         );
                       });
                     },
-                    icon: Icon(Icons.clear),
+                    suffixIcon: Icon(Icons.clear),
                     controller: _textWebsiteController,
                   ),
                   Padding(
@@ -330,7 +331,7 @@ class _EditProfileState extends State<EditProfile> {
                         );
                       });
                     },
-                    icon: Icon(Icons.clear),
+                    suffixIcon: Icon(Icons.clear),
                     controller: _textInfoController,
                   ),
                 ],

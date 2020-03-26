@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:thikana_ki/models/model_message.dart';
+import 'package:thikana_ki/cores/models/model_message.dart';
 
 class AppMessageItem extends StatelessWidget {
   final MessageModel item;

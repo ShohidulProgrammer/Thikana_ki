@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
-import '../../../models/model_category.dart';
+import '../../../cores/models/model_category.dart';
 
 class AppCategoryItem extends StatelessWidget {
   AppCategoryItem({

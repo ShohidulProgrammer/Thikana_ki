@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/UI/abstruct/sliver_page.dart';
-import 'package:thikana_ki/api/api.dart';
+import 'package:thikana_ki/UI/genericUI/sliver_page.dart';
+import 'package:thikana_ki/cores/api/api.dart';
 import 'package:thikana_ki/UI/data_list/shop_details/shop_detail_page_sliver_banner_items.dart';
 import 'package:thikana_ki/UI/data_list/shop_details/shop_detail_tabs.dart';
-import 'package:thikana_ki/models/import_model.dart';
+import 'package:thikana_ki/cores/models/import_model.dart';
 
 
 class ShopDetails extends StatefulWidget {
@@ -39,7 +39,7 @@ class _ShopDetailsState extends State<ShopDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: MyAbstractSliverPage(
+        child: MyGenericSliverPage(
           sliverHeaderItems: shopDetailPageSliverBannerItems,
           sliverBodyItems: shopDetailPageSliverTabBarBodies,
         ),

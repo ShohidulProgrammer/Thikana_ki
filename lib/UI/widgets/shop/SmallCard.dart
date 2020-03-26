@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/models/screen_models/shop_model.dart';
+import 'package:thikana_ki/cores/models/screen_models/shop_model.dart';
 
 class SmallCard extends StatelessWidget {
   const SmallCard({Key key, this.shopModel}) : super(key: key);
@@ -24,12 +24,13 @@ class SmallCard extends StatelessWidget {
                 flex: 2,
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
-                  child: Image.network(
-                    'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTpjEka_FWyPfQBgiQg4QUDRZc1BeWqiNjurXPbnDc7vUMshkC9',
-                    // width: 300,
-//                  height: 100,
-                    fit: BoxFit.contain,
-                  ),
+                  child: Icon(shopModel.icon, color: shopModel.color,),
+//                  Image.network(
+//                    'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTpjEka_FWyPfQBgiQg4QUDRZc1BeWqiNjurXPbnDc7vUMshkC9',
+//                    // width: 300,
+////                  height: 100,
+//                    fit: BoxFit.contain,
+//                  ),
                 ),
               ),
               Expanded(

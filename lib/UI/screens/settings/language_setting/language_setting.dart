@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../utils/import_utility_path.dart';
-import '../../../../blocs/bloc.dart';
-import '../../../../configs/config.dart';
+import '../../../../cores/blocs/language/language_event.dart';
+import '../../../../cores/blocs/language/language_state.dart';
+import '../../../../cores/utils/import_utility_path.dart';
+import '../../../../cores/blocs/bloc.dart';
+import '../../../../cores/configs/config.dart';
 import '../../../widgets/widget.dart';
 
 class LanguageSetting extends StatefulWidget {

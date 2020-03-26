@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:thikana_ki/UI/screens/home/main_navigation.dart';
-import '../blocs/bloc.dart';
+import 'package:thikana_ki/cores/blocs/language/language_state.dart';
+import 'package:thikana_ki/cores/blocs/theme/theme_state.dart';
+import 'screens/main_navigation.dart';
+import '../cores/blocs/bloc.dart';
 
-import '../configs/config.dart';
+import '../cores/configs/config.dart';
 import 'screens/screen.dart';
-import '../utils/language/translate.dart';
+import '../cores/utils/language/translate.dart';
 
 class App extends StatefulWidget {
   @override

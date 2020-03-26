@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
-import 'package:thikana_ki/models/model_banner.dart';
-import 'package:thikana_ki/utils/language/translate.dart';
+import '../../../cores/models/model_banner.dart';
+import 'package:thikana_ki/cores/utils/language/translate.dart';
 
 class PhotoPreview extends StatefulWidget {
   PhotoPreview({

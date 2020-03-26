@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../configs/router/router_path_constants.dart';
-import '../../../../utils/import_utility_path.dart';
-import '../../../../blocs/bloc.dart';
-import '../../../../configs/config.dart';
+import '../../../../cores/configs/router/router_path_constants.dart';
+import '../../../../cores/utils/import_utility_path.dart';
+import '../../../../cores/blocs/bloc.dart';
+import '../../../../cores/configs/config.dart';
 import '../../../widgets/widget.dart';
 
 class Setting extends StatefulWidget {

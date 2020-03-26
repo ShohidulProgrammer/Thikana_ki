@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intro_views_flutter/Models/page_view_model.dart';
 import 'package:intro_views_flutter/intro_views_flutter.dart';
-import 'package:thikana_ki/utils/language/translate.dart';
-import '../../../blocs/bloc.dart';
-import '../../../configs/config.dart';
+import 'package:thikana_ki/cores/utils/language/translate.dart';
+import '../../../cores/blocs/bloc.dart';
+import '../../../cores/configs/config.dart';
 
 class IntroPreview extends StatefulWidget {
   IntroPreview({Key key}) : super(key: key);

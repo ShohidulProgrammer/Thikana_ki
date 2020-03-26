@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../utils/language/translate.dart';
-import '../../../../blocs/bloc.dart';
-import '../../../../configs/config.dart';
+import 'package:thikana_ki/cores/blocs/theme/theme_state.dart';
+import '../../../../cores/utils/language/translate.dart';
+import '../../../../cores/blocs/bloc.dart';
+import '../../../../cores/configs/config.dart';
 import '../../../widgets/widget.dart';
 
 class FontSetting extends StatefulWidget {

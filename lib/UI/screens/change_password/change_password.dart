@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:thikana_ki/blocs/bloc.dart';
-import 'package:thikana_ki/utils/import_utility_path.dart';
-import 'package:thikana_ki/UI/widgets/button/app_button.dart';
-import 'package:thikana_ki/UI/widgets/keyboard_input/app_text_input.dart';
+import '../../../cores/blocs/bloc.dart';
+import '../../../cores/blocs/login/login_state.dart';
+import '../../../cores/utils/import_utility_path.dart';
+import '../../../UI/widgets/button/app_button.dart';
+import '../../components/keyboard_input/app_text_input.dart';
 
 class ChangePassword extends StatefulWidget {
   ChangePassword({Key key}) : super(key: key);
@@ -102,7 +103,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                       );
                     });
                   },
-                  icon: Icon(Icons.clear),
+                  suffixIcon: Icon(Icons.clear),
                   controller: _textPassController,
                 ),
                 Padding(
@@ -139,7 +140,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                           data: _textRePassController.text);
                     });
                   },
-                  icon: Icon(Icons.clear),
+                  suffixIcon: Icon(Icons.clear),
                   controller: _textRePassController,
                 ),
                 Padding(

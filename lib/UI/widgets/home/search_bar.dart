@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/utils/language/translate.dart';
+import 'package:thikana_ki/cores/utils/language/translate.dart';
 
 class SearchBar extends StatefulWidget {
   @override

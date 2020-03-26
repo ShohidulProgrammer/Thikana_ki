@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../blocs/theme/theme_bloc.dart';
-import '../../../../blocs/theme/theme_event.dart';
-import '../../../../blocs/theme/theme_state.dart';
-import '../../../../configs/theme/theme.dart';
-import '../../../../models/import_model.dart';
-import '../../../../utils/language/translate.dart';
+import '../../../../cores/blocs/theme/theme_bloc.dart';
+import '../../../../cores/blocs/theme/theme_event.dart';
+import '../../../../cores/blocs/theme/theme_state.dart';
+import '../../../../cores/configs/theme/theme.dart';
+import '../../../../cores/models/import_model.dart';
+import '../../../../cores/utils/language/translate.dart';
 import '../../../widgets/button/app_button.dart';
 
 class ThemeSetting extends StatefulWidget {

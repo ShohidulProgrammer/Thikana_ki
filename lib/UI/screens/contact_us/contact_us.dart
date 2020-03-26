@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import '../../../utils/import_utility_path.dart';
+import '../../../cores/utils/import_utility_path.dart';
 import '../../widgets/widget.dart';
 
 class ContactUs extends StatefulWidget {

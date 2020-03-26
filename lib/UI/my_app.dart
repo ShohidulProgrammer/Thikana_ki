@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import '../configs/language.dart';
-import '../configs/router/router_path_constants.dart';
-import '../configs/router/routes.dart';
-import '../configs/theme/theme.dart';
-import '../utils/language/translate.dart';
+import '../cores/configs/language.dart';
+import '../cores/configs/router/router_path_constants.dart';
+import '../cores/configs/router/routes.dart';
+import '../cores/configs/theme/theme.dart';
+import '../cores/utils/language/translate.dart';
 
 class MyApp extends StatelessWidget {
   @override

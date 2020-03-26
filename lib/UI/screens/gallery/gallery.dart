@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:thikana_ki/configs/router/router_path_constants.dart';
-import 'package:thikana_ki/models/model_banner.dart';
-import '../../../configs/config.dart';
+import 'package:thikana_ki/cores/configs/router/router_path_constants.dart';
+import 'package:thikana_ki/cores/models/model_banner.dart';
 
 
 class Gallery extends StatefulWidget {

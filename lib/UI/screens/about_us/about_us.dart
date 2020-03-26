@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import '../../../models/import_model.dart';
-import '../../../utils/language/translate.dart';
-import '../../../api/api.dart';
+import '../../../cores/models/model_result_api.dart';
+import '../../../cores/models/import_model.dart';
+import '../../../cores/utils/language/translate.dart';
+import '../../../cores/api/api.dart';
 import 'package:shimmer/shimmer.dart';
 
 class AboutUs extends StatefulWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../../../utils/language/translate.dart';
+import '../../../cores/utils/language/translate.dart';
 
 class CategoryTitle extends StatelessWidget {
   final String title;

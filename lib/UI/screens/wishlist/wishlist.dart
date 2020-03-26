@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import '../../../configs/router/router_path_constants.dart';
-import '../../../models/model_result_api.dart';
-import '../../../utils/language/translate.dart';
-import '../../../api/api.dart';
+import '../../../cores/configs/router/router_path_constants.dart';
+import '../../../cores/models/model_result_api.dart';
+import '../../../cores/utils/language/translate.dart';
+import '../../../cores/api/api.dart';
 
-import '../../../models/screen_models/screen_models.dart';
+import '../../../cores/models/screen_models/screen_models.dart';
 import '../../widgets/widget.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 

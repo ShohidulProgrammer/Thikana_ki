@@ -1,0 +1,52 @@
+{
+  "success": true,
+  "data": {
+    "category": [
+      {
+        "id": 1,
+        "name": "999-National Emergency Service",
+        "count": 32,
+        "image": "assets/images/category-3.jpg",
+        "icon": "dialer_sip",
+        "color": "#ff8a65",
+        "route": "list"
+      },
+      {
+        "id": 2,
+        "name": "Public Toilet",
+        "image": "assets/images/category-2.jpg",
+        "icon": "accessible",
+        "color": "#5d6d7e",
+        "route": "list"
+      },
+      {
+        "id": 3,
+        "name": "Fire Service",
+        "count": 32,
+        "image": "assets/images/category-3.jpg",
+        "icon": "directions_bus",
+        "color": "#a569bd",
+        "route": "list"
+      },
+      {
+        "id": 4,
+        "name": "Local Hospital",
+        "count": 12,
+        "image": "assets/images/category-4.jpg",
+        "icon": "local_hospital",
+        "color": "#5dade2",
+        "route": "list"
+      },
+      {
+        "id": 5,
+        "name": "Job Street",
+        "count": 54,
+        "image": "assets/images/location-1.jpg",
+        "icon": "card_travel",
+        "color": "#4a90a4",
+        "route": "list"
+      }
+    ]
+  },
+  "message": "get data success"
+}

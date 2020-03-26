@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import '../../../configs/router/router_path_constants.dart';
+import 'package:geolocator/geolocator.dart';
+
+import '../../../cores/configs/router/router_path_constants.dart';
 import 'animated_logo.dart';
 import 'app_bangla_logo.dart';
-import 'package:geolocator/geolocator.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -10,7 +11,6 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
   Future<void> getCurrentLocation() async {
     Position position = await Geolocator()
         .getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
@@ -20,8 +20,9 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
+
     Future.delayed(
-      Duration(seconds: 4),
+      Duration(microseconds: 500),
       () {
         getCurrentLocation();
         Navigator.pushNamed(context, mainNavigationRoute);

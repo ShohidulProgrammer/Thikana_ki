@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
-import '../../../api/api.dart';
-import '../../../configs/router/router_path_constants.dart';
-import '../../../models/import_model.dart';
-import '../../../utils/language/translate.dart';
+import '../../../cores/api/api.dart';
+import '../../../cores/configs/router/router_path_constants.dart';
+import '../../../cores/models/import_model.dart';
+import '../../../cores/utils/language/translate.dart';
 import '../../widgets/message/app_message_item.dart';
 
 class MessageList extends StatefulWidget {

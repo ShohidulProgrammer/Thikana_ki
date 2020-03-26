@@ -2,16 +2,16 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import '../../data_list/home/home_page_tabs.dart';
-import '../../abstruct/sliver_page.dart';
-import '../../../configs/router/router_path_constants.dart';
-import '../../../utils/language/translate.dart';
-import '../../abstruct/carousel_banner_image.dart';
-import '../../../models/model_result_api.dart';
+import '../../genericUI/sliver_page.dart';
+import '../../../cores/configs/router/router_path_constants.dart';
+import '../../../cores/utils/language/translate.dart';
+import '../../genericUI/carousel_banner_image.dart';
+import '../../../cores/models/model_result_api.dart';
 import '../../widgets/product_list/app_star_rating.dart';
 import '../../widgets/product_list/app_tag.dart';
-import '../../../api/api.dart';
-import '../../../configs/config.dart';
-import '../../../models/screen_models/screen_models.dart';
+import '../../../cores/api/api.dart';
+import '../../../cores/configs/config.dart';
+import '../../../cores/models/screen_models/screen_models.dart';
 import 'package:shimmer/shimmer.dart';
 
 class ProductDetail extends StatefulWidget {
@@ -94,8 +94,8 @@ class _ProductDetailState extends State<ProductDetail> {
         body: SafeArea(
           top: false,
           child: SingleChildScrollView(
-            child: MyAbstractSliverPage(
-              sliverBodyItems: homePageSliverTabBarBodies,
+            child: MyGenericSliverPage(
+              sliverBodyItems: homePageTabBarBodies,
             ),
           ),
         ),

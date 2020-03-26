@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../models/model_message.dart';
+import '../../../cores/models/model_message.dart';
 
 class SendMessage extends StatelessWidget {
   final MessageModel item;

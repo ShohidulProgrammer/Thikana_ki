@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:thikana_ki/models/model_location.dart';
-import 'package:thikana_ki/utils/language/translate.dart';
+import '../../../cores/models/model_location.dart';
+import '../../../cores/utils/language/translate.dart';
 
 
 class Location extends StatefulWidget {

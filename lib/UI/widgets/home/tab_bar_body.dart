@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
-import 'package:thikana_ki/api/api.dart';
-import 'package:thikana_ki/UI/components/build_popular.dart';
-import 'package:thikana_ki/models/model_category.dart';
-import 'package:thikana_ki/models/model_result_api.dart';
-import 'package:thikana_ki/models/screen_models/screen_models.dart';
-import 'package:thikana_ki/UI/widgets/home/category_title.dart';
+import '../../../cores/api/api.dart';
+import '../../../UI/sharing_components/build_popular.dart';
+import '../../../cores/models/import_model.dart';
+import '../../../cores/models/screen_models/screen_models.dart';
+import '../../../UI/widgets/home/category_title.dart';
 
 import 'category_icon.dart';
 
@@ -30,9 +29,9 @@ class _TabBarBodyState extends State<TabBarBody> {
       padding: EdgeInsets.symmetric(vertical: 5.0),
       child: ListView(
         children: <Widget>[
-          CategoryIcons(homePageModel: _homePage),
-//          _buildCategory(),
-          SizedBox(height: 10.0),
+//          EmergencyCategoryIcons(homePageModel: _homePage),
+////          _buildCategory(),
+//          SizedBox(height: 10.0),
           // emergency title
           CategoryTitle(
               title: 'emergency', image: 'assets/images/emergency.png'),
