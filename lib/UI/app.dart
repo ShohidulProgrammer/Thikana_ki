@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:thikana_ki/cores/blocs/language/language_state.dart';
 import 'package:thikana_ki/cores/blocs/theme/theme_state.dart';
+import 'package:thikana_ki/cores/configs/theme/theme.dart';
 import 'package:thikana_ki/cores/utils/language/language_setting.dart';
 import 'screens/bottom_navigation/main_navigation.dart';
 import '../cores/blocs/bloc.dart';

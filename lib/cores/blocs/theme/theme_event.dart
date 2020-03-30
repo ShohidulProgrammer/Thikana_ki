@@ -1,3 +1,4 @@
+import 'package:thikana_ki/cores/configs/theme/theme.dart';
 import 'package:thikana_ki/cores/models/theme/theme_model.dart';
 
 import '../../configs/config.dart';

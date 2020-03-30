@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
+import 'package:thikana_ki/cores/configs/theme/theme.dart';
 import 'package:thikana_ki/cores/utils/sharedpreferences/preferences.dart';
 import 'bloc.dart';
 import '../../configs/config.dart';

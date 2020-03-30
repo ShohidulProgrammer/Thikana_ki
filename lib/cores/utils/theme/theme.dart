@@ -1,4 +1,4 @@
-import '../../configs/config.dart';
+import 'package:thikana_ki/cores/configs/theme/theme.dart';
 
 class UtilTheme {
   static String exportLangTheme(DarkOption option) {

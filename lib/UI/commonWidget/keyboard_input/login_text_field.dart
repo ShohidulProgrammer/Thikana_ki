@@ -1,33 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:thikana_ki/UI/commonWidget/keyboard_input/custom_text_input_field.dart';
 import 'package:thikana_ki/cores/utils/import_utility_path.dart';
 
-class LoginTextField extends StatefulWidget {
+import 'custom_text_form_field.dart';
+
+class MyFormTextField extends StatefulWidget {
   final String hintText;
   final ValidationType type;
   final Icon icon;
   final FocusNode focusNode;
   final FocusNode nextFocusNode;
   final TextInputType keyboardType;
+  final fieldKey;
 
-  const LoginTextField(
+  const MyFormTextField(
       {this.hintText,
       this.type,
       this.icon,
+      this.fieldKey,
       this.keyboardType,
       this.focusNode,
       this.nextFocusNode});
 
   @override
-  _LoginTextFieldState createState() => _LoginTextFieldState();
+  _MyFormTextFieldState createState() => _MyFormTextFieldState();
 }
 
-class _LoginTextFieldState extends State<LoginTextField> {
+class _MyFormTextFieldState extends State<MyFormTextField> {
   final FocusNode _focusNode = FocusNode();
 
   final TextEditingController _textEditingController = TextEditingController();
-  final _fieldKey = GlobalKey<FormFieldState<String>>();
 
   String errorText;
 
@@ -35,15 +37,15 @@ class _LoginTextFieldState extends State<LoginTextField> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: CustomTextInputField(
-        key: _fieldKey,
+      child: CustomTextFormField(
+        key: widget.fieldKey,
         hintText: Translate.of(context).translate(widget.hintText),
         errorText: errorText != null
             ? Translate.of(context).translate(errorText)
             : null,
         focusNode: widget.focusNode ?? _focusNode,
         textInputAction: TextInputAction.next,
-        onSubmitted: (text) {
+        onSaved: (text) {
           InputFocusChanger.fieldFocusChange(
               context, widget.focusNode ?? _focusNode, widget.nextFocusNode);
         },

@@ -29,6 +29,7 @@ class AppButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RaisedButton(
+
       onPressed: disableTouchWhenLoading && loading ? null : onPressed,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -39,7 +40,7 @@ class AppButton extends StatelessWidget {
             style: Theme.of(context)
                 .textTheme
                 .button
-                .copyWith(color: Colors.white, fontWeight: FontWeight.w600),
+                .copyWith(color: Colors.white,fontSize: 16.0, fontWeight: FontWeight.w600),
           ),
           _buildLoading()
         ],

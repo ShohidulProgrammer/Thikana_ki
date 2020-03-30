@@ -25,7 +25,8 @@ class CollectionTheme {
           brightness: Brightness.light,
           primaryColor: Color(0xffe5634d),
           primaryColorBrightness: Brightness.dark,
-          primaryColorLight: Color(0xffFF8A65),
+          primaryColorLight: Color(0xff99004c),
+//          primaryColorLight: Color(0xffFF8A65),
           primaryColorDark: Color(0xff862413),
           accentColor: Color(0xff4A90A4),
           accentColorBrightness: Brightness.dark,
@@ -39,7 +40,8 @@ class CollectionTheme {
           selectedRowColor: Color(0xfff5f5f5),
           unselectedWidgetColor: Color(0x8a000000),
           disabledColor: Color(0x61000000),
-          buttonColor: Color(0xffe5634d),
+          buttonColor: Color(0xff2e7d32),
+//          buttonColor: Color(0xffe5634d),
           toggleableActiveColor: Color(0xff4A90A4),
           secondaryHeaderColor: Color(0xfffcebe9),
           textSelectionColor: Color(0xff4A90A4),
@@ -53,7 +55,7 @@ class CollectionTheme {
           buttonTheme: ButtonThemeData(
             textTheme: ButtonTextTheme.accent,
             minWidth: 88,
-            height: 48,
+            height: 55,
             padding: EdgeInsets.only(left: 16, right: 16),
             shape: RoundedRectangleBorder(
               side: BorderSide(
@@ -65,7 +67,8 @@ class CollectionTheme {
                 Radius.circular(8),
               ),
             ),
-            buttonColor: Color(0xffe5634d),
+            buttonColor: Color(0xffb71c1c),
+//            buttonColor: Color(0xffe5634d),
             disabledColor: Color(0x61000000),
             highlightColor: Color(0x29000000),
             splashColor: Color(0x1f000000),
@@ -945,10 +948,10 @@ class CollectionTheme {
             selectedColor: Color(0x3dffffff),
             shape: StadiumBorder(
                 side: BorderSide(
-                  color: Color(0xff000000),
-                  width: 0,
-                  style: BorderStyle.none,
-                )),
+              color: Color(0xff000000),
+              width: 0,
+              style: BorderStyle.none,
+            )),
           ),
           dialogTheme: DialogTheme(
             shape: RoundedRectangleBorder(

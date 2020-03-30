@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CustomTextInputField extends StatelessWidget {
+class CustomTextFormField extends StatelessWidget {
   final String hintText;
   final TextEditingController controller;
   final FocusNode focusNode;
@@ -8,7 +8,7 @@ class CustomTextInputField extends StatelessWidget {
   final VoidCallback onTapSuffixIcon;
   final GestureTapCallback onTap;
   final ValueChanged<String> onChanged;
-  final ValueChanged<String> onSubmitted;
+  final ValueChanged<String> onSaved;
   final Icon icon;
   final Icon suffixIcon;
   final Color backgroundColor;
@@ -19,7 +19,7 @@ class CustomTextInputField extends StatelessWidget {
   final String errorText;
   final int maxLines;
 
-  CustomTextInputField({
+  CustomTextFormField({
     Key key,
     this.hintText,
     this.controller,
@@ -27,7 +27,7 @@ class CustomTextInputField extends StatelessWidget {
     this.onTapIcon,
     this.onTap,
     this.onChanged,
-    this.onSubmitted,
+    this.onSaved,
     this.icon,
     this.suffixIcon,
     this.onTapSuffixIcon,
@@ -71,10 +71,10 @@ class CustomTextInputField extends StatelessWidget {
       child: Stack(
         alignment: Alignment.bottomLeft,
         children: <Widget>[
-          TextField(
+          TextFormField(
             onTap: onTap,
             textAlignVertical: TextAlignVertical.center,
-            onSubmitted: onSubmitted,
+            onSaved: onSaved,
             controller: controller,
             focusNode: focusNode,
             onChanged: onChanged,
@@ -86,15 +86,15 @@ class CustomTextInputField extends StatelessWidget {
               hintText: hintText,
               icon: icon != null
                   ? IconButton(
-                      icon: icon,
-                      onPressed: onTapIcon,
-                    )
+                icon: icon,
+                onPressed: onTapIcon,
+              )
                   : null,
               suffixIcon: suffixIcon != null
                   ? IconButton(
-                      icon: suffixIcon,
-                      onPressed: onTapSuffixIcon,
-                    )
+                icon: suffixIcon,
+                onPressed: onTapSuffixIcon,
+              )
                   : null,
               border: InputBorder.none,
             ),

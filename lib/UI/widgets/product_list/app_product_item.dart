@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:thikana_ki/cores/configs/theme.dart';
+import 'package:thikana_ki/cores/configs/theme/theme.dart';
 import 'package:thikana_ki/cores/models/model_product.dart';
 
 import 'app_star_rating.dart';

@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:thikana_ki/cores/configs/theme/theme.dart';
 import '../../blocs/authentication/authentication_event.dart';
 import '../../blocs/language/language_event.dart';
 import '../../configs/preferences.dart';

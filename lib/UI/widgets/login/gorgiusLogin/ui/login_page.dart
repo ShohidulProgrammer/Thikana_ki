@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:thikana_ki/UI/commonWidget/border_line.dart';
-import 'package:thikana_ki/UI/widgets/login/gorgiusLogin/style/theme.dart' as Theme;
+import 'package:thikana_ki/UI/screens/login/widgets/business_sign_up.dart';
+import 'package:thikana_ki/UI/screens/login/widgets/user_sign_up.dart';
+import 'package:thikana_ki/UI/widgets/login/gorgiusLogin/style/theme.dart'
+    as Theme;
 import 'package:thikana_ki/UI/widgets/login/gorgiusLogin/utils/bubble_indication_painter.dart';
 
-import '../../sign_in_text_field.dart';
-import 'custom_flat_button.dart';
 import 'login_text_field.dart';
-import 'sign_in_button.dart';
-import 'sign_up.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key key}) : super(key: key);
@@ -53,7 +52,8 @@ class _LoginPageState extends State<LoginPage>
       key: _scaffoldKey,
       body: NotificationListener<OverscrollIndicatorNotification>(
         onNotification: (overscroll) {
-          overscroll.disallowGlow();
+           overscroll.disallowGlow();
+
         },
         child: SingleChildScrollView(
           child: Container(
@@ -77,16 +77,16 @@ class _LoginPageState extends State<LoginPage>
               children: <Widget>[
                 // logo
                 Padding(
-                  padding: EdgeInsets.only(top: 75.0),
+                  padding: EdgeInsets.only(top: 30.0),
                   child: new Image(
                       width: 250.0,
                       height: 191.0,
-                      fit: BoxFit.fill,
+                      fit: BoxFit.contain,
                       image: new AssetImage(
                           'assets/images/thikana_ki_bangla_logo.png')),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 20.0),
+                  padding: EdgeInsets.only(top: 0.0),
                   child: _buildMenuBar(context),
                 ),
                 Expanded(
@@ -109,32 +109,11 @@ class _LoginPageState extends State<LoginPage>
                     children: <Widget>[
                       new ConstrainedBox(
                         constraints: const BoxConstraints.expand(),
-                        child: Column(
-                          children: <Widget>[
-                            SignInTextField(hintText: '',),
-                            SignUpUser(),
-                            SizedBox(height: 8.0),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                              child: SignInButton(
-                                text: 'Sign Up',
-                                textColor: Colors.black87,
-                                color: Colors.teal[800],
-                                width: MediaQuery.of(context).size.width,
-                                  borderRadius: 16.0,
-                                onPressed: () {},
-                              ),
-                            ),
-                            CustomFlatButton(
-                              title: 'Sign In',
-                            ),
-                          ],
-                        ),
-//                        child: _buildSignIn(context),
+                        child: UserSignUp(),
                       ),
                       new ConstrainedBox(
                         constraints: const BoxConstraints.expand(),
-                        child: _buildSignUp(context),
+                        child: BusinessSignUp(),
                       ),
                     ],
                   ),
@@ -187,11 +166,14 @@ class _LoginPageState extends State<LoginPage>
 
   // menu bar
   Widget _buildMenuBar(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
+    final double height = size.height;
+    final double width = size.width;
     return Container(
-      width: 300.0,
-      height: 50.0,
+      width: width * 0.833,  //300.0,
+      height:  height * 0.075, //50.0,
       decoration: BoxDecoration(
-        color: Color(0xFFC0C0C0),
+        color: Colors.teal,
         borderRadius: BorderRadius.all(Radius.circular(25.0)),
       ),
       child: CustomPaint(
