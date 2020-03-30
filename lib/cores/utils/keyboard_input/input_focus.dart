@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 
 class InputFocusChanger {
   static fieldFocusChange(
-      BuildContext context,
-      FocusNode current,
-      FocusNode next,
-      ) {
+    BuildContext context,
+    FocusNode current,
+    FocusNode next,
+  ) {
     current.unfocus();
-    FocusScope.of(context).requestFocus(next);
+    next == null
+        ? FocusScope.of(context).nextFocus()
+        : FocusScope.of(context).requestFocus(next);
   }
 
   static hiddenKeyboard(BuildContext context) {

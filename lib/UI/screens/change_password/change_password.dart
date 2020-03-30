@@ -4,7 +4,7 @@ import '../../../cores/blocs/bloc.dart';
 import '../../../cores/blocs/login/login_state.dart';
 import '../../../cores/utils/import_utility_path.dart';
 import '../../../UI/widgets/button/app_button.dart';
-import '../../components/keyboard_input/app_text_input.dart';
+import '../../components/keyboard_input/custom_text_input_field.dart';
 
 class ChangePassword extends StatefulWidget {
   ChangePassword({Key key}) : super(key: key);

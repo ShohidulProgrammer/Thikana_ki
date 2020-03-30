@@ -1,11 +1,11 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import '../../data_list/home/home_page_tabs.dart';
-import '../../genericUI/sliver_page.dart';
+import 'package:thikana_ki/UI/commonWidget/carousel_banner_image.dart';
+import 'package:thikana_ki/UI/commonWidget/sliver_page.dart';
+import 'package:thikana_ki/UI/screens/home/widget_list/home_page_container_tab_headers_and_bodies.dart';
 import '../../../cores/configs/router/router_path_constants.dart';
 import '../../../cores/utils/language/translate.dart';
-import '../../genericUI/carousel_banner_image.dart';
 import '../../../cores/models/model_result_api.dart';
 import '../../widgets/product_list/app_star_rating.dart';
 import '../../widgets/product_list/app_tag.dart';

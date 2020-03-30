@@ -1,4 +1,4 @@
-enum Type {
+enum ValidationType {
   normal,
   email,
   password,
@@ -15,13 +15,13 @@ class UtilValidator {
 
   static validate({
     String data,
-    Type type = Type.normal,
+    ValidationType type : ValidationType.normal,
     int min,
     int max,
     bool allowEmpty = false,
   }) {
     switch (type) {
-      case Type.email:
+      case ValidationType.email:
 
         ///Empty
         if (!allowEmpty && data.isEmpty) {
@@ -31,7 +31,7 @@ class UtilValidator {
         ///Length
         if (min != null ||
             max != null && (data.length < min || data.length > max)) {
-          return '$error_range ($min-$max)';
+          return '$error_range : ($min-$max)';
         }
 
         ///More pattern
@@ -46,9 +46,13 @@ class UtilValidator {
         if (!allowEmpty && data.isEmpty) {
           return error_empty;
         }
-        if (min != null ||
-            max != null && (data.length < min || data.length > max)) {
-          return '$error_range ($min-$max)';
+
+        ///Length
+        if ((min != null || max != null) &&
+            (data.length < min || data.length > max)) {
+          print("Data length: ${data.length} Min: $min Max: $max");
+          return '$error_range';
+//          return '$error_range : ($min-$max)';
         }
         return null;
     }

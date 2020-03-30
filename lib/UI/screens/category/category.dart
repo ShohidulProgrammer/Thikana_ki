@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:thikana_ki/UI/commonWidget/keyboard_input/custom_text_input_field.dart';
 import '../../../cores/configs/router/router_path_constants.dart';
 import '../../../cores/models/model_category.dart';
 import '../../../cores/models/model_result_api.dart';
@@ -155,7 +156,7 @@ class _CategoryState extends State<Category> {
                 top: 15,
                 bottom: 15,
               ),
-              child: AppTextInput(
+              child: CustomTextInputField(
                 hintText: Translate.of(context).translate('search'),
                 onTapIcon: _onClearTapped,
                 icon: Icon(Icons.clear),

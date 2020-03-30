@@ -7,7 +7,7 @@ class AppLocaleDelegate extends LocalizationsDelegate<Translate> {
 
   @override
   bool isSupported(Locale locale) {
-    return AppLanguage.supportLanguage.contains(locale);
+    return AppLanguageSetting.supportLanguage.contains(locale);
   }
 
   @override

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import '../cores/configs/language.dart';
+import 'package:thikana_ki/cores/utils/language/language_setting.dart';
 import '../cores/configs/router/router_path_constants.dart';
 import '../cores/configs/router/routes.dart';
 import '../cores/configs/theme/theme.dart';
@@ -14,13 +14,13 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       title: 'Thikana Ki',
-      locale: AppLanguage.defaultLanguage,
+      locale: AppLanguageSetting.defaultLanguage,
       localizationsDelegates: [
         Translate.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
       ],
-      supportedLocales: AppLanguage.supportLanguage,
+      supportedLocales: AppLanguageSetting.supportLanguage,
       onGenerateRoute: Router.generateRoute,
       initialRoute: splashRoute,
     );

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/UI/genericUI/sliver_page.dart';
+import 'package:thikana_ki/UI/commonWidget/sliver_page.dart';
+import 'package:thikana_ki/UI/widget_list/shop_details/shop_detail_page_sliver_banner_items.dart';
+import 'package:thikana_ki/UI/widget_list/shop_details/shop_detail_tabs.dart';
 import 'package:thikana_ki/cores/api/api.dart';
-import 'package:thikana_ki/UI/data_list/shop_details/shop_detail_page_sliver_banner_items.dart';
-import 'package:thikana_ki/UI/data_list/shop_details/shop_detail_tabs.dart';
 import 'package:thikana_ki/cores/models/import_model.dart';
 
 

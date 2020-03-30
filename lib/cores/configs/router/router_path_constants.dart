@@ -2,7 +2,7 @@
 const String splashRoute = 'screens.splash';
 const String mainNavigationBottomPageRoute = '/';
 const String mainNavigationRoute = '/mainNavigation';
-const String signUpRoute = '/signUp';
+const String loginPageRoute = '/loginPage';
 const String changePasswordPageRoute = '/changePassword';
 const String changeLanguagePageRoute = '/changeLanguage';
 const String themeSettingPageRoute = '/themeSetting';
@@ -13,7 +13,7 @@ const String profilePageRoute = '/profilePage';
 const String categoryPageRoute = "/category";
 const String listProductPageRoute = "/listProduct";
 const String shopDetailPageRoute = "/shopDetail";
-const String PopularCategoryListFactoryPageRoute = "/popularCategoryListFactory";
+const String emergencyCategoryListFactoryPageRoute = "/emegencyCategoryListFactory";
 const String aboutUsPageRoute = "/aboutUs";
 const String contactUsPageRoute = "/Contact Us";
 const String editProfilePageRoute = "/editProfile";

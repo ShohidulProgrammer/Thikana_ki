@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:thikana_ki/UI/commonWidget/keyboard_input/custom_text_input_field.dart';
+import 'package:thikana_ki/cores/utils/language/language_setting.dart';
 import '../../../../cores/blocs/language/language_event.dart';
 import '../../../../cores/blocs/language/language_state.dart';
 import '../../../../cores/utils/import_utility_path.dart';
@@ -21,8 +23,8 @@ class _LanguageSettingState extends State<LanguageSetting> {
   final _textLanguageController = TextEditingController();
   bool _loading = false;
 
-  List<Locale> _listLanguage = AppLanguage.supportLanguage;
-  Locale _languageSelected = AppLanguage.defaultLanguage;
+  List<Locale> _listLanguage = AppLanguageSetting.supportLanguage;
+  Locale _languageSelected = AppLanguageSetting.defaultLanguage;
 
   @override
   void initState() {
@@ -34,13 +36,13 @@ class _LanguageSettingState extends State<LanguageSetting> {
   void _onFilter(String text) {
     if (text.isEmpty) {
       setState(() {
-        _listLanguage = AppLanguage.supportLanguage;
+        _listLanguage = AppLanguageSetting.supportLanguage;
       });
       return;
     }
     setState(() {
       _listLanguage = _listLanguage.where(((item) {
-        return UtilLanguage.getGlobalLanguageName(item.languageCode)
+        return UtilLanguageName.getGlobalLanguageName(item.languageCode)
             .toUpperCase()
             .contains(text.toUpperCase());
       })).toList();
@@ -75,7 +77,7 @@ class _LanguageSettingState extends State<LanguageSetting> {
                 top: 15,
                 bottom: 15,
               ),
-              child: AppTextInput(
+              child: CustomTextInputField(
                 hintText: Translate.of(context).translate('search'),
                 icon: Icon(Icons.clear),
                 controller: _textLanguageController,
@@ -99,7 +101,7 @@ class _LanguageSettingState extends State<LanguageSetting> {
                         )
                       : null;
                   return AppListTitle(
-                    title: UtilLanguage.getGlobalLanguageName(
+                    title: UtilLanguageName.getGlobalLanguageName(
                       item.languageCode,
                     ),
                     textStyle: item == _languageSelected

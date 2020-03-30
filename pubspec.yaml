@@ -29,6 +29,7 @@ dependencies:
   dio: ^3.0.9
   shared_preferences: ^0.5.6+3
   shimmer: ^1.1.0
+  font_awesome_flutter: ^8.8.0
   flutter_swiper: ^1.1.6
   flutter_icons: ^1.0.0+1
   image_picker: ^0.6.3+4
@@ -64,6 +65,7 @@ flutter:
     - assets/locale/
     - assets/data/
     - assets/images/
+
 
   fonts:
     - family: Raleway
@@ -112,6 +114,16 @@ flutter:
         - asset: assets/fonts/Merriweather-Light.ttf
         - asset: assets/fonts/Merriweather-LightItalic.ttf
         - asset: assets/fonts/Merriweather-Regular.ttf
+
+    - family: WorkSansSemiBold
+      fonts:
+        - asset: assets/fonts/Work_Sans/WorkSans-SemiBold.ttf
+    - family: WorkSansBold
+      fonts:
+        - asset: assets/fonts/Work_Sans/WorkSans-Bold.ttf
+    - family: WorkSansMedium
+      fonts:
+        - asset: assets/fonts/Work_Sans/WorkSans-Medium.ttf
 
 
 

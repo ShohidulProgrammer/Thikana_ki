@@ -1,17 +1,18 @@
 import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:thikana_ki/cores/configs/image.dart';
 
-import '../../../cores/utils/import_utility_path.dart';
-import '../../widgets/button/app_button.dart';
-import '../../components/keyboard_input/app_text_input.dart';
 import '../../../cores/blocs/bloc.dart';
 import '../../../cores/configs/config.dart';
+import '../../../cores/utils/import_utility_path.dart';
+import '../../commonWidget/keyboard_input/custom_text_input_field.dart';
+import '../../widgets/button/app_button.dart';
 
 class EditProfile extends StatefulWidget {
-  EditProfile({Key key}) : super(key: key);
+//  EditProfile({Key key}) : super(key: key);
 
   @override
   _EditProfileState createState() {
@@ -67,7 +68,7 @@ class _EditProfileState extends State<EditProfile> {
       );
       _validEmail = UtilValidator.validate(
         data: _textEmailController.text,
-        type: Type.email,
+        type: ValidationType.email,
       );
       _validAddress = UtilValidator.validate(
         data: _textAddressController.text,
@@ -157,7 +158,7 @@ class _EditProfileState extends State<EditProfile> {
                           .copyWith(fontWeight: FontWeight.w600),
                     ),
                   ),
-                  AppTextInput(
+                  CustomTextInputField(
                     hintText: Translate.of(context).translate('input_name'),
                     errorText: _validName != null
                         ? Translate.of(context).translate(_validName)
@@ -195,7 +196,7 @@ class _EditProfileState extends State<EditProfile> {
                           .copyWith(fontWeight: FontWeight.w600),
                     ),
                   ),
-                  AppTextInput(
+                  CustomTextInputField(
                     hintText: Translate.of(context).translate('input_email'),
                     errorText: _validEmail != null
                         ? Translate.of(context).translate(_validEmail)
@@ -214,7 +215,7 @@ class _EditProfileState extends State<EditProfile> {
                       setState(() {
                         _validEmail = UtilValidator.validate(
                           data: _textEmailController.text,
-                          type: Type.email,
+                          type: ValidationType.email,
                         );
                       });
                     },
@@ -232,7 +233,7 @@ class _EditProfileState extends State<EditProfile> {
                           .copyWith(fontWeight: FontWeight.w600),
                     ),
                   ),
-                  AppTextInput(
+                  CustomTextInputField(
                     hintText: Translate.of(context).translate('input_address'),
                     errorText: _validAddress != null
                         ? Translate.of(context).translate(_validAddress)
@@ -270,7 +271,7 @@ class _EditProfileState extends State<EditProfile> {
                           .copyWith(fontWeight: FontWeight.w600),
                     ),
                   ),
-                  AppTextInput(
+                  CustomTextInputField(
                     hintText: Translate.of(context).translate('input_website'),
                     errorText: _validAddress != null
                         ? Translate.of(context).translate(_validAddress)
@@ -308,7 +309,7 @@ class _EditProfileState extends State<EditProfile> {
                           .copyWith(fontWeight: FontWeight.w600),
                     ),
                   ),
-                  AppTextInput(
+                  CustomTextInputField(
                     hintText:
                         Translate.of(context).translate('input_information'),
                     errorText: _validInfo != null
@@ -327,7 +328,7 @@ class _EditProfileState extends State<EditProfile> {
                       setState(() {
                         _validInfo = UtilValidator.validate(
                           data: _textInfoController.text,
-                          type: Type.email,
+                          type: ValidationType.email,
                         );
                       });
                     },

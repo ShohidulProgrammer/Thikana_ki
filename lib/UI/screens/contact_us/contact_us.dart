@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:thikana_ki/UI/commonWidget/keyboard_input/custom_text_input_field.dart';
 import '../../../cores/utils/import_utility_path.dart';
 import '../../widgets/widget.dart';
 
@@ -43,7 +44,7 @@ class ContactUsState extends State<ContactUs> {
       );
       _validEmail = UtilValidator.validate(
         data: _textEmailController.text,
-        type: Type.email,
+        type: ValidationType.email,
       );
       _validInfo = UtilValidator.validate(
         data: _textInfoController.text,
@@ -104,7 +105,7 @@ class ContactUsState extends State<ContactUs> {
                               .copyWith(fontWeight: FontWeight.w600),
                         ),
                       ),
-                      AppTextInput(
+                      CustomTextInputField(
                         hintText: Translate.of(context).translate('input_name'),
                         errorText: _validName != null
                             ? Translate.of(context).translate(_validName)
@@ -139,7 +140,7 @@ class ContactUsState extends State<ContactUs> {
                               .copyWith(fontWeight: FontWeight.w600),
                         ),
                       ),
-                      AppTextInput(
+                      CustomTextInputField(
                         hintText: Translate.of(context).translate(
                           'input_email',
                         ),
@@ -160,7 +161,7 @@ class ContactUsState extends State<ContactUs> {
                           setState(() {
                             _validEmail = UtilValidator.validate(
                               data: _textEmailController.text,
-                              type: Type.email,
+                              type: ValidationType.email,
                             );
                           });
                         },
@@ -178,7 +179,7 @@ class ContactUsState extends State<ContactUs> {
                               .copyWith(fontWeight: FontWeight.w600),
                         ),
                       ),
-                      AppTextInput(
+                      CustomTextInputField(
                         hintText: Translate.of(context).translate(
                           'input_information',
                         ),
@@ -198,7 +199,7 @@ class ContactUsState extends State<ContactUs> {
                           setState(() {
                             _validInfo = UtilValidator.validate(
                               data: _textInfoController.text,
-                              type: Type.email,
+                              type: ValidationType.email,
                             );
                           });
                         },

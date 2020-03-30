@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../cores/configs/router/router_path_constants.dart';
 import '../../../cores/models/model_location.dart';
 
-class PopularCategoryIem extends StatelessWidget {
+class EmergencyCategoryListTileIem extends StatelessWidget {
   final String title;
   final String subTitle;
   final LocationModel locationModel;
@@ -10,7 +10,7 @@ class PopularCategoryIem extends StatelessWidget {
   final IconData icon;
   final Color iconColor;
 
-  const PopularCategoryIem(
+  const EmergencyCategoryListTileIem(
       {this.title = '',
       this.subTitle = '',
       this.locationModel,

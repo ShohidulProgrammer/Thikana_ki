@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'asset.dart';
+
 import 'app_local_delegate.dart';
+import 'util_load_local_file.dart';
 
 class Translate {
   final Locale locale;
@@ -16,7 +17,7 @@ class Translate {
   Map<String, String> _localizedStrings;
 
   Future<bool> load() async {
-    final jsonMap = await UtilAsset.loadJson(
+    final jsonMap = await UtilLoadLocalFile.loadJson(
       "assets/locale/${locale.languageCode}.json",
     );
 

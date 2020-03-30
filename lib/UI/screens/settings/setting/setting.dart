@@ -142,13 +142,13 @@ class _SettingState extends State<Setting> {
               trailing: Row(
                 children: <Widget>[
                   Text(
-                    UtilLanguage.getGlobalLanguageName(
+                    UtilLanguageName.getGlobalLanguageName(
                       AppLanguage.defaultLanguage.languageCode,
                     ),
                     style: Theme.of(context).textTheme.body2,
                   ),
                   RotatedBox(
-                    quarterTurns: UtilLanguage.isRTL() ? 2 : 0,
+                    quarterTurns: UtilLanguageName.isRTL() ? 2 : 0,
                     child: Icon(
                       Icons.keyboard_arrow_right,
                       textDirection: TextDirection.ltr,
@@ -192,7 +192,7 @@ class _SettingState extends State<Setting> {
                     style: Theme.of(context).textTheme.body2,
                   ),
                   RotatedBox(
-                    quarterTurns: UtilLanguage.isRTL() ? 2 : 0,
+                    quarterTurns: UtilLanguageName.isRTL() ? 2 : 0,
                     child: Icon(
                       Icons.keyboard_arrow_right,
                       textDirection: TextDirection.ltr,
@@ -213,7 +213,7 @@ class _SettingState extends State<Setting> {
                     style: Theme.of(context).textTheme.body2,
                   ),
                   RotatedBox(
-                    quarterTurns: UtilLanguage.isRTL() ? 2 : 0,
+                    quarterTurns: UtilLanguageName.isRTL() ? 2 : 0,
                     child: Icon(
                       Icons.keyboard_arrow_right,
                       textDirection: TextDirection.ltr,
@@ -232,7 +232,7 @@ class _SettingState extends State<Setting> {
                     style: Theme.of(context).textTheme.body2,
                   ),
                   RotatedBox(
-                    quarterTurns: UtilLanguage.isRTL() ? 2 : 0,
+                    quarterTurns: UtilLanguageName.isRTL() ? 2 : 0,
                     child: Icon(
                       Icons.keyboard_arrow_right,
                       textDirection: TextDirection.ltr,
