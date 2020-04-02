@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:thikana_ki/cores/models/import_model.dart';
-import '../../api/api.dart';
+import '../../api/local_file_api.dart';
 import '../authentication/bloc.dart';
 import 'bloc.dart';
 
@@ -27,7 +27,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
       await Future.delayed(Duration(seconds: 1));
 
       ///Fetch API
-      final ResultApiModel result = await Api.login(
+      final ResultApiModel result = await LocalFileApi.login(
         username: event.username,
         password: event.password,
       );

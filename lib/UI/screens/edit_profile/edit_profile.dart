@@ -9,7 +9,7 @@ import '../../../cores/blocs/bloc.dart';
 import '../../../cores/configs/config.dart';
 import '../../../cores/utils/import_utility_path.dart';
 import '../../commonWidget/keyboard_input/custom_text_input_field.dart';
-import '../../widgets/button/app_button.dart';
+import '../../commonWidget/buttons/app_button.dart';
 
 class EditProfile extends StatefulWidget {
 //  EditProfile({Key key}) : super(key: key);

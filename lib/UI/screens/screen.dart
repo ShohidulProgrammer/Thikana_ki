@@ -19,7 +19,7 @@ export 'list_product/list_product.dart';
 //export 'message/message.dart';
 //export 'notification/notification.dart';
 //export 'photo_preview/photo_preview.dart';
-export 'shop_detail/product_detail.dart';
+export 'shop/product_detail.dart';
 export 'bottom_navbar/main_navigation_bottom_navbar.dart';
 export 'intro_preview/intro_preview.dart';
 export 'splash/splash_screen.dart';

@@ -5,12 +5,13 @@ import 'package:thikana_ki/UI/screens/chat/chat.dart';
 import 'package:thikana_ki/UI/screens/contact_us/contact_us.dart';
 import 'package:thikana_ki/UI/screens/gallery/gallery.dart';
 import 'package:thikana_ki/UI/screens/location/location.dart';
-//import 'package:thikana_ki/UI/screens/login/login_page.dart';
+//import 'package:thikana_ki/UI/screens/login/reject_login_page.dart';
 import 'package:thikana_ki/UI/screens/photo_preview/photo_preview.dart';
 import 'package:thikana_ki/UI/screens/popular/emergency_categroy_iem_list_factory.dart';
 import 'package:thikana_ki/UI/screens/screen.dart';
-import 'package:thikana_ki/UI/screens/shop_detail/shop_details.dart';
-import 'package:thikana_ki/UI/widgets/login/gorgiusLogin/ui/login_page.dart';
+import 'package:thikana_ki/UI/screens/shop/shop_details.dart';
+import 'package:thikana_ki/UI/screens/login/login_page.dart';
+import 'package:thikana_ki/UI/screens/shop/shop_profile.dart';
 
 
 import '../../../UI/screens/category/category.dart';
@@ -30,8 +31,8 @@ class Router {
         return MaterialPageRoute(builder: (_) => MainNavigation());
       case categoryPageRoute:
         return MaterialPageRoute(builder: (_) => Category());
-      case shopDetailPageRoute:
-        return MaterialPageRoute(builder: (_) => ShopDetails());
+      case shopProfilePageRoute:
+        return MaterialPageRoute(builder: (_) => ShopProfile());
       case aboutUsPageRoute:
       case '/About Us':
         return MaterialPageRoute(builder: (_) => AboutUs());

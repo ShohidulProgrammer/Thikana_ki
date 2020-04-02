@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:thikana_ki/UI/commonWidget/keyboard_input/login_text_field.dart';
-import 'package:thikana_ki/UI/widgets/button/app_button.dart';
-import 'package:thikana_ki/UI/widgets/login/password_text_field.dart';
+import 'package:thikana_ki/UI/commonWidget/buttons/app_button.dart';
+import 'package:thikana_ki/UI/screens/login/widgets/password_text_field.dart';
+
+import 'aggre_check_box.dart';
+import 'already_have_account.dart';
 
 class BusinessSignUp extends StatefulWidget {
   @override
@@ -56,7 +59,9 @@ class _BusinessSignUpState extends State<BusinessSignUp> {
           PasswordTextField(
             hintText: 'confirm_password',
           ),
+          AgreeCheckbox(),
           _buildButton(),
+          AlreadyHaveAccount()
         ],
       ),
     );

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:thikana_ki/UI/commonWidget/grids/custom_grid_view.dart';
 
-List<Widget> homePageTabHeaderIcons = [
+final List<Widget> homePageTabHeader = [
   Tab(
 //      icon: Icon(Icons.category),
       text: "Category"),
@@ -20,3 +20,4 @@ List<Widget> homePageTabBarBodies = [
   ImageWithTitleCardGridView(),
   ImageWithTitleCardGridView(),
 ];
+

@@ -16,21 +16,25 @@ class _AgreeCheckboxState extends State<AgreeCheckbox> {
         crossAxisAlignment: WrapCrossAlignment.center,
         alignment: WrapAlignment.center,
         direction: Axis.horizontal,
-         runSpacing: -30.0,
+        runSpacing: -30.0,
+        spacing: -10,
         children: <Widget>[
           Checkbox(
             value: _termsChecked,
             onChanged: _setAgreedToTOS,
           ),
-          Text('I aggree to the'),
+          Text('I agree to the'),
           FlatButton(
             child: Text(
               'Pricvacy Policy',
               style: TextStyle(
+                fontWeight: FontWeight.w600,
+                fontSize: 14.0,
                 color: Colors.red,
                 decoration: TextDecoration.underline,
               ),
             ),
+            onPressed: () {},
           ),
           Text('And'),
           FlatButton(
@@ -41,36 +45,11 @@ class _AgreeCheckboxState extends State<AgreeCheckbox> {
                 decoration: TextDecoration.underline,
               ),
             ),
+            onPressed: () {},
           ),
           Text('of Thikana Ki'),
         ],
       ),
-//      child: CheckboxFormField(
-//        title: Row(
-//          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-//          children: <Widget>[
-//            Text('I aggree to the'),
-//            FlatButton(
-//              child: Text(
-//                'Pricvacy Policy',
-//                style: TextStyle(
-//                  decoration: TextDecoration.underline,
-//                ),
-//              ),
-//            ),
-//            Text('And'),
-//            FlatButton(
-//              child: Text(
-//                'Terms & Conditions',
-//                style: TextStyle(
-//                  decoration: TextDecoration.underline,
-//                ),
-//              ),
-//            ),
-//            Text('of Thikana Ki'),
-//          ],
-//        ),
-//      ),
     );
   }
 
@@ -78,10 +57,10 @@ class _AgreeCheckboxState extends State<AgreeCheckbox> {
     return _termsChecked;
   }
 
-//  void _submit() {
+  void _submit() {
 //    _formKey.currentState.validate();
-//    print('Form submitted');
-//  }
+    print('Form submitted');
+  }
 
   void _setAgreedToTOS(bool newValue) {
     setState(() {
@@ -91,10 +70,18 @@ class _AgreeCheckboxState extends State<AgreeCheckbox> {
 
 //output from validation will be displayed in state.errorText (above)
 //  validator(bool value) {
-//    if (!checkboxValue) {
+//    if (!_termsChecked) {
 //      return 'You need to accept terms';
 //    } else {
 //      return null;
 //    }
+//  }
+
+//  toSubmit(){
+//   return OutlineButton(
+//      highlightedBorderColor: Colors.black,
+//      onPressed: _submittable() ? _submit : null,
+//      child: const Text('Register'),
+//    );
 //  }
 }

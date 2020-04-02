@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../../cores/utils/language/translate.dart';
-import '../../widgets/notification/app_notification_item.dart';
+import 'widgets/app_notification_item.dart';
 import '../../../cores/models/model_result_api.dart';
-import '../../../cores/api/api.dart';
+import '../../../cores/api/local_file_api.dart';
 import '../../../cores/models/screen_models/screen_models.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
@@ -28,7 +28,7 @@ class _NotificationListState extends State<NotificationList> {
 
   ///Fetch API
   Future<void> _loadData() async {
-    final ResultApiModel result = await Api.getNotification();
+    final ResultApiModel result = await LocalFileApi.getNotification();
     if (result.success) {
       setState(() {
         _notificationPage = NotificationPageModel.fromJson(result.data);

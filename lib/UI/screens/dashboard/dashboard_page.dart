@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/UI/commonWidget/custom_user_account_drawer_header.dart';
-import 'package:thikana_ki/UI/widgets/drawer/drawer_menu_item.dart';
+import 'package:thikana_ki/UI/commonWidget/drawer/custom_user_account_drawer_header.dart';
+import 'package:thikana_ki/UI/commonWidget/drawer/drawer_menu_item.dart';
 
 class DashBoardPage extends StatelessWidget {
   @override

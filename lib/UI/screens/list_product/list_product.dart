@@ -8,12 +8,12 @@ import '../../../cores/configs/sort.dart';
 import '../../../cores/models/model_location.dart';
 import '../../../cores/models/model_result_api.dart';
 import '../../../cores/utils/language/translate.dart';
-import '../../../UI/widgets/drawer/drawer_menu.dart';
-import '../../../cores/api/api.dart';
+import '../../commonWidget/drawer/drawer_menu.dart';
+import '../../../cores/api/local_file_api.dart';
 import '../../../cores/configs/router/router_path_constants.dart';
 import '../../../cores/models/import_model.dart';
 import '../../../cores/models/screen_models/product_list_page_model.dart';
-import '../../widgets/product_list/app_product_item.dart';
+import '../../commonWidget/cards/app_product_item.dart';
 
 enum PageType { map, list }
 
@@ -56,7 +56,7 @@ class _ListProductState extends State<ListProduct> {
 
   ///On Fetch API
   Future<void> _loadData() async {
-    final ResultApiModel result = await Api.getProduct();
+    final ResultApiModel result = await LocalFileApi.getProduct();
     if (result.success) {
       final listProduct = ProductListPageModel.fromJson(result.data);
 
@@ -321,7 +321,7 @@ class _ListProductState extends State<ListProduct> {
             padding: EdgeInsets.only(left: 15),
             child: AppProductItem(
               onPressed: () {
-                Navigator.pushNamed(context, shopDetailPageRoute);
+                Navigator.pushNamed(context, shopProfilePageRoute);
               },
               item: item,
               type: _modeView,
@@ -334,7 +334,7 @@ class _ListProductState extends State<ListProduct> {
           padding: EdgeInsets.only(left: 15),
           child: AppProductItem(
             onPressed: () {
-              Navigator.pushNamed(context, shopDetailPageRoute);
+              Navigator.pushNamed(context, shopProfilePageRoute);
             },
             item: item,
             type: _modeView,
@@ -344,7 +344,7 @@ class _ListProductState extends State<ListProduct> {
       default:
         return AppProductItem(
           onPressed: () {
-            Navigator.pushNamed(context, shopDetailPageRoute);
+            Navigator.pushNamed(context, shopProfilePageRoute);
           },
           item: item,
           type: _modeView,

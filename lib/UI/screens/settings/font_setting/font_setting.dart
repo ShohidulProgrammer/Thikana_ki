@@ -53,7 +53,7 @@ class _FontSettingState extends State<FontSetting> {
                           color: Theme.of(context).primaryColor,
                         )
                       : null;
-                  return AppListTitle(
+                  return AppListItem(
                     title: item,
                     trailing: trailing,
                     onPressed: () {

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../cores/models/model_result_api.dart';
 import '../../../cores/models/import_model.dart';
 import '../../../cores/utils/language/translate.dart';
-import '../../../cores/api/api.dart';
+import '../../../cores/api/local_file_api.dart';
 import 'package:shimmer/shimmer.dart';
 
 class AboutUs extends StatefulWidget {
@@ -25,7 +25,7 @@ class _AboutUsState extends State<AboutUs> {
 
   ///Fetch API
   Future<void> _loadData() async {
-    final ResultApiModel result = await Api.getAboutUs();
+    final ResultApiModel result = await LocalFileApi.getAboutUs();
     if (result.success) {
       setState(() {
         _aboutUsPage = new AboutUsPageModel.fromJson(result.data);

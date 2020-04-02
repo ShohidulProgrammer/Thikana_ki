@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../cores/configs/router/router_path_constants.dart';
 import '../../../cores/models/model_result_api.dart';
 import '../../../cores/utils/language/translate.dart';
-import '../../../cores/api/api.dart';
+import '../../../cores/api/local_file_api.dart';
 
 import '../../../cores/models/screen_models/screen_models.dart';
 import '../../widgets/widget.dart';
@@ -29,7 +29,7 @@ class _WishListState extends State<WishList> {
 
   ///Fetch API
   Future<void> _loadData() async {
-    final ResultApiModel result = await Api.getWishList();
+    final ResultApiModel result = await LocalFileApi.getWishList();
     if (result.success) {
       setState(() {
         _listPage = new WishListPageModel.fromJson(result.data);
@@ -51,7 +51,7 @@ class _WishListState extends State<WishList> {
 
   ///On navigate product detail
   void _onProductDetail() {
-    Navigator.pushNamed(context, shopDetailPageRoute);
+    Navigator.pushNamed(context, shopProfilePageRoute);
   }
 
   ///Build list

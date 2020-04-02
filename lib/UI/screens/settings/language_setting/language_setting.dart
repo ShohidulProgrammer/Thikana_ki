@@ -100,7 +100,7 @@ class _LanguageSettingState extends State<LanguageSetting> {
                           color: Theme.of(context).primaryColor,
                         )
                       : null;
-                  return AppListTitle(
+                  return AppListItem(
                     title: UtilLanguageName.getGlobalLanguageName(
                       item.languageCode,
                     ),

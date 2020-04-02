@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../cores/utils/language/translate.dart';
 import 'widget_list/bottom_menu_item.dart';
 import 'widget_list/bottom_navigation_body_items.dart';
-import '../../widgets/drawer/drawer_menu.dart';
+import '../../commonWidget/drawer/drawer_menu.dart';
 
 class MainNavigation extends StatefulWidget {
   @override

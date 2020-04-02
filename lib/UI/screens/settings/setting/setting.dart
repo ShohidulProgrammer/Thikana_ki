@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:thikana_ki/cores/utils/language/language_setting.dart';
 import '../../../../cores/configs/router/router_path_constants.dart';
 import '../../../../cores/utils/import_utility_path.dart';
 import '../../../../cores/blocs/bloc.dart';
@@ -134,7 +135,7 @@ class _SettingState extends State<Setting> {
             top: 15,
           ),
           children: <Widget>[
-            AppListTitle(
+            AppListItem(
               title: Translate.of(context).translate('language'),
               onPressed: () {
                 _onNavigate(changeLanguagePageRoute);
@@ -143,7 +144,7 @@ class _SettingState extends State<Setting> {
                 children: <Widget>[
                   Text(
                     UtilLanguageName.getGlobalLanguageName(
-                      AppLanguage.defaultLanguage.languageCode,
+                      AppLanguageSetting.defaultLanguage.languageCode,
                     ),
                     style: Theme.of(context).textTheme.body2,
                   ),
@@ -157,7 +158,7 @@ class _SettingState extends State<Setting> {
                 ],
               ),
             ),
-            AppListTitle(
+            AppListItem(
               title: Translate.of(context).translate('notification'),
               trailing: Switch(
                 value: _receiveNotification,
@@ -168,7 +169,7 @@ class _SettingState extends State<Setting> {
                 },
               ),
             ),
-            AppListTitle(
+            AppListItem(
               title: Translate.of(context).translate('theme'),
               onPressed: () {
                 _onNavigate(themeSettingPageRoute);
@@ -180,7 +181,7 @@ class _SettingState extends State<Setting> {
                 color: Theme.of(context).primaryColor,
               ),
             ),
-            AppListTitle(
+            AppListItem(
               title: Translate.of(context).translate('dark_mode'),
               onPressed: _showDarkModeSetting,
               trailing: Row(
@@ -201,7 +202,7 @@ class _SettingState extends State<Setting> {
                 ],
               ),
             ),
-            AppListTitle(
+            AppListItem(
               title: Translate.of(context).translate('font'),
               onPressed: () {
                 _onNavigate(fontSettingPageRoute);
@@ -222,7 +223,7 @@ class _SettingState extends State<Setting> {
                 ],
               ),
             ),
-            AppListTitle(
+            AppListItem(
               title: Translate.of(context).translate('version'),
               onPressed: () {},
               trailing: Row(

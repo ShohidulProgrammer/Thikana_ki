@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../widgets/avater/app_circle_avater.dart';
+import '../../commonWidget/avater/app_circle_avater.dart';
 import '../../../cores/models/model_message.dart';
 
 class ReceiveMessage extends StatelessWidget {

@@ -4,10 +4,10 @@ import '../../../cores/configs/router/router_path_constants.dart';
 import '../../../cores/models/model_category.dart';
 import '../../../cores/models/model_result_api.dart';
 import '../../../cores/utils/language/translate.dart';
-import '../../../UI/widgets/app_text_input.dart';
+import '../../commonWidget/keyboard_input/app_text_input.dart';
 import '../../../UI/widgets/category/app_category_item.dart';
-import '../../../UI/widgets/drawer/drawer_menu.dart';
-import '../../../cores/api/api.dart';
+import '../../commonWidget/drawer/drawer_menu.dart';
+import '../../../cores/api/local_file_api.dart';
 import '../../../cores/models/screen_models/category_page_model.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
@@ -42,7 +42,7 @@ class _CategoryState extends State<Category> {
 
   ///Fetch API
   Future<void> _loadData() async {
-    final ResultApiModel result = await Api.getCategory();
+    final ResultApiModel result = await LocalFileApi.getCategory();
     if (result.success) {
       setState(() {
         _categoryPage = CategoryPageModel.fromJson(result.data);

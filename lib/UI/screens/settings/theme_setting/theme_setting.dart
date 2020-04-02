@@ -6,7 +6,7 @@ import '../../../../cores/blocs/theme/theme_state.dart';
 import '../../../../cores/configs/theme/theme.dart';
 import '../../../../cores/models/import_model.dart';
 import '../../../../cores/utils/language/translate.dart';
-import '../../../widgets/button/app_button.dart';
+import '../../../commonWidget/buttons/app_button.dart';
 
 class ThemeSetting extends StatefulWidget {
   ThemeSetting({Key key}) : super(key: key);

@@ -6,7 +6,7 @@ import '../../configs/preferences.dart';
 import '../../models/model_result_api.dart';
 import '../../models/model_user.dart';
 import '../../utils/sharedpreferences/preferences.dart';
-import '../../api/api.dart';
+import '../../api/local_file_api.dart';
 import '../../api/http_manager.dart';
 import 'authentication_event.dart';
 import 'bloc.dart';
@@ -32,7 +32,7 @@ class AuthBloc extends Bloc<AuthenticationEvent, AuthenticationState> {
         httpManager.baseOptions.headers["Authorization"] =
             "Bearer " + user.token;
         await Future.delayed(Duration(seconds: 1));
-        final ResultApiModel result = await Api.validateToken();
+        final ResultApiModel result = await LocalFileApi.validateToken();
 
         ///Fetch api success
         if (result.success) {

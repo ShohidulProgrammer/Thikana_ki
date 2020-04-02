@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:thikana_ki/UI/commonWidget/keyboard_input/custom_text_input_field.dart';
 import '../../../cores/blocs/bloc.dart';
 import '../../../cores/blocs/login/login_state.dart';
 import '../../../cores/utils/import_utility_path.dart';
-import '../../../UI/widgets/button/app_button.dart';
-import '../../components/keyboard_input/custom_text_input_field.dart';
+import '../../commonWidget/buttons/app_button.dart';
+
 
 class ChangePassword extends StatefulWidget {
   ChangePassword({Key key}) : super(key: key);
@@ -75,7 +76,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                         .copyWith(fontWeight: FontWeight.w600),
                   ),
                 ),
-                AppTextInput(
+                CustomTextInputField(
                   hintText: Translate.of(context).translate(
                     'input_your_password',
                   ),
@@ -117,7 +118,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                         .copyWith(fontWeight: FontWeight.w600),
                   ),
                 ),
-                AppTextInput(
+                CustomTextInputField(
                   hintText: Translate.of(context).translate(
                     'confirm_your_password',
                   ),

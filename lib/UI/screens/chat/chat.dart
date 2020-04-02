@@ -6,8 +6,8 @@ import '../../../cores/models/model_user.dart';
 import '../../../cores/models/import_model.dart';
 import '../../../cores/utils/import_utility_path.dart';
 import '../../../cores/utils/keyboard_input/input_focus.dart';
-import '../../widgets/avater/app_circle_avater.dart';
-import '../../../cores/api/api.dart';
+import '../../commonWidget/avater/app_circle_avater.dart';
+import '../../../cores/api/local_file_api.dart';
 import 'chat_item.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
@@ -34,7 +34,7 @@ class _ChatState extends State<Chat> {
 
   ///Fetch API
   Future<void> _loadData() async {
-    final ResultApiModel result = await Api.getDetailMessage();
+    final ResultApiModel result = await LocalFileApi.getDetailMessage();
     if (result.success) {
       final Iterable convertMessage = result.data['message'] ?? [];
       setState(() {

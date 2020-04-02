@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
-import '../../../cores/api/api.dart';
+import '../../../cores/api/local_file_api.dart';
 import '../../../cores/configs/router/router_path_constants.dart';
 import '../../../cores/models/import_model.dart';
 import '../../../cores/utils/language/translate.dart';
-import '../../widgets/message/app_message_item.dart';
+import 'widgets/app_message_item.dart';
 
 class MessageList extends StatefulWidget {
   MessageList({Key key}) : super(key: key);
@@ -30,7 +30,7 @@ class _MessageListState extends State<MessageList> {
 
   ///Fetch API
   Future<void> _loadData() async {
-    final ResultApiModel result = await Api.getMessage();
+    final ResultApiModel result = await LocalFileApi.getMessage();
     if (result.success) {
       setState(() {
         _messagePage = new MessagePageModel.fromJson(result.data);
