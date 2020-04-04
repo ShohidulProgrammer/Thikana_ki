@@ -32,7 +32,7 @@ class EmergencyCategoryIcons extends StatelessWidget {
       children: allEmergencyMenuItems.map(
         (item) {
           print(
-              'My Item: Icon: ${item.icon} \nColor: ${item.color} \nTitle: ${item.title}');
+              'My Item: Icon: ${item.emergencyImageName} \nColor: ${item.color} \nTitle: ${item.title}');
           return HomeEmergencyCategoryItem(
             item: item,
             onPressed: (item) {

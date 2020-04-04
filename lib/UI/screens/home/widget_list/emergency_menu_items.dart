@@ -1,29 +1,34 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:thikana_ki/cores/configs/router/router_path_constants.dart';
 
 class EmergencyMenuItem {
   const EmergencyMenuItem(
-      {@required this.icon, this.title, this.color, this.route});
+      {@required this.emergencyImageName, this.title, this.color, this.route});
 
   final String title;
-  final IconData icon;
+  final String emergencyImageName;
   final Color color;
   final String route;
 }
 
 const List<EmergencyMenuItem> allEmergencyMenuItems = <EmergencyMenuItem>[
   EmergencyMenuItem(
-      title: '999-National Emergency Service ',
-      icon: Icons.person_pin_circle,
-      color: Colors.blueGrey,
-      route: emergencyCategoryListFactoryPageRoute),
-  EmergencyMenuItem(
     title: 'Public Toilet',
-    icon: Icons.accessible,
-    color: Colors.brown,
+    emergencyImageName: 'public_toilet.png',
   ),
   EmergencyMenuItem(
-      title: 'Fire Service', icon: Icons.directions_bus, color: Colors.red),
+      title: 'Police',
+      emergencyImageName: 'national_emergency_service_999.PNG',
+//      emergencyImageName: 'emergency_call_999.jpg',
+
+      route: emergencyCategoryListFactoryPageRoute),
   EmergencyMenuItem(
-      title: 'Hospital', icon: Icons.local_hospital, color: Colors.green),
+    title: 'Fire Service',
+    emergencyImageName: 'fire_service.png',
+  ),
+  EmergencyMenuItem(
+    title: 'Hospital',
+    emergencyImageName: 'hospital.png',
+  ),
 ];

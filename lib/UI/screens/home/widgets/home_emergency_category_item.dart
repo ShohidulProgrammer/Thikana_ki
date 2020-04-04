@@ -59,21 +59,19 @@ class HomeEmergencyCategoryItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              width: 36,
-              height: 36,
+              width: 50,
+              height: 50,
               alignment: Alignment.center,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: item.color,
               ),
-              child: Icon(
-                item.icon,
-                size: 18,
-                color: Colors.white,
+              child: Image.asset(
+                'assets/images/${item.emergencyImageName}',
+                fit: BoxFit.contain,
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 3),
+              padding: EdgeInsets.all(5.0),
               child: Text(
                 item.title,
                 style: Theme.of(context)

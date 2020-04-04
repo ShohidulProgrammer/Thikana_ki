@@ -9,12 +9,14 @@ class HomePageShareLocation extends StatelessWidget {
       height: 40,
       width: 40,
       child: InkWell(
-
         onTap: () {},
         child: Card(
           elevation: 5,
 
-          child: Icon(Icons.share, color: Colors.deepPurple,  ),
+          child: Icon(
+            Icons.share,
+            color: Colors.deepOrange,
+          ),
 //          IconButton(
 //
 //            icon:

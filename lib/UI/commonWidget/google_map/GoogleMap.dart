@@ -37,6 +37,7 @@ class _MyGoogleMapState extends State<MyGoogleMap> {
 //      padding: EdgeInsets.only(bottom: 10),
       child: GoogleMap(
         initialCameraPosition: initialCameraPosition,
+
         myLocationEnabled: widget.myLocationEnabled,
       ),
     );

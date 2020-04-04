@@ -42,6 +42,9 @@ class _ShopInfoState extends State<ShopInfo> {
 
   @override
   Widget build(BuildContext context) {
+    if (_detailPage == null) {
+      return Center(child: CircularProgressIndicator());
+    }
     return Padding(
       padding: EdgeInsets.only(left: 20, right: 20),
       child: Column(

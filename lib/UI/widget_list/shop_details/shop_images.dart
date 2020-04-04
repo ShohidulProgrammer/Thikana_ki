@@ -1,9 +1,9 @@
 var shopImages = [
-  'https://images.unsplash.com/photo-1502117859338-fd9daa518a9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-  'https://images.unsplash.com/photo-1554321586-92083ba0a115?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-  'https://images.unsplash.com/photo-1536679545597-c2e5e1946495?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-  'https://images.unsplash.com/photo-1543922596-b3bbaba80649?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-  'https://images.unsplash.com/photo-1502943693086-33b5b1cfdf2f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
+  'https://assets1.progressivegrocer.com/files/styles/content_sm/s3/2020-01/Stop%20%26%20Shop%20MASS.jpg?itok=PzykErKN',
+  'https://www.liberaldictionary.com/wp-content/uploads/2018/11/shop.jpg',
+  'https://www.sentinelassam.com/wp-content/uploads/2019/05/Body-Shop-e1558166013607.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/3/3e/Zurich_Duty_Free_shop.jpg',
+  'https://www.finavia.fi/sites/default/files/styles/header_image_large/public/images/2018-04/Helsinki_Duty_Free_nose_front.jpg?h=a6bd591c&itok=fIf4AvCh',
 ];
 
 //              ExactAssetImage("assets/images/LaunchImage.jpg"),

@@ -43,6 +43,7 @@ class _CustomContainerTabBarState extends State<CustomContainerTabBar>
 //      decoration: new BoxDecoration(color: Theme.of(context).primaryColor),
           // home page container tab header icons
           child: new TabBar(
+            labelPadding: EdgeInsets.symmetric(vertical: 2.0, horizontal: 0.0),
             indicatorColor: Colors.red,
             labelColor: Colors.black,
             unselectedLabelColor: Colors.grey,

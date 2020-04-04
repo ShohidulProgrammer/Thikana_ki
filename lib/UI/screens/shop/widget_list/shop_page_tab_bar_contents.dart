@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:thikana_ki/UI/commonWidget/grids/custom_grid_view.dart';
-import 'package:thikana_ki/UI/commonWidget/list/custom_sererator_list_factory.dart';
-import 'package:thikana_ki/UI/screens/shop/widgets/product_list_tile.dart';
+import 'package:thikana_ki/UI/screens/shop/widgets/contact_shop.dart';
+import 'package:thikana_ki/UI/screens/shop/widgets/products_in_shop.dart';
 
 List<Widget> shopPageTabHeader = [
   Tab(
 //      icon: Icon(Icons.category),
-      text: "Product/\nService"),
+      text: "Product/Service"),
   Tab(
 //    icon: Icon(Icons.shopping_cart),
     text: "Video",
@@ -18,13 +18,8 @@ List<Widget> shopPageTabHeader = [
 ];
 
 List<Widget> shopPageTabBarBodies = [
-  CustomSeparatorListFactory(
-    child: ProductListTile(
-      productName: 'Product Name',
-      category: "Product Category",
-      price: "50 /=",
-    ),
-  ),
+  ProductsInShop(),
   ImageWithTitleCardGridView(),
-  ImageWithTitleCardGridView(),
+  ContactShop(),
+//  ImageWithTitleCardGridView(),
 ];

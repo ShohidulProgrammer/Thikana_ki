@@ -12,6 +12,7 @@ class ImageWithTitleCard extends StatelessWidget {
 
     return Card(
       semanticContainer: true,
+
       clipBehavior: Clip.antiAliasWithSaveLayer,
       child: InkWell(
         splashColor: Colors.blue.withAlpha(30),
