@@ -44,7 +44,9 @@ class CustomSeparatorListFactory extends StatelessWidget {
 //    }
 
     return ListView.separated(
-      padding: EdgeInsets.only(top: 2.0),
+      padding: EdgeInsets.only(
+        top: 2.0,
+      ),
 //      shrinkWrap: true,
 
       separatorBuilder: (context, index) => Divider(
@@ -56,8 +58,6 @@ class CustomSeparatorListFactory extends StatelessWidget {
       itemBuilder: (context, index) {
 //        final item = listItem[index] ;
         return Container(
-//          padding: EdgeInsets.only(left: 10, right: 10, bottom: 15),
-//          margin: EdgeInsets.only(bottom: 5000.0),
           child: child,
         );
       },

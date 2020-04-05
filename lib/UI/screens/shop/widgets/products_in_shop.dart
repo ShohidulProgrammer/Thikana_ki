@@ -13,7 +13,9 @@ class _ProductsInShopState extends State<ProductsInShop> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 2.0,),
+      padding: EdgeInsets.only(
+        top: 5.0,
+      ),
       child: Column(
         children: <Widget>[
           SearchInputField(

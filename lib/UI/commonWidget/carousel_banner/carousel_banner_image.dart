@@ -8,6 +8,7 @@ class CarouselBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (shopImages == null) {
+      print('Carousel banner image not found');
       return Shimmer.fromColors(
         baseColor: Theme.of(context).hoverColor,
         highlightColor: Theme.of(context).highlightColor,
@@ -18,13 +19,16 @@ class CarouselBanner extends StatelessWidget {
       );
     }
 
+    print('Carousel banner image Successfully found');
     return Center(
+
       child: SizedBox(
         height: MediaQuery.of(context).size.height /3,
 //          200.0,
         width: MediaQuery.of(context).size.width,
         child: Carousel(
           boxFit: BoxFit.cover,
+
           autoplay: true,
           animationCurve: Curves.fastOutSlowIn,
           animationDuration: Duration(milliseconds: 500),

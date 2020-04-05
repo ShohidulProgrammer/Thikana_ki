@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/UI/screens/home/widget_list/home_page_container_tab_headers_and_bodies.dart';
-import 'package:thikana_ki/UI/screens/shop/widget_list/shop_page_tab_bar_contents.dart';
 
 class CustomContainerTabBar extends StatefulWidget {
   final List<Widget> tabHeaders;
@@ -21,7 +19,6 @@ class _CustomContainerTabBarState extends State<CustomContainerTabBar>
     with SingleTickerProviderStateMixin {
   TabController _controller;
 
-
   @override
   void initState() {
     super.initState();
@@ -35,13 +32,14 @@ class _CustomContainerTabBarState extends State<CustomContainerTabBar>
       return Center(child: CircularProgressIndicator());
     }
     print('header length: ${widget.tabHeaders}');
+    MediaQuery.of(context).size.height;
 
     return Column(
       children: <Widget>[
         Container(
           decoration: new BoxDecoration(color: Colors.white),
 //      decoration: new BoxDecoration(color: Theme.of(context).primaryColor),
-          // home page container tab header icons
+// home page container tab header icons
           child: new TabBar(
             labelPadding: EdgeInsets.symmetric(vertical: 2.0, horizontal: 0.0),
             indicatorColor: Colors.red,
@@ -52,13 +50,13 @@ class _CustomContainerTabBarState extends State<CustomContainerTabBar>
 //            tabs: widget.tabHeaders == homePageTabHeader ? homePageTabHeader: shopPageTabHeader ,
           ),
         ),
-        // home page container tab bodies
+// home page container tab bodies
 
         Container(
           height: MediaQuery.of(context).size.height / widget.heightPart,
+// math.max(MediaQuery.of(context).size.height-450.0, MediaQuery.of(context).size.height / widget.heightPart),
           child: new TabBarView(
             controller: _controller,
-//            children: homePageTabBarBodies,
             children: widget.tabBodies,
           ),
         ),

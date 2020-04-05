@@ -7,7 +7,8 @@ class CustomListTile extends StatelessWidget {
   final Widget trailing;
   final VoidCallback onTap;
 
-  const CustomListTile({this.title, this.subTitle, this.leading, this.trailing, this.onTap});
+  const CustomListTile(
+      {this.title, this.subTitle, this.leading, this.trailing, this.onTap});
 
   @override
   Widget build(BuildContext context) {

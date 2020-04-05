@@ -5,10 +5,10 @@ import 'package:thikana_ki/cores/configs/constants/google_map_constant.dart';
 import 'package:thikana_ki/cores/utils/location/current_location.dart';
 
 class MyGoogleMap extends StatefulWidget {
-  final double height;
+  final double heightPart;
   final bool myLocationEnabled;
 
-  const MyGoogleMap({this.height, this.myLocationEnabled = false});
+  const MyGoogleMap({this.heightPart: 3, this.myLocationEnabled = false});
 
   @override
   _MyGoogleMapState createState() => _MyGoogleMapState();
@@ -32,7 +32,7 @@ class _MyGoogleMapState extends State<MyGoogleMap> {
 //    context.size.height ;
     return Container(
       width: double.infinity,
-      height: widget.height ?? screenHeight,
+      height: screenHeight/ widget.heightPart ?? screenHeight,
 //      height: widget.height,
 //      padding: EdgeInsets.only(bottom: 10),
       child: GoogleMap(

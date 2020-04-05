@@ -8,25 +8,25 @@ class ShopCurrentStatus extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-//    if (currentStatus == 'Open') {
-//      return Column(
-//        children: <Widget>[
-//          Image(
-//            image: AssetImage('assets/images/open_icon.png'),
-//            height: 60.0,
-//            width: 60.0,
-//          ),
-//          Padding(
-//            padding: const EdgeInsets.only(bottom: 4.0),
-//            child: AppTag(
-//              'Closed At : 11 pm',
-//              type: TagType.status,
-//            ),
-//          ),
-//        ],
-//      );
-//    }
-//
+    if (currentStatus == 'Open') {
+      return Column(
+        children: <Widget>[
+          Image(
+            image: AssetImage('assets/images/open_icon.png'),
+            height: 60.0,
+            width: 60.0,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 4.0),
+            child: AppTag(
+              'Closed At : 11 pm',
+              type: TagType.status,
+            ),
+          ),
+        ],
+      );
+    }
+
 
     return Column(
       children: <Widget>[

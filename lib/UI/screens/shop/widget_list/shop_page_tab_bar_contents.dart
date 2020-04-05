@@ -21,5 +21,4 @@ List<Widget> shopPageTabBarBodies = [
   ProductsInShop(),
   ImageWithTitleCardGridView(),
   ContactShop(),
-//  ImageWithTitleCardGridView(),
 ];

@@ -20,9 +20,9 @@ class _SearchInputFieldState extends State<SearchInputField> {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.teal,
-      height: 40.0,
+//      height: 40.0,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 2.0),
+        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
         child: CustomTextInputField(
           hintText: Translate.of(context).translate(widget.hintText),
 //      errorText: _validAddress != null

@@ -21,7 +21,7 @@ class _ShopInfoState extends State<ShopInfo> {
 
   bool isEditor = false;
 
-  bool isOpen = false;
+  bool isOpen = true;
 
   @override
   void initState() {
@@ -61,6 +61,7 @@ class _ShopInfoState extends State<ShopInfo> {
                     .copyWith(fontWeight: FontWeight.w600),
               ),
 
+              // shop open or close status
               ShopCurrentStatus(
                 currentStatus: _detailPage.status,
               ),
