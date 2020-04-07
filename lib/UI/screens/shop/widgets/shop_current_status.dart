@@ -23,6 +23,7 @@ class ShopCurrentStatus extends StatelessWidget {
               type: TagType.status,
             ),
           ),
+
         ],
       );
     }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shimmer/shimmer.dart';
+import 'package:thikana_ki/UI/commonWidget/buttons/app_button.dart';
 import 'package:thikana_ki/UI/commonWidget/google_map/GoogleMap.dart';
 import 'package:thikana_ki/cores/api/local_file_api.dart';
 import 'package:thikana_ki/cores/models/model_result_api.dart';
@@ -33,39 +33,63 @@ class _ContactShopState extends State<ContactShop> {
     }
   }
 
+  bool isEditor = true;
+
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      padding: EdgeInsets.all(2.0),
-      children: <Widget>[
-        Container(
-            child: Stack(
-          children: <Widget>[
-            MyGoogleMap(
-              heightPart: 2.8,
-            ),
-            Positioned(
-              bottom: 0.0,
-              right: 0.0,
-              height: 40,
-              width: 40,
-              child: InkWell(
-                child: Card(
-                  child: Icon(
-                    Icons.directions,
-                    color: Colors.deepOrangeAccent,
+    return Container(
+      child: Column(
+        children: <Widget>[
+          isEditor
+              ? Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: AppButton(
+                    text: 'Edit Business Profile',
+                    onPressed: () {
+                      // Todo: Add Products
+                    },
+                    disableTouchWhenLoading: true,
                   ),
+                )
+              : Container(
+                  color: Colors.purpleAccent,
                 ),
-              ),
-            ),
-          ],
-        )),
-        SizedBox(
-          height: 5.0,
-        ),
+          Expanded(
+            child: ListView(
+              padding: EdgeInsets.all(2.0),
+              children: <Widget>[
+                Container(
+                    child: Stack(
+                  children: <Widget>[
+                    MyGoogleMap(
+                      heightPart: 2.8,
+                    ),
+                    Positioned(
+                      bottom: 0.0,
+                      right: 0.0,
+                      height: 40,
+                      width: 40,
+                      child: InkWell(
+                        child: Card(
+                          child: Icon(
+                            Icons.directions,
+                            color: Colors.deepOrangeAccent,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                )),
+                SizedBox(
+                  height: 5.0,
+                ),
 //        CustomSeparatorListFactory(),
-        _buildInfo(),
-      ],
+                _buildInfo(),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 

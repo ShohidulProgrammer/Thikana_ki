@@ -12,7 +12,9 @@ class ShopPageBody extends StatelessWidget {
       child: Column(
         children: <Widget>[
           CarouselBanner(),
-          ShopInfo(),
+          ShopInfo(
+            isEditor: true,
+          ),
           CustomContainerTabBar(
             tabHeaders: shopPageTabHeader,
             tabBodies: shopPageTabBarBodies,

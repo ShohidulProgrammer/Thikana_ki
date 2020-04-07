@@ -8,6 +8,10 @@ import 'package:thikana_ki/cores/models/import_model.dart';
 import 'shop_current_status.dart';
 
 class ShopInfo extends StatefulWidget {
+  final bool isEditor;
+
+  const ShopInfo({this.isEditor: false});
+
   @override
   _ShopInfoState createState() => _ShopInfoState();
 }
@@ -18,8 +22,6 @@ class _ShopInfoState extends State<ShopInfo> {
   bool _showHour = false;
 
   ProductDetailPageModel _detailPage;
-
-  bool isEditor = false;
 
   bool isOpen = true;
 
@@ -46,20 +48,25 @@ class _ShopInfoState extends State<ShopInfo> {
       return Center(child: CircularProgressIndicator());
     }
     return Padding(
-      padding: EdgeInsets.only(left: 20, right: 20),
+      padding: EdgeInsets.only(left: 2, right: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Text(
-                _detailPage.title,
-                style: Theme.of(context)
-                    .textTheme
-                    .title
-                    .copyWith(fontWeight: FontWeight.w600),
+              FlatButton(
+                onPressed: ()=> widget.isEditor ? print('Edit Shop name') : null,
+                child: Text(
+                  _detailPage.title,
+                  style: Theme.of(context)
+                      .textTheme
+                      .title
+                      .copyWith(fontWeight: FontWeight.w600),
+                ),
               ),
+
+
 
               // shop open or close status
               ShopCurrentStatus(
@@ -72,8 +79,8 @@ class _ShopInfoState extends State<ShopInfo> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              InkWell(
-//                onTap: _onReview,
+              FlatButton(
+                onPressed: ()=> widget.isEditor ? print('Edit Shop Category') : null,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -118,11 +125,21 @@ class _ShopInfoState extends State<ShopInfo> {
                   ),
                   onPressed: () {}),
               IconButton(
-                  icon: Icon(
-                    Icons.chat,
-                    color: Theme.of(context).primaryColorLight,
-                  ),
-                  onPressed: () {}),
+                icon: Icon(
+                  Icons.chat,
+                  color: Theme.of(context).primaryColorLight,
+                ),
+                onPressed: () {},
+              ),
+              widget.isEditor
+                  ? IconButton(
+                      icon: Icon(Icons.publish),
+                      tooltip: 'Publish',
+                      onPressed: () {
+                        // # ToDo: Publish ON/OFF
+                      },
+                    )
+                  : Container(),
             ],
           ),
           Padding(

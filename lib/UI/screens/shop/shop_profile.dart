@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/UI/commonWidget/tag/app_tag.dart';
+import 'package:thikana_ki/UI/screens/shop/widgets/app_bar_discount_leading.dart';
 import 'package:thikana_ki/cores/api/local_file_api.dart';
 import 'package:thikana_ki/cores/configs/router/router_path_constants.dart';
 import 'package:thikana_ki/cores/models/import_model.dart';
@@ -19,9 +19,8 @@ class _ShopProfileState extends State<ShopProfile> {
   bool _like = false;
   bool _showHour = false;
   ProductDetailPageModel _detailPage;
-  bool isEditor = false;
+  bool isEditor = true;
   bool isOpen = false;
-  int discount = 50;
 
   @override
   void initState() {
@@ -44,45 +43,51 @@ class _ShopProfileState extends State<ShopProfile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Wrap(
-          children: <Widget>[
-            AppTag(
-              'Upto $discount% OFF',
-              type: TagType.rateSmall,
-            ),
-          ],
+        leading: Discount(
+          discount: 50,
         ),
         backgroundColor: Colors.transparent,
         elevation: 0.0,
         actions: <Widget>[
           CircleAvatar(
             backgroundColor: Colors.blueGrey,
-            child: IconButton(
-              icon: Icon(
-                _like ? Icons.favorite : Icons.favorite_border,
-                color: Colors.white,
-              ),
-              onPressed: _onLike,
+            child: isEditor
+                ? IconButton(
+                    icon: Icon(
+                      Icons.lock_outline,
+                      color: Colors.white,
+                    ),
+                    onPressed: _onLike,
+                  )
+                : IconButton(
+                    icon: Icon(
+                      _like ? Icons.favorite : Icons.favorite_border,
+                      color: Colors.white,
+                    ),
+                    onPressed: _onLike,
+                  ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: CircleAvatar(
+              backgroundColor: Colors.orange,
+              child: isEditor
+                  ? IconButton(
+                      icon: Icon(
+                        Icons.edit_location,
+                        color: Colors.white,
+                      ),
+                      onPressed: () {
+                        _onLocation();
+                      })
+                  : IconButton(
+                      icon: Icon(Icons.share),
+                      color: Colors.white,
+                      onPressed: () {
+                        _onShareLocation();
+                      }),
             ),
           ),
-          isEditor
-              ? IconButton(
-                  icon: Icon(Icons.location_on),
-                  onPressed: () {
-                    _onLocation();
-                  })
-              : Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: CircleAvatar(
-                    backgroundColor: Colors.orange,
-                    child: IconButton(
-                        icon: Icon(Icons.share),
-                        color: Colors.white,
-                        onPressed: () {
-                          _onShareLocation();
-                        }),
-                  ),
-                ),
         ],
       ),
       extendBodyBehindAppBar: true,

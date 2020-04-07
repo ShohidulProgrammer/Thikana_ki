@@ -26,7 +26,7 @@ class ImageWithTitleCardGridView extends StatelessWidget {
     final double itemWidth = screenSize.width / cardWidthPart;
 
     return GridView.count(
-      padding: EdgeInsets.only(top:2.0, bottom: screenSize.height  /10),
+      padding: EdgeInsets.only(top:2.0, ), // bottom: screenSize.height  /10
       crossAxisCount: crossAxisCount,
       childAspectRatio: (itemWidth / itemHeight),
       children: List.generate(iconWithTitleList.length, (int index) {

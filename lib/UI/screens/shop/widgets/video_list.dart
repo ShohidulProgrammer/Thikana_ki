@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:thikana_ki/UI/commonWidget/buttons/app_button.dart';
 import 'package:thikana_ki/UI/screens/shop/widget_list/video_url_list.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
@@ -33,7 +34,8 @@ class _VideoListState extends State<VideoList> {
 //    '8cOi04y7LKY',
 //  ]
 
-  final List<YoutubePlayerController> _controllers = videoUrls.map<YoutubePlayerController>(
+  final List<YoutubePlayerController> _controllers = videoUrls
+      .map<YoutubePlayerController>(
         (videoId) => YoutubePlayerController(
           initialVideoId: videoId,
           flags: YoutubePlayerFlags(
@@ -43,36 +45,56 @@ class _VideoListState extends State<VideoList> {
       )
       .toList();
 
-
-
+  bool isEditor = true;
 
   @override
   Widget build(BuildContext context) {
-
-    return  ListView.separated(
-      padding: EdgeInsets.only(top: 8.0, bottom: 180.0, left: 2.0, right: 2.0),
-      itemBuilder: (context, index) {
-        return YoutubePlayer(
-          key: ObjectKey(_controllers[index]),
-          controller: _controllers[index],
-          actionsPadding: EdgeInsets.only(left: 16.0),
-          bottomActions: [
-            CurrentPosition(),
-            SizedBox(width: 10.0),
-            ProgressBar(
-              isExpanded: true,
-              colors: ProgressBarColors(
-                playedColor: Colors.red,
-                handleColor: Colors.red,
-                bufferedColor: Colors.white,
+    return Container(
+      child: Column(
+        children: <Widget>[
+          SizedBox(
+            height: 5.0,
+          ),
+          isEditor
+              ? Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: AppButton(
+                    text: 'Add New Video',
+                    onPressed: () {
+                      // Todo: Add Products
+                    },
+                    disableTouchWhenLoading: true,
+                  ),
+                )
+              : Container(
+                  color: Colors.purpleAccent,
+                ),
+          Expanded(
+            child: ListView.separated(
+              padding:
+                  EdgeInsets.only(top: 8.0, bottom: 180.0, left: 2.0, right: 2.0),
+              itemBuilder: (context, index) {
+                return YoutubePlayer(
+                  key: ObjectKey(_controllers[index]),
+                  controller: _controllers[index],
+                  actionsPadding: EdgeInsets.only(left: 16.0),
+                  bottomActions: [
+                    CurrentPosition(),
+                    SizedBox(width: 10.0),
+                    ProgressBar(
+                      isExpanded: true,
+                      colors: ProgressBarColors(
+                        playedColor: Colors.red,
+                        handleColor: Colors.red,
+                        bufferedColor: Colors.white,
 //                backgroundColor: Colors.yellow,
-              ),
-            ),
-            SizedBox(width: 10.0),
-            RemainingDuration(),
-            SizedBox(width: 10.0),
-            PlaybackSpeedButton(),
-            SizedBox(width: 10.0),
+                      ),
+                    ),
+                    SizedBox(width: 10.0),
+                    RemainingDuration(),
+                    SizedBox(width: 10.0),
+                    PlaybackSpeedButton(),
+                    SizedBox(width: 10.0),
 //                     IconButton(
 //                       icon: Icon(
 //                         _rotation == 0 ? Icons.fullscreen : Icons.fullscreen_exit,
@@ -97,14 +119,18 @@ class _VideoListState extends State<VideoList> {
 //                         controller: _controllers[index],
 //                       ),
 //                     ),
-          ],
+                  ],
 //            onReady: () {
 //              _isPlayerReady = true;
 //            },
-        );
-      },
-      itemCount: _controllers.length,
-      separatorBuilder: (context, _) => SizedBox(height: 10.0),
+                );
+              },
+              itemCount: _controllers.length,
+              separatorBuilder: (context, _) => SizedBox(height: 10.0),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+
 import '../../../cores/configs/router/router_path_constants.dart';
 import '../../../cores/models/screen_models/screen_models.dart';
 import 'app_card.dart';
@@ -13,7 +14,7 @@ class CategoryImageCardFactory extends StatelessWidget {
   Widget build(BuildContext context) {
     if (homePageModel?.popular == null) {
       return ListView(
-        padding: EdgeInsets.only(left: 5, right: 20, top: 10, bottom: 15),
+        padding: EdgeInsets.only(top: 10, left: 5, right: 20, bottom: 15),
         scrollDirection: Axis.horizontal,
         children: List.generate(8, (index) => index).map(
           (item) {
@@ -31,7 +32,7 @@ class CategoryImageCardFactory extends StatelessWidget {
     }
 
     return ListView(
-      padding: EdgeInsets.only(left: 5, right: 20, top: 10, bottom: 15),
+      padding: EdgeInsets.only(top: 10, left: 5, right: 20, bottom: 15),
       scrollDirection: Axis.horizontal,
       children: homePageModel.popular.map(
         (item) {
