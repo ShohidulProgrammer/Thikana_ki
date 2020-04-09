@@ -35,7 +35,7 @@ class _CustomUserAccountDrawerHeaderState
             backgroundImage: NetworkImage(widget.image),
 //              NetworkImage("${snapshot.data.hitsList[index].previewUrl}")
           )),
-      decoration: new BoxDecoration(color: Colors.red),
+      decoration: new BoxDecoration(color: Colors.pink),
     );
   }
 }

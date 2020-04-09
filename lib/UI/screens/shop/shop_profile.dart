@@ -50,7 +50,7 @@ class _ShopProfileState extends State<ShopProfile> {
         elevation: 0.0,
         actions: <Widget>[
           CircleAvatar(
-            backgroundColor: Colors.blueGrey,
+            backgroundColor: Colors.blueGrey[600],
             child: isEditor
                 ? IconButton(
                     icon: Icon(
@@ -70,7 +70,7 @@ class _ShopProfileState extends State<ShopProfile> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: CircleAvatar(
-              backgroundColor: Colors.orange,
+              backgroundColor: Colors.orange[600],
               child: isEditor
                   ? IconButton(
                       icon: Icon(

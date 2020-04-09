@@ -15,6 +15,7 @@ class ShopPageBody extends StatelessWidget {
           ShopInfo(
             isEditor: true,
           ),
+          SizedBox(height: 5.0,),
           CustomContainerTabBar(
             tabHeaders: shopPageTabHeader,
             tabBodies: shopPageTabBarBodies,

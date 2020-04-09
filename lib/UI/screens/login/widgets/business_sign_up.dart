@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/UI/commonWidget/keyboard_input/login_text_field.dart';
 import 'package:thikana_ki/UI/commonWidget/buttons/app_button.dart';
+import 'package:thikana_ki/UI/commonWidget/keyboard_input/login_text_field.dart';
 import 'package:thikana_ki/UI/screens/login/widgets/password_text_field.dart';
 
 import 'aggre_check_box.dart';
@@ -26,42 +26,49 @@ class _BusinessSignUpState extends State<BusinessSignUp> {
       padding: const EdgeInsets.all(18.0),
       child: Column(
         children: <Widget>[
-          MyFormTextField(
-            hintText: 'name',
-            icon: const Icon(
-              Icons.perm_identity,
-              size: 22.0,
-              color: Colors.black,
-            ),
-            fieldKey: _userNameFieldKey,
-          ),
-          MyFormTextField(
-            hintText: 'business_name',
-            icon: Icon(
+          Expanded(
+            child: ListView(
+              padding: const EdgeInsets.all(0.0),
+              children: <Widget>[
+                MyFormTextField(
+                  hintText: 'name',
+                  icon: const Icon(
+                    Icons.perm_identity,
+                    size: 22.0,
+                    color: Colors.black,
+                  ),
+                  fieldKey: _userNameFieldKey,
+                ),
+                MyFormTextField(
+                  hintText: 'business_name',
+                  icon: Icon(
 //              FontAwesomeIcons.coins,
-              Icons.shop,
-              size: 22.0,
-              color: Colors.black,
-            ),
-            fieldKey: _businessNameFieldKey,
-          ),
-          MyFormTextField(
-              hintText: 'phone',
-              icon: Icon(
+                    Icons.shop,
+                    size: 22.0,
+                    color: Colors.black,
+                  ),
+                  fieldKey: _businessNameFieldKey,
+                ),
+                MyFormTextField(
+                    hintText: 'phone',
+                    icon: Icon(
 //                FontAwesomeIcons.mobileAlt,
-                Icons.phone,
-                size: 22.0,
-                color: Colors.black,
-              ),
-              keyboardType: TextInputType.phone,
-              fieldKey: _phoneFieldKey),
-          PasswordTextField(),
-          PasswordTextField(
-            hintText: 'confirm_password',
+                      Icons.phone,
+                      size: 22.0,
+                      color: Colors.black,
+                    ),
+                    keyboardType: TextInputType.phone,
+                    fieldKey: _phoneFieldKey),
+                PasswordTextField(),
+                PasswordTextField(
+                  hintText: 'confirm_password',
+                ),
+              ],
+            ),
           ),
           AgreeCheckbox(),
           _buildButton(),
-          AlreadyHaveAccount()
+          AlreadyHaveAccount(),
         ],
       ),
     );

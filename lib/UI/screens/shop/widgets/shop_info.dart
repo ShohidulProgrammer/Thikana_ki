@@ -47,8 +47,9 @@ class _ShopInfoState extends State<ShopInfo> {
     if (_detailPage == null) {
       return Center(child: CircularProgressIndicator());
     }
-    return Padding(
+    return Container(
       padding: EdgeInsets.only(left: 2, right: 20),
+      color: Colors.white,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -56,7 +57,8 @@ class _ShopInfoState extends State<ShopInfo> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               FlatButton(
-                onPressed: ()=> widget.isEditor ? print('Edit Shop name') : null,
+                onPressed: () =>
+                    widget.isEditor ? print('Edit Shop name') : null,
                 child: Text(
                   _detailPage.title,
                   style: Theme.of(context)
@@ -65,8 +67,6 @@ class _ShopInfoState extends State<ShopInfo> {
                       .copyWith(fontWeight: FontWeight.w600),
                 ),
               ),
-
-
 
               // shop open or close status
               ShopCurrentStatus(
@@ -80,7 +80,8 @@ class _ShopInfoState extends State<ShopInfo> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               FlatButton(
-                onPressed: ()=> widget.isEditor ? print('Edit Shop Category') : null,
+                onPressed: () =>
+                    widget.isEditor ? print('Edit Shop Category') : null,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[

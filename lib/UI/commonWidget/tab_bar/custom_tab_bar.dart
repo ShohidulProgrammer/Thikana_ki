@@ -43,8 +43,8 @@ class _CustomContainerTabBarState extends State<CustomContainerTabBar>
           child: new TabBar(
             labelPadding: EdgeInsets.symmetric(vertical: 2.0, horizontal: 0.0),
             indicatorColor: Colors.red,
-            labelColor: Colors.black,
-            unselectedLabelColor: Colors.grey,
+            labelColor: Colors.blueGrey[900],
+            unselectedLabelColor: Colors.blueGrey[300],
             controller: _controller,
             tabs: widget.tabHeaders,
 //            tabs: widget.tabHeaders == homePageTabHeader ? homePageTabHeader: shopPageTabHeader ,
@@ -53,6 +53,7 @@ class _CustomContainerTabBarState extends State<CustomContainerTabBar>
 // home page container tab bodies
 
         Container(
+          padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 0.0),
           height: MediaQuery.of(context).size.height / widget.heightPart,
 // math.max(MediaQuery.of(context).size.height-450.0, MediaQuery.of(context).size.height / widget.heightPart),
           child: new TabBarView(

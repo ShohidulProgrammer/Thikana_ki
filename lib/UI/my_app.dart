@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+//      theme: AppTheme.greenLight,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       title: 'Thikana Ki',

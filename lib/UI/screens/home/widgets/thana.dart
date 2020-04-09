@@ -29,13 +29,13 @@ class ThanaName extends StatelessWidget {
                   children: <Widget>[
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Icon(Icons.location_on,color: Colors.deepOrange,),
+                      child: Icon(Icons.location_on,color: Colors.red,),
                     ),
                     Text(thana),
                   ],
                 ),
               ),
-              Text('Change location'),
+              Text('Change location', style: TextStyle(color: Colors.red)),
             ],
           ),
         ),

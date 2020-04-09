@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/UI/commonWidget/keyboard_input/login_text_field.dart';
 import 'package:thikana_ki/UI/commonWidget/buttons/app_button.dart';
+import 'package:thikana_ki/UI/commonWidget/keyboard_input/login_text_field.dart';
 import 'package:thikana_ki/UI/screens/login/widgets/password_text_field.dart';
 
 import 'aggre_check_box.dart';
@@ -25,20 +25,27 @@ class _UserSignUpState extends State<UserSignUp> {
     return Padding(
       padding: const EdgeInsets.all(18.0),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          MyFormTextField(
-            hintText: 'name',
-            icon: const Icon(Icons.perm_identity),
-            fieldKey: _userNameFieldKey,
-          ),
-          MyFormTextField(
-              hintText: 'phone',
-              icon: Icon(Icons.phone),
-              keyboardType: TextInputType.phone,
-              fieldKey: _phoneFieldKey),
-          PasswordTextField(),
-          PasswordTextField(
-            hintText: 'confirm_password',
+          Expanded(
+            child: ListView(
+              children: <Widget>[
+                MyFormTextField(
+                  hintText: 'name',
+                  icon: const Icon(Icons.perm_identity),
+                  fieldKey: _userNameFieldKey,
+                ),
+                MyFormTextField(
+                    hintText: 'phone',
+                    icon: Icon(Icons.phone),
+                    keyboardType: TextInputType.phone,
+                    fieldKey: _phoneFieldKey),
+                PasswordTextField(),
+                PasswordTextField(
+                  hintText: 'confirm_password',
+                ),
+              ],
+            ),
           ),
           AgreeCheckbox(),
           _buildButton(),

@@ -1,8 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:thikana_ki/UI/commonWidget/buttons/app_button.dart';
+import 'package:thikana_ki/UI/commonWidget/dialog/dialog_utils.dart';
 import 'package:thikana_ki/UI/screens/shop/widget_list/video_url_list.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+
+import 'shop_text_form_field.dart';
 
 /// Creates list of video players
 class VideoList extends StatefulWidget {
@@ -61,7 +64,7 @@ class _VideoListState extends State<VideoList> {
                   child: AppButton(
                     text: 'Add New Video',
                     onPressed: () {
-                      // Todo: Add Products
+                      addVideo();
                     },
                     disableTouchWhenLoading: true,
                   ),
@@ -71,8 +74,8 @@ class _VideoListState extends State<VideoList> {
                 ),
           Expanded(
             child: ListView.separated(
-              padding:
-                  EdgeInsets.only(top: 8.0, bottom: 180.0, left: 2.0, right: 2.0),
+              padding: EdgeInsets.only(
+                  top: 8.0, bottom: 180.0, left: 2.0, right: 2.0),
               itemBuilder: (context, index) {
                 return YoutubePlayer(
                   key: ObjectKey(_controllers[index]),
@@ -132,5 +135,15 @@ class _VideoListState extends State<VideoList> {
         ],
       ),
     );
+  }
+
+  void addVideo() {
+    DialogUtils.showCustomDialog(context,
+        title: "New Video",
+        okBtnText: "Add",
+        cancelBtnText: "Cancel",
+        child: shopTextFormField(labelText: "Youtube link"),
+        /* call method in which you have write your logic and save process  */
+        okBtnFunction: () => {});
   }
 }

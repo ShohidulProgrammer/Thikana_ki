@@ -3,7 +3,8 @@ import 'package:thikana_ki/cores/configs/router/router_path_constants.dart';
 import 'package:thikana_ki/cores/models/screen_models/icon_with_title_list.dart';
 
 class ImageWithTitleCard extends StatelessWidget {
-  const ImageWithTitleCard({Key key, this.iconWithTitleModel}) : super(key: key);
+  const ImageWithTitleCard({Key key, this.iconWithTitleModel})
+      : super(key: key);
   final IconWithTitleModel iconWithTitleModel;
 
   @override
@@ -26,10 +27,8 @@ class ImageWithTitleCard extends StatelessWidget {
                 flex: 2,
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
-                  child: Icon(
-                    iconWithTitleModel.icon,
-                    color: iconWithTitleModel.color,
-                  ),
+                  child: Icon(iconWithTitleModel.icon,
+                      color: iconWithTitleModel.color, size: 30),
 //                  Image.network(
 //                    'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTpjEka_FWyPfQBgiQg4QUDRZc1BeWqiNjurXPbnDc7vUMshkC9',
 //                    // width: 300,

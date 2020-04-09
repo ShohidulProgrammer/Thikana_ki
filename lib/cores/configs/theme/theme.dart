@@ -19,6 +19,7 @@ class AppTheme {
   ///List Font support
   static List<String> fontSupport = ["Raleway", "Roboto", "Merriweather"];
 
+
   ///Default Theme
   static ThemeModel currentTheme = ThemeModel.fromJson({
     "name": "default",
@@ -71,6 +72,7 @@ class AppTheme {
   static ThemeData darkTheme = CollectionTheme.getCollectionTheme(
     theme: currentTheme.darkTheme,
   );
+
 
   ///Singleton factory
   static final AppTheme _instance = AppTheme._internal();

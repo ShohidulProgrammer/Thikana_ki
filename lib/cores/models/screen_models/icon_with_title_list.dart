@@ -13,7 +13,7 @@ class IconWithTitleModel {
 
 const List<IconWithTitleModel> iconWithTitleList = const <IconWithTitleModel>[
   const IconWithTitleModel(
-      title: 'Car', icon: Icons.directions_car, color: Colors.blueGrey),
+      title: 'Car', icon: Icons.directions_car, color: Colors.blueGrey, ),
   const IconWithTitleModel(
       title: 'Bicycle', icon: Icons.directions_bike, color: Colors.green),
   const IconWithTitleModel(

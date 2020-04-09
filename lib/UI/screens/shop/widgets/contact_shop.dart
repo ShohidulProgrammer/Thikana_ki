@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:thikana_ki/UI/commonWidget/buttons/app_button.dart';
+import 'package:thikana_ki/UI/commonWidget/dialog/dialog_utils.dart';
 import 'package:thikana_ki/UI/commonWidget/google_map/GoogleMap.dart';
 import 'package:thikana_ki/cores/api/local_file_api.dart';
 import 'package:thikana_ki/cores/models/model_result_api.dart';
@@ -7,6 +8,7 @@ import 'package:thikana_ki/cores/models/screen_models/product_detail_page_model.
 
 import 'contact_info.dart';
 import 'contact_info_shop_open_time.dart';
+import 'shop_text_form_field.dart';
 import 'social_contact.dart';
 
 class ContactShop extends StatefulWidget {
@@ -46,7 +48,7 @@ class _ContactShopState extends State<ContactShop> {
                   child: AppButton(
                     text: 'Edit Business Profile',
                     onPressed: () {
-                      // Todo: Add Products
+                      editBusinessProfile();
                     },
                     disableTouchWhenLoading: true,
                   ),
@@ -455,6 +457,33 @@ class _ContactShopState extends State<ContactShop> {
 //          ),
         ],
       ),
+    );
+  }
+
+  void editBusinessProfile() {
+    DialogUtils.showCustomDialog(context,
+        title: "Edit Business Profile",
+        okBtnText: "Save",
+        cancelBtnText: "Cancel",
+        child: _buildEditBusinessProfileForm(),
+        /* call method in which you have write your logic and save process  */
+        okBtnFunction: () => {});
+  }
+
+  Widget _buildEditBusinessProfileForm() {
+    return ListView(
+      children: <Widget>[
+        shopTextFormField(labelText: 'Business Name'),
+        shopTextFormField(labelText: 'Category'),
+        shopTextFormField(labelText: 'Address'),
+        shopTextFormField(labelText: 'Phone'),
+        shopTextFormField(labelText: 'Email'),
+        shopTextFormField(labelText: 'WebSite'),
+        shopTextFormField(labelText: 'Facebook Link'),
+        shopTextFormField(labelText: 'linkdin Link'),
+        shopTextFormField(labelText: 'twitter Link'),
+        shopTextFormField(labelText: 'twitter Link'),
+      ],
     );
   }
 }
