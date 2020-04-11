@@ -7,6 +7,7 @@ enum TagType {
   secondaryIcon,
   small,
   status,
+  offer,
   light,
   gray,
   chip,
@@ -133,7 +134,7 @@ class AppTag extends StatelessWidget {
             ),
             decoration: BoxDecoration(
               color: Theme.of(context).primaryColor,
-              borderRadius: BorderRadius.all(Radius.circular(3)),
+              borderRadius: BorderRadius.all(Radius.circular(10)),
             ),
             child: Text(
               data,
@@ -141,6 +142,30 @@ class AppTag extends StatelessWidget {
                   .textTheme
                   .caption
                   .copyWith(color: Colors.white),
+            ),
+          ),
+        );
+
+      case TagType.offer:
+        return InkWell(
+          onTap: onPressed,
+          child: Container(
+            padding: EdgeInsets.only(
+              left: 6,
+              right: 6,
+              top: 3,
+              bottom: 3,
+            ),
+            decoration: BoxDecoration(
+              color: Theme.of(context).primaryColor,
+              borderRadius: BorderRadius.all(Radius.circular(20)),
+            ),
+            child: Text(
+              data,
+              style: Theme.of(context)
+                  .textTheme
+                  .caption
+                  .copyWith(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 18),
             ),
           ),
         );

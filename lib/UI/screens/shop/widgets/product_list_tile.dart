@@ -7,7 +7,7 @@ class ProductListTile extends CustomListTile {
       {@required String productName,
       String category,
       String currentPrice,
-      String originalPrice})
+      String regularPrice})
       : super(
           title: Text(productName),
           subTitle: Text(category),
@@ -21,7 +21,7 @@ class ProductListTile extends CustomListTile {
 //        text: currentPrice,
               children: <TextSpan>[
                 new TextSpan(
-                  text: originalPrice,
+                  text: regularPrice,
                   style: new TextStyle(
                     color: Colors.red[300],
                     decoration: TextDecoration.lineThrough,

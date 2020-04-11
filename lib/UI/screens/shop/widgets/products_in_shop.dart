@@ -7,6 +7,7 @@ import 'package:thikana_ki/UI/commonWidget/dialog/dialog_utils.dart';
 import 'package:thikana_ki/UI/commonWidget/keyboard_input/search_input_field.dart';
 import 'package:thikana_ki/UI/commonWidget/list/custom_sererator_list_factory.dart';
 
+import 'add_product_form.dart';
 import 'product_list_tile.dart';
 import 'shop_text_form_field.dart';
 
@@ -52,7 +53,7 @@ class _ProductsInShopState extends State<ProductsInShop> {
                 productName: 'Product Name',
                 category: "Product Category",
                 currentPrice: "50 /=",
-                originalPrice: "60 /=",
+                regularPrice: "60 /=",
               ),
             ),
           ),
@@ -61,74 +62,81 @@ class _ProductsInShopState extends State<ProductsInShop> {
     );
   }
 
-  Widget _buildImage() {
-    return Column(
-      children: <Widget>[
-        InkWell(
-          child: _image == null
-              ? new Image.asset(
-                  'assets/images/img_placeholder.jpg',
-                  height: 200.0,
-                  width: 400.0,
-                  fit: BoxFit.fill,
-                )
-              : new Image.file(
-                  _image,
-                  height: 200.0,
-                  width: 400.0,
-                ),
-          onTap: () {
-            // getImageFromCamera();
-            _isImage = true;
-          },
-        ),
-        FloatingActionButton(
-          onPressed: () => Text('Image picker disabled'),
-          //getImage,
-          tooltip: 'Pick Image',
-          child: Icon(Icons.add_a_photo),
-        ),
-      ],
-    );
-  }
-
   void addProduct() {
     DialogUtils.showCustomDialog(context,
         title: "New Product",
         okBtnText: "Add",
         cancelBtnText: "Cancel",
-        child: _buildAddProductForm(),
+        child: AddProductForm(),
         /* call method in which you have write your logic and save process  */
         okBtnFunction: () => {});
   }
 
-  Widget _buildAddProductForm() {
-    return Container(
-      height: 250,
-      child: SingleChildScrollView(
-          child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          _buildImage(),
-          // text input
-          _buildForm(),
-        ],
-      )),
-    );
-  }
+
 }
 
-Widget _buildForm() {
-  return Column(
-    mainAxisSize: MainAxisSize.min,
-    children: <Widget>[
-      // text input
-      shopTextFormField(labelText: "Product Name *", hintText: 'Lux'),
-      shopTextFormField(labelText: "Category Name*", hintText: 'Soap'),
-      shopTextFormField(labelText: "Current Price*", hintText: '25'),
-      shopTextFormField(labelText: "Regular Price", hintText: '30'),
-      shopTextFormField(labelText: "Product Details", hintText: 'Soap'),
-      shopTextFormField(labelText: "Keywords", hintText: 'myTag'),
-    ],
-  );
-}
+//Widget _buildForm() {
+//  return Column(
+//    mainAxisSize: MainAxisSize.min,
+//    children: <Widget>[
+//      // text input
+//      shopTextFormField(labelText: "Product Name *", hintText: 'Lux'),
+//      shopTextFormField(labelText: "Category Name*", hintText: 'Soap'),
+//      shopTextFormField(labelText: "Current Price*", hintText: '25'),
+//      shopTextFormField(labelText: "Regular Price", hintText: '30'),
+//      shopTextFormField(labelText: "Product Details", hintText: 'Soap'),
+//      shopTextFormField(labelText: "Keywords", hintText: 'myTag'),
+//    ],
+//  );
+//}
+//
+//
+//Widget _buildImage() {
+//  return Column(
+//    children: <Widget>[
+//      InkWell(
+//        child: _image == null
+//            ? new Image.asset(
+//          'assets/images/img_placeholder.jpg',
+//          height: 200.0,
+//          width: 400.0,
+//          fit: BoxFit.fill,
+//        )
+//            : new Image.file(
+//          _image,
+//          height: 200.0,
+//          width: 400.0,
+//        ),
+//        onTap: () {
+//          // getImageFromCamera();
+//          _isImage = true;
+//        },
+//      ),
+//      FloatingActionButton(
+//        onPressed: () => Text('Image picker disabled'),
+//        //getImage,
+//        tooltip: 'Pick Image',
+//        child: Icon(Icons.add_a_photo),
+//      ),
+//    ],
+//  );
+//}
+
+
+
+//Widget _buildAddProductForm() {
+//  return Container(
+//    height: 250,
+//    child: SingleChildScrollView(
+//        child: Form(
+//          child: Column(
+//            mainAxisSize: MainAxisSize.min,
+//            children: <Widget>[
+//              _buildImage(),
+//              // text input
+//              _buildForm(),
+//            ],
+//          ),
+//        )),
+//  );
+//}

@@ -11,7 +11,8 @@ class Discount extends StatelessWidget {
       children: <Widget>[
         AppTag(
           'Upto $discount% OFF',
-          type: TagType.rateSmall,
+          type: TagType.offer,
+
         ),
       ],
     );

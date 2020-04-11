@@ -9,6 +9,7 @@ import '../../wishlist/wishlist.dart';
 List<Widget> bottomNavigationBodyItems = [
   HomePage(),
   WishList(),
+
   MessageList(),
   NotificationList(),
   DashBoardPage(),

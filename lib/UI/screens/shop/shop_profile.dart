@@ -43,7 +43,7 @@ class _ShopProfileState extends State<ShopProfile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Discount(
+        title: Discount(
           discount: 50,
         ),
         backgroundColor: Colors.transparent,

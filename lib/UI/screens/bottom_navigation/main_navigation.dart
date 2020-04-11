@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:thikana_ki/cores/configs/mobile_screen_size.dart';
+import 'package:thikana_ki/cores/utils/theme/device_screen_size.dart';
 import '../../../cores/utils/language/translate.dart';
 import 'widget_list/bottom_menu_item.dart';
 import 'widget_list/bottom_navigation_body_items.dart';
 import '../../commonWidget/drawer/drawer_menu.dart';
 
 class MainNavigation extends StatefulWidget {
+
   @override
   _MainNavigationState createState() => _MainNavigationState();
 }
@@ -20,6 +23,7 @@ class _MainNavigationState extends State<MainNavigation> {
 
   @override
   Widget build(BuildContext context) {
+    UIScreenSize.size = MediaQuery.of(context).size;
     return Scaffold(
         drawer: DrawerMenu(),
         body: IndexedStack(

@@ -75,6 +75,7 @@ class CustomTextInputField extends StatelessWidget {
             onTap: onTap,
             textAlignVertical: TextAlignVertical.center,
             onSubmitted: onSubmitted,
+
             controller: controller,
             focusNode: focusNode,
             onChanged: onChanged,

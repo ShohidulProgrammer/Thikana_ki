@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:geocoder/geocoder.dart';
 import 'package:thikana_ki/UI/commonWidget/buttons/app_button.dart';
 import 'package:thikana_ki/UI/commonWidget/dialog/dialog_utils.dart';
-import 'package:thikana_ki/UI/commonWidget/google_map/GoogleMap.dart';
+import 'package:thikana_ki/UI/commonWidget/google_map/google_map.dart';
+import 'package:thikana_ki/UI/commonWidget/google_map/marker/GoogleMap.dart';
 import 'package:thikana_ki/cores/api/local_file_api.dart';
 import 'package:thikana_ki/cores/models/model_result_api.dart';
 import 'package:thikana_ki/cores/models/screen_models/product_detail_page_model.dart';
+import 'package:thikana_ki/cores/utils/location/current_location.dart';
 
 import 'contact_info.dart';
 import 'contact_info_shop_open_time.dart';
@@ -18,6 +21,7 @@ class ContactShop extends StatefulWidget {
 
 class _ContactShopState extends State<ContactShop> {
   ProductDetailPageModel _detailPage;
+  final TextEditingController _addressController = new TextEditingController();
 
   @override
   void initState() {
@@ -63,7 +67,7 @@ class _ContactShopState extends State<ContactShop> {
                 Container(
                     child: Stack(
                   children: <Widget>[
-                    MyGoogleMap(
+                    AreaMap(
                       heightPart: 2.8,
                     ),
                     Positioned(
@@ -471,19 +475,38 @@ class _ContactShopState extends State<ContactShop> {
   }
 
   Widget _buildEditBusinessProfileForm() {
-    return ListView(
-      children: <Widget>[
-        shopTextFormField(labelText: 'Business Name'),
-        shopTextFormField(labelText: 'Category'),
-        shopTextFormField(labelText: 'Address'),
-        shopTextFormField(labelText: 'Phone'),
-        shopTextFormField(labelText: 'Email'),
-        shopTextFormField(labelText: 'WebSite'),
-        shopTextFormField(labelText: 'Facebook Link'),
-        shopTextFormField(labelText: 'linkdin Link'),
-        shopTextFormField(labelText: 'twitter Link'),
-        shopTextFormField(labelText: 'twitter Link'),
-      ],
+    final _formKey = GlobalKey<FormState>();
+    return SingleChildScrollView(
+      child: Form(
+        key: _formKey,
+        child: Column(
+          children: <Widget>[
+            shopTextFormField(labelText: 'Business Name'),
+            shopTextFormField(labelText: 'Category'),
+            shopTextFormField(
+                labelText: 'Address',
+                textController: _addressController,
+                suffixIcon: Icons.location_searching,
+                onPressedSuffixIcon: () => loadLocation()),
+            shopTextFormField(labelText: 'Phone'),
+            shopTextFormField(labelText: 'Email'),
+            shopTextFormField(labelText: 'WebSite'),
+            shopTextFormField(labelText: 'Facebook Link'),
+            shopTextFormField(labelText: 'linkdin Link'),
+            shopTextFormField(labelText: 'twitter Link'),
+            shopTextFormField(labelText: 'twitter Link'),
+          ],
+        ),
+      ),
     );
+  }
+
+  Future<void> loadLocation() async {
+    Address address = await LocationUtils.getCurrentLocation();
+    await Future.delayed(Duration(milliseconds: 100));
+    setState(() {
+      _addressController.text = address.addressLine;
+    });
+    print('\n\nMy Business Location: ${address.addressLine}');
   }
 }
