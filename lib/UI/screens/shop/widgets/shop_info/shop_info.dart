@@ -5,6 +5,7 @@ import 'package:thikana_ki/cores/api/local_file_api.dart';
 import 'package:thikana_ki/cores/configs/config.dart';
 import 'package:thikana_ki/cores/models/import_model.dart';
 
+import 'components/edit_shop_title.dart';
 import 'components/shop_current_status.dart';
 
 class ShopInfo extends StatefulWidget {
@@ -54,8 +55,13 @@ class _ShopInfoState extends State<ShopInfo> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               FlatButton(
-                onPressed: () =>
-                    widget.isEditor ? print('Edit Shop name') : null,
+                onPressed: () => widget.isEditor
+                    ? editShopTitle(
+                        context: context,
+                        title: 'Business Name',
+                        labelText: 'Name',
+                        hintText: _detailPage.title)
+                    : null,
                 child: Text(
                   _detailPage.title,
                   style: Theme.of(context)
@@ -76,58 +82,80 @@ class _ShopInfoState extends State<ShopInfo> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              FlatButton(
-                onPressed: () =>
-                    widget.isEditor ? print('Edit Shop Category') : null,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  FlatButton(
+                    onPressed: () => widget.isEditor
+                        ? editShopTitle(
+                            context: context,
+                            title: 'Shop Category',
+                            labelText: 'Category',
+                            hintText: _detailPage.subtitle)
+                        : null,
+                    child: Text(
                       "${_detailPage.subtitle}",
                       style: Theme.of(context).textTheme.body2,
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 3),
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
-                        AppTag(
-                          "${_detailPage.rate}",
-                          type: TagType.rateSmall,
-                        ),
-                        Padding(padding: EdgeInsets.only(left: 5)),
-                        StarRating(
-                          rating: _detailPage.rate,
-                          size: 14,
-                          color: AppTheme.yellowColor,
-                          borderColor: AppTheme.yellowColor,
-                          onRatingChanged: (v) {
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 3),
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      AppTag(
+                        "${_detailPage.rate}",
+                        type: TagType.rateSmall,
+                      ),
+                      Padding(padding: EdgeInsets.only(left: 5)),
+                      StarRating(
+                        rating: _detailPage.rate,
+                        size: 14,
+                        color: AppTheme.yellowColor,
+                        borderColor: AppTheme.yellowColor,
+                        onRatingChanged: (v) {
 //                            _onReview();
-                          },
-                        ),
-                        Padding(padding: EdgeInsets.only(left: 5)),
-                        Text(
-                          "(${_detailPage.numRate})",
-                          style: Theme.of(context).textTheme.body2,
-                        ),
-                      ],
-                    )
-                  ],
-                ),
+                        },
+                      ),
+                      Padding(padding: EdgeInsets.only(left: 5)),
+                      Text(
+                        "(${_detailPage.numRate})",
+                        style: Theme.of(context).textTheme.body2,
+                      ),
+                    ],
+                  )
+                ],
               ),
               IconButton(
-                  icon: Icon(
-                    Icons.phone,
-                    color: Theme.of(context).primaryColorLight,
-                  ),
-                  onPressed: () {}),
+                icon: Icon(
+                  Icons.phone,
+                  color: Theme.of(context).primaryColorLight,
+                ),
+                onPressed: () => widget.isEditor
+                    ? editShopTitle(
+                        context: context,
+                        title: 'Business Mobile Number',
+                        labelText: 'Mobile No',
+                        hintText: '01944700')
+                    :
+                    // # ToDo: Call to this number
+                    print('Call to this number'),
+              ),
               IconButton(
                 icon: Icon(
                   Icons.chat,
                   color: Theme.of(context).primaryColorLight,
                 ),
-                onPressed: () {},
+                onPressed: () => widget.isEditor
+                    ? editShopTitle(
+                        context: context,
+                        title: 'Business Chat',
+                        labelText: 'Chat address',
+                        hintText: 'user name')
+                    :
+                    // # ToDo: Chat to this shop
+                    print('Chat to this shop'),
               ),
               widget.isEditor
                   ? IconButton(

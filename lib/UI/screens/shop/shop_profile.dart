@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:thikana_ki/UI/commonWidget/keyboard_input/normal_text_form_field.dart';
 import 'package:thikana_ki/UI/screens/shop/widgets/shop_info/components/app_bar_discount_leading.dart';
 import 'package:thikana_ki/cores/api/local_file_api.dart';
 import 'package:thikana_ki/cores/configs/router/router_path_constants.dart';
 import 'package:thikana_ki/cores/models/import_model.dart';
 
+import 'widgets/shop_info/components/edit_shop_title.dart';
+import 'widgets/shop_info/components/edit_shop_widget.dart';
 import 'widgets/shop_page_body.dart';
 
 class ShopProfile extends StatefulWidget {
@@ -57,7 +60,12 @@ class _ShopProfileState extends State<ShopProfile> {
                       Icons.lock_outline,
                       color: Colors.white,
                     ),
-                    onPressed: _onLike,
+//                    onPressed:  editShopInfo(
+//                        context: context,
+//                        title: 'Business Image Link',
+//                      child: Widget _buildShopImageForm()
+//                       )
+
                   )
                 : IconButton(
                     icon: Icon(
@@ -112,7 +120,11 @@ class _ShopProfileState extends State<ShopProfile> {
   }
 
   void _onShareLocation() {}
+
+
 }
+
+//ListTile()
 
 //      floatingActionButton: isEditor
 //          ? AddProductionFloatingActionButton()

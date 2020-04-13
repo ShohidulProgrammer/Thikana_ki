@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:geocoder/geocoder.dart';
-import 'package:thikana_ki/UI/commonWidget/dropdown/my_drop_down_menu.dart';
 import 'package:thikana_ki/cores/utils/location/current_location.dart';
 
 import '../../../../../commonWidget/keyboard_input/normal_text_form_field.dart';
@@ -39,9 +38,7 @@ class _BusinessProfileEditFormState extends State<BusinessProfileEditForm> {
             normalTextFormField(labelText: 'twitter Link'),
             // open close time
             ShopOpenCloseTimeEditor(),
-//            SizedBox(
-//              height: 8.0,
-//            ),
+            // description
             normalTextFormField(labelText: 'Description', keyboardType: TextInputType.multiline,)
           ],
         ),

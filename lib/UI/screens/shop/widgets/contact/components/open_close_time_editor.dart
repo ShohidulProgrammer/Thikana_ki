@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
-import 'package:thikana_ki/UI/commonWidget/dropdown/my_drop_down_menu.dart';
-import 'package:thikana_ki/UI/screens/shop/widget_list/time_value_list.dart';
 
 class ShopOpenCloseTimeEditor extends StatefulWidget {
   @override
@@ -10,12 +8,20 @@ class ShopOpenCloseTimeEditor extends StatefulWidget {
 }
 
 class _ShopOpenCloseTimeEditorState extends State<ShopOpenCloseTimeEditor> {
-  String _openHour,
-      _openMinute,
-      _openPeriods,
-      _closeHour,
-      _closeMinute,
-      _closePeriods;
+  String _monOpen,
+      _tuOpen,
+      _wedOpen,
+      _thurOpen,
+      _friOpen,
+      _satOpen,
+      _sunOpen,
+      _monClose,
+      _tuClose,
+      _wedClose,
+      _thurClose,
+      _friClose,
+      _satClose,
+      _sunClose;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +35,6 @@ class _ShopOpenCloseTimeEditorState extends State<ShopOpenCloseTimeEditor> {
         _buildOpenCloseChooser(day: 'Fri'),
         _buildOpenCloseChooser(day: 'Sat'),
         _buildOpenCloseChooser(day: 'Sun'),
-//        _buildOpenCloseChooser(day: 'Sun'),
       ],
     );
   }
@@ -63,41 +68,47 @@ class _ShopOpenCloseTimeEditorState extends State<ShopOpenCloseTimeEditor> {
   Widget _buildOpenCloseChooser({
     String day,
   }) {
-    return Table(
-        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-        columnWidths: {
-          0: FractionColumnWidth(.2)
-        },
+    return Table(defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+//        columnWidths: {
+//          0: FractionColumnWidth(.2)
+//        },
         children: [
           TableRow(children: [
+//            MyCheckBox(),
             Text(
               day,
               style: TextStyle(fontWeight: FontWeight.w400),
             ),
-            MyDropDownMenu(
-              menuItemList: hours,
+            showTimePicker(Icons.access_time),
+            SizedBox(
+              width: 5.0,
             ),
-            MyDropDownMenu(
-              menuItemList: minutes,
-            ),
-            MyDropDownMenu(
-              menuItemList: amPm,
-            ),
-            Text('  -'),
-            MyDropDownMenu(
-              menuItemList: hours,
-            ),
-            MyDropDownMenu(
-              menuItemList: minutes,
-            ),
-            MyDropDownMenu(
-              menuItemList: amPm,
-            ),
+            showTimePicker(Icons.watch_later),
+
+//            MyDropDownMenu(
+//              menuItemList: hours,
+//            ),
+//            MyDropDownMenu(
+//              menuItemList: minutes,
+//            ),
+//            MyDropDownMenu(
+//              menuItemList: amPm,
+//            ),
+//            Text('  -'),
+//            MyDropDownMenu(
+//              menuItemList: hours,
+//            ),
+//            MyDropDownMenu(
+//              menuItemList: minutes,
+//            ),
+//            MyDropDownMenu(
+//              menuItemList: amPm,
+//            ),
           ]),
         ]);
   }
 
-  Widget showTimePicker(String day) {
+  Widget showTimePicker(IconData icon) {
     return FlatButton(
         onPressed: () {
           DatePicker.showTime12hPicker(context, showTitleActions: true,
@@ -108,10 +119,7 @@ class _ShopOpenCloseTimeEditorState extends State<ShopOpenCloseTimeEditor> {
             print('confirm $date');
           }, currentTime: DateTime.now());
         },
-        child: Text(
-          day,
-          style: TextStyle(color: Colors.blue),
-        ));
+        child: Icon(icon));
   }
 
 //  void selectedItem(newValue) {
