@@ -6,7 +6,7 @@ import 'package:thikana_ki/UI/commonWidget/dialog/bottom_sheet.dart';
 import 'package:thikana_ki/cores/utils/image/image_picker.dart';
 import 'package:thikana_ki/cores/utils/theme/device_screen_size.dart';
 
-import 'shop_text_form_field.dart';
+import '../../../../../commonWidget/keyboard_input/normal_text_form_field.dart';
 
 class AddProductForm extends StatefulWidget {
   @override
@@ -29,12 +29,12 @@ class _AddProductFormState extends State<AddProductForm> {
             _buildImage(),
             // text input
 
-            shopTextFormField(labelText: "Product Name *", hintText: 'Lux'),
-            shopTextFormField(labelText: "Category Name*", hintText: 'Soap'),
-            shopTextFormField(labelText: "Current Price*", hintText: '25'),
-            shopTextFormField(labelText: "Regular Price", hintText: '30'),
-            shopTextFormField(labelText: "Product Details", hintText: 'Soap'),
-            shopTextFormField(labelText: "Keywords", hintText: 'myTag'),
+            normalTextFormField(labelText: "Product Name *", hintText: 'Lux'),
+            normalTextFormField(labelText: "Category Name*", hintText: 'Soap'),
+            normalTextFormField(labelText: "Current Price*", hintText: '25'),
+            normalTextFormField(labelText: "Regular Price", hintText: '30'),
+            normalTextFormField(labelText: "Product Details", hintText: 'Soap'),
+            normalTextFormField(labelText: "Keywords", hintText: 'myTag'),
           ],
         ),
       )),

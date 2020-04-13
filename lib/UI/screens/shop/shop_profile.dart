@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/UI/screens/shop/widgets/app_bar_discount_leading.dart';
+import 'package:thikana_ki/UI/screens/shop/widgets/shop_info/components/app_bar_discount_leading.dart';
 import 'package:thikana_ki/cores/api/local_file_api.dart';
 import 'package:thikana_ki/cores/configs/router/router_path_constants.dart';
 import 'package:thikana_ki/cores/models/import_model.dart';

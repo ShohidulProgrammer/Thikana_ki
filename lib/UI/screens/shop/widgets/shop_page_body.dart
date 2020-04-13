@@ -3,7 +3,7 @@ import 'package:thikana_ki/UI/commonWidget/carousel_banner/carousel_banner_image
 import 'package:thikana_ki/UI/commonWidget/tab_bar/custom_tab_bar.dart';
 import 'package:thikana_ki/UI/screens/shop/widget_list/shop_page_tab_bar_contents.dart';
 
-import 'shop_info.dart';
+import 'shop_info/shop_info.dart';
 
 class ShopPageBody extends StatelessWidget {
   @override

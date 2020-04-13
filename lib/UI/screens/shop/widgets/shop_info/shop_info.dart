@@ -5,7 +5,7 @@ import 'package:thikana_ki/cores/api/local_file_api.dart';
 import 'package:thikana_ki/cores/configs/config.dart';
 import 'package:thikana_ki/cores/models/import_model.dart';
 
-import 'shop_current_status.dart';
+import 'components/shop_current_status.dart';
 
 class ShopInfo extends StatefulWidget {
   final bool isEditor;
@@ -18,11 +18,8 @@ class ShopInfo extends StatefulWidget {
 
 class _ShopInfoState extends State<ShopInfo> {
   bool _like = false;
-
   bool _showHour = false;
-
   ProductDetailPageModel _detailPage;
-
   bool isOpen = true;
 
   @override
@@ -69,7 +66,7 @@ class _ShopInfoState extends State<ShopInfo> {
               ),
 
               // shop open or close status
-              ShopCurrentStatus(
+              ShopCurrentOpenCloseStatus(
                 currentStatus: _detailPage.status,
               ),
 

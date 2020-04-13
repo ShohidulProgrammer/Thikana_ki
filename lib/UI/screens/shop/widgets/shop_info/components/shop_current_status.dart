@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:thikana_ki/UI/commonWidget/tag/app_tag.dart';
 
-class ShopCurrentStatus extends StatelessWidget {
+class ShopCurrentOpenCloseStatus extends StatelessWidget {
   final String currentStatus;
 
-  const ShopCurrentStatus({@required this.currentStatus});
+  const ShopCurrentOpenCloseStatus({@required this.currentStatus});
 
   @override
   Widget build(BuildContext context) {

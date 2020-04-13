@@ -75,8 +75,8 @@ class _AreaMapState extends State<AreaMap> {
 
   @override
   void initState() {
-    _getLocation();
-    _initMarkers();
+//    _getLocation();
+//    _initMarkers();
     super.initState();
   }
 

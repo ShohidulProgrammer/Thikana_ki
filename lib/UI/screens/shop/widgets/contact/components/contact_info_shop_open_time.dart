@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/cores/models/screen_models/product_detail_page_model.dart';
 import 'package:thikana_ki/cores/utils/language/translate.dart';
 
 class ContactInfoShopOpenTime extends StatefulWidget {

@@ -5,7 +5,7 @@ import 'package:thikana_ki/UI/commonWidget/dialog/dialog_utils.dart';
 import 'package:thikana_ki/UI/screens/shop/widget_list/video_url_list.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-import 'shop_text_form_field.dart';
+import '../../../../commonWidget/keyboard_input/normal_text_form_field.dart';
 
 /// Creates list of video players
 class VideoList extends StatefulWidget {
@@ -142,7 +142,7 @@ class _VideoListState extends State<VideoList> {
         title: "New Video",
         okBtnText: "Add",
         cancelBtnText: "Cancel",
-        child: shopTextFormField(labelText: "Youtube link"),
+        child: normalTextFormField(labelText: "Youtube link"),
         /* call method in which you have write your logic and save process  */
         okBtnFunction: () => {});
   }

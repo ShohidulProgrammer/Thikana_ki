@@ -7,9 +7,9 @@ import 'package:thikana_ki/UI/commonWidget/dialog/dialog_utils.dart';
 import 'package:thikana_ki/UI/commonWidget/keyboard_input/search_input_field.dart';
 import 'package:thikana_ki/UI/commonWidget/list/custom_sererator_list_factory.dart';
 
-import 'add_product_form.dart';
-import 'product_list_tile.dart';
-import 'shop_text_form_field.dart';
+import 'components/add_product_form.dart';
+import 'components/product_list_tile.dart';
+
 
 class ProductsInShop extends StatefulWidget {
   @override
