@@ -1,11 +1,16 @@
+import 'dart:io';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:thikana_ki/UI/commonWidget/dialog/bottom_sheet.dart';
 import 'package:thikana_ki/UI/commonWidget/keyboard_input/normal_text_form_field.dart';
 import 'package:thikana_ki/UI/screens/shop/widgets/shop_info/components/app_bar_discount_leading.dart';
 import 'package:thikana_ki/cores/api/local_file_api.dart';
 import 'package:thikana_ki/cores/configs/router/router_path_constants.dart';
 import 'package:thikana_ki/cores/models/import_model.dart';
 
-import 'widgets/shop_info/components/edit_shop_title.dart';
+import 'widgets/product/components/image_source_type_selector_form.dart';
+import 'widgets/shop_info/components/banner_image_edit_form.dart';
 import 'widgets/shop_info/components/edit_shop_widget.dart';
 import 'widgets/shop_page_body.dart';
 
@@ -60,12 +65,11 @@ class _ShopProfileState extends State<ShopProfile> {
                       Icons.lock_outline,
                       color: Colors.white,
                     ),
-//                    onPressed:  editShopInfo(
-//                        context: context,
-//                        title: 'Business Image Link',
-//                      child: Widget _buildShopImageForm()
-//                       )
-
+                    onPressed: ()=> editShopInfo(
+                      context: context,
+                      title: 'Add Banner Image',
+                      child: BannerImageEditForm(),
+                    ),
                   )
                 : IconButton(
                     icon: Icon(
@@ -120,9 +124,32 @@ class _ShopProfileState extends State<ShopProfile> {
   }
 
   void _onShareLocation() {}
-
-
 }
+
+
+//Widget _buildBannerImageEditForm() {
+//  return Container(
+//    height: 280.0,
+//    child: ListView.builder(
+//      padding: EdgeInsets.all(0.0),
+//        itemCount: 5,
+//        itemBuilder: (context, index) {
+//          return InkWell(
+//            onTap:()=> customBottomSheet(
+//                context: context, child: ImageSourceTypeSelectorForm()),
+//            child: ListTile(
+//              leading:  Icon(Icons.image),
+//              title: Text(
+//                'Banner Image : ${index+1}',
+//              ),
+//            ),
+//          );
+//        }),
+//  );
+//}
+
+
+
 
 //ListTile()
 

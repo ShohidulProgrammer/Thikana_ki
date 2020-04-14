@@ -11,7 +11,8 @@ class Discount extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FlatButton(
+    return InkWell(
+
       child: Wrap(
         children: <Widget>[
           AppTag(
@@ -20,7 +21,7 @@ class Discount extends StatelessWidget {
           ),
         ],
       ),
-      onPressed: () => isEditor
+      onTap: () => isEditor
           ? editShopTitle(
               context: context,
               title: 'Sell Discount',

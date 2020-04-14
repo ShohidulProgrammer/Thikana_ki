@@ -3,13 +3,11 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:thikana_ki/UI/commonWidget/buttons/app_button.dart';
-import 'package:thikana_ki/UI/commonWidget/dialog/dialog_utils.dart';
 import 'package:thikana_ki/UI/commonWidget/keyboard_input/search_input_field.dart';
 import 'package:thikana_ki/UI/commonWidget/list/custom_sererator_list_factory.dart';
+import 'package:thikana_ki/UI/screens/shop/widgets/product/components/edit_product.dart';
 
-import 'components/add_product_form.dart';
 import 'components/product_list_tile.dart';
-
 
 class ProductsInShop extends StatefulWidget {
   @override
@@ -35,9 +33,11 @@ class _ProductsInShopState extends State<ProductsInShop> {
                       left: 16.0, right: 16.0, bottom: 8.0),
                   child: AppButton(
                     text: 'Add New Product',
-                    onPressed: () {
-                      addProduct();
-                    },
+                    onPressed: () => editProduct(
+                      context: context,
+                      title: "New Product",
+                      okBtnTxt: "Add",
+                    ),
                     disableTouchWhenLoading: true,
                   ),
                 )
@@ -49,11 +49,18 @@ class _ProductsInShopState extends State<ProductsInShop> {
           ),
           Expanded(
             child: CustomSeparatorListFactory(
-              child: ProductListTile(
-                productName: 'Product Name',
-                category: "Product Category",
-                currentPrice: "50 /=",
-                regularPrice: "60 /=",
+              child: InkWell(
+                onTap: () => editProduct(
+                  context: context,
+                  title: "Update Product",
+                  okBtnTxt: "Update",
+                ),
+                child: ProductListTile(
+                  productName: 'Product Name',
+                  category: "Product Category",
+                  currentPrice: "50 /=",
+                  regularPrice: "60 /=",
+                ),
               ),
             ),
           ),
@@ -62,16 +69,15 @@ class _ProductsInShopState extends State<ProductsInShop> {
     );
   }
 
-  void addProduct() {
-    DialogUtils.showCustomDialog(context,
-        title: "New Product",
-        okBtnText: "Add",
-        cancelBtnText: "Cancel",
-        child: AddProductForm(),
-        /* call method in which you have write your logic and save process  */
-        okBtnFunction: () => {});
-  }
-
+//  void addProduct() {
+//    DialogUtils.showCustomDialog(context,
+//        title: "New Product",
+//        okBtnText: "Add",
+//        cancelBtnText: "Cancel",
+//        child: ProductEditForm(),
+//        /* call method in which you have write your logic and save process  */
+//        okBtnFunction: () => {});
+//  }
 
 }
 
@@ -121,8 +127,6 @@ class _ProductsInShopState extends State<ProductsInShop> {
 //    ],
 //  );
 //}
-
-
 
 //Widget _buildAddProductForm() {
 //  return Container(

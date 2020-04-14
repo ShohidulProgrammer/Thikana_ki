@@ -37,7 +37,7 @@ class _BusinessProfileEditFormState extends State<BusinessProfileEditForm> {
             normalTextFormField(labelText: 'linkdin Link'),
             normalTextFormField(labelText: 'twitter Link'),
             // open close time
-            ShopOpenCloseTimeEditor(),
+            ShopOpenCloseTimeEditor(title: 'Choose Open & Close Time' ,),
             // description
             normalTextFormField(labelText: 'Description', keyboardType: TextInputType.multiline,)
           ],

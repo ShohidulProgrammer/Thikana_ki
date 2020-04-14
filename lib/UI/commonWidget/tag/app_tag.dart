@@ -162,10 +162,10 @@ class AppTag extends StatelessWidget {
             ),
             child: Text(
               data,
-              style: Theme.of(context)
-                  .textTheme
-                  .caption
-                  .copyWith(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 18),
+              style: Theme.of(context).textTheme.caption.copyWith(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 14),
             ),
           ),
         );

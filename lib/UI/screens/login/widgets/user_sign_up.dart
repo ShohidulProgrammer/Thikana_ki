@@ -32,12 +32,12 @@ class _UserSignUpState extends State<UserSignUp> {
               children: <Widget>[
                 MyFormTextField(
                   hintText: 'name',
-                  icon: const Icon(Icons.perm_identity),
+                  icon: const Icon(Icons.perm_identity,  color: Colors.black,),
                   fieldKey: _userNameFieldKey,
                 ),
                 MyFormTextField(
                     hintText: 'phone',
-                    icon: Icon(Icons.phone),
+                    icon: Icon(Icons.phone,  color: Colors.black,),
                     keyboardType: TextInputType.phone,
                     fieldKey: _phoneFieldKey),
                 PasswordTextField(),

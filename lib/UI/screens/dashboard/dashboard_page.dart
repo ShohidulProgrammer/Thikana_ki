@@ -10,7 +10,7 @@ class DashBoardPage extends StatelessWidget {
         children: <Widget>[
           CustomUserAccountDrawerHeader(
             image:
-                'https://cdn2.vectorstock.com/i/1000x1000/66/56/software-developer-vector-12486656.jpg',
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRRhgSomq3OavrtWRyt5ey3d1kKFKtTmlRQK26af_WxC_ytTTIf&usqp=CAU',
           ),
           DrawerMenuItem(title: 'D-Card', icon: Icons.card_membership),
           DrawerMenuItem(title: 'QR-Code', icon: Icons.graphic_eq),

@@ -7,13 +7,14 @@ import 'package:thikana_ki/cores/utils/image/image_picker.dart';
 import 'package:thikana_ki/cores/utils/theme/device_screen_size.dart';
 
 import '../../../../../commonWidget/keyboard_input/normal_text_form_field.dart';
+import 'image_source_type_selector_form.dart';
 
-class AddProductForm extends StatefulWidget {
+class ProductEditForm extends StatefulWidget {
   @override
-  _AddProductFormState createState() => _AddProductFormState();
+  _ProductEditFormState createState() => _ProductEditFormState();
 }
 
-class _AddProductFormState extends State<AddProductForm> {
+class _ProductEditFormState extends State<ProductEditForm> {
   File _image;
   bool _isImage = false;
 
@@ -49,7 +50,7 @@ class _AddProductFormState extends State<AddProductForm> {
             child: FittedBox(
               child: FloatingActionButton(
                 onPressed: () => customBottomSheet(
-                    context: context, child: imageSourceTypeListTitle()),
+                    context: context, child: ImageSourceTypeSelectorForm()),
                 tooltip: 'Pick Image',
                 child: Icon(Icons.add_a_photo),
               ),
@@ -57,7 +58,7 @@ class _AddProductFormState extends State<AddProductForm> {
           )
         : InkWell(
             onTap: () => customBottomSheet(
-                context: context, child: imageSourceTypeListTitle()),
+                context: context, child: ImageSourceTypeSelectorForm()),
             child: Image.file(
               _image,
               width: UIScreenSize.size.width / 2,
@@ -66,31 +67,4 @@ class _AddProductFormState extends State<AddProductForm> {
           );
   }
 
-  Future<void> _getImage(ImageSource imageSource) async {
-    _image = await getImage(imageSource);
-    setState(() {});
-  }
-
-  Widget imageSourceTypeListTitle() {
-    return Container(
-      child: new Wrap(
-        children: <Widget>[
-          new ListTile(
-              leading: new Icon(Icons.photo_library),
-              title: new Text('Gallery Image'),
-              onTap: () {
-                Navigator.pop(context);
-                _getImage(ImageSource.gallery);
-              }),
-          new ListTile(
-              leading: new Icon(Icons.camera_enhance),
-              title: new Text('Take Photo'),
-              onTap: () {
-                Navigator.pop(context);
-                _getImage(ImageSource.camera);
-              }),
-        ],
-      ),
-    );
-  }
 }

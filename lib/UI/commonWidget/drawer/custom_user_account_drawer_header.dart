@@ -23,8 +23,8 @@ class _CustomUserAccountDrawerHeaderState
   @override
   Widget build(BuildContext context) {
     return new UserAccountsDrawerHeader(
-      accountName: Text(widget.userName),
-      accountEmail: Text('${widget.phone}\n${widget.email}'),
+      accountName: Text(widget.userName, style: TextStyle(color: Colors.blueGrey[600]),),
+      accountEmail: Text('${widget.phone}\n${widget.email}', style: TextStyle(color: Colors.blueGrey[600]),),
       currentAccountPicture: GestureDetector(
           onTap: () {
             print('profile pic taped!');
@@ -35,7 +35,7 @@ class _CustomUserAccountDrawerHeaderState
             backgroundImage: NetworkImage(widget.image),
 //              NetworkImage("${snapshot.data.hitsList[index].previewUrl}")
           )),
-      decoration: new BoxDecoration(color: Colors.pink),
+      decoration: new BoxDecoration(color: Colors.white12),
     );
   }
 }

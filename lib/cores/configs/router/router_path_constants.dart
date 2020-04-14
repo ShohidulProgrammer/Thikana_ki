@@ -4,6 +4,7 @@ const String mainNavigationBottomPageRoute = '/';
 const String mainNavigationRoute = '/mainNavigation';
 const String loginPageRoute = '/loginPage';
 const String changePasswordPageRoute = '/changePassword';
+const String manageShopPageRoute = '/Manage Shop';
 const String changeLanguagePageRoute = '/changeLanguage';
 const String themeSettingPageRoute = '/themeSetting';
 const String fontSettingPageRoute = '/fontSetting';
