@@ -18,7 +18,7 @@ class ImageWithTitleCard extends StatelessWidget {
       child: InkWell(
         splashColor: Colors.blue.withAlpha(30),
         onTap: () {
-          Navigator.of(context).pushNamed(shopProfilePageRoute);
+          Navigator.pushNamed(context, listProductPageRoute, arguments: 'Category Name');
         },
         child: Center(
           child: Column(

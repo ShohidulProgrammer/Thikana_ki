@@ -127,7 +127,7 @@ class ContactUsState extends State<ContactUs> {
                             );
                           });
                         },
-                        icon: Icon(Icons.clear),
+                        suffixIcon: Icon(Icons.clear),
                         controller: _textNameController,
                       ),
                       Padding(
@@ -165,7 +165,7 @@ class ContactUsState extends State<ContactUs> {
                             );
                           });
                         },
-                        icon: Icon(Icons.clear),
+                        suffixIcon: Icon(Icons.clear),
                         controller: _textEmailController,
                         keyboardType: TextInputType.emailAddress,
                       ),
@@ -203,7 +203,7 @@ class ContactUsState extends State<ContactUs> {
                             );
                           });
                         },
-                        icon: Icon(Icons.clear),
+                        suffixIcon: Icon(Icons.clear),
                         controller: _textInfoController,
                       ),
                     ],
