@@ -3,7 +3,7 @@
 //import 'package:flutter/material.dart';
 //import 'package:thikana_ki/UI/commonWidget/carousel_banner/carousel_banner_image.dart';
 //import 'package:thikana_ki/UI/commonWidget/sliver/sliver_page.dart';
-//import 'package:thikana_ki/UI/screens/home/widget_list/home_page_container_tab_headers_and_bodies.dart';
+//import 'package:thikana_ki/UI/screens/home/widget_list/home_page_tab_headers_and_bodies.dart';
 //import '../../../cores/configs/router/router_path_constants.dart';
 //import '../../../cores/utils/language/translate.dart';
 //import '../../../cores/models/model_result_api.dart';
