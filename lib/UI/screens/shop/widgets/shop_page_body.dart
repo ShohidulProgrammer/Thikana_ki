@@ -8,6 +8,7 @@ import 'shop_info/shop_info.dart';
 class ShopPageBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+//    double containerHeight = (iconWithTitleList.length.toDouble())/15.4;
     return SingleChildScrollView(
       child: Column(
         children: <Widget>[
@@ -20,6 +21,7 @@ class ShopPageBody extends StatelessWidget {
             tabHeaders: shopPageTabHeader,
             tabBodies: shopPageTabBarBodies,
             heightPart: 1.6,
+
           ),
         ],
       ),

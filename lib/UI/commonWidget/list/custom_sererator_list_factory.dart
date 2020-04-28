@@ -44,6 +44,7 @@ class CustomSeparatorListFactory extends StatelessWidget {
 //    }
 
     return ListView.separated(
+      physics: const NeverScrollableScrollPhysics(),
       padding: EdgeInsets.only(
         top: 2.0,
       ),
@@ -54,7 +55,7 @@ class CustomSeparatorListFactory extends StatelessWidget {
         endIndent: 15,
 //        color: Colors.black,
       ),
-      itemCount: 10,
+      itemCount: 60,
       itemBuilder: (context, index) {
 //        final item = listItem[index] ;
         return Container(

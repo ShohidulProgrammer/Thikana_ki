@@ -74,6 +74,7 @@ class _VideoListState extends State<VideoList> {
                 ),
           Expanded(
             child: ListView.separated(
+              physics: const NeverScrollableScrollPhysics(),
               padding: EdgeInsets.only(
                   top: 8.0, bottom: 180.0, left: 2.0, right: 2.0),
               itemBuilder: (context, index) {

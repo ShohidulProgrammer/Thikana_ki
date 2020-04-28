@@ -22,10 +22,10 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
 
     Future.delayed(
-      Duration(microseconds: 500),
+      Duration(seconds: 1),
       () {
         getCurrentLocation();
-        Navigator.pushNamed(context, mainNavigationRoute);
+        Navigator.pushReplacementNamed(context, mainNavigationRoute);
       },
     );
   }

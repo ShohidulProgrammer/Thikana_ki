@@ -8,13 +8,15 @@ class ImageWithTitleCardGridView extends StatelessWidget {
       this.backgroundColor,
       this.crossAxisCount: 3,
       this.cardHeightPart: 6,
-      this.cardWidthPart: 3.5});
+      this.cardWidthPart: 3.5,
+      });
 
   final List<dynamic> myListView;
   final Color backgroundColor;
   final int crossAxisCount;
   final double cardHeightPart;
   final double cardWidthPart;
+
 
 //  final double itemHeight = 200;
 //  final double itemWidth = 150;
@@ -26,19 +28,35 @@ class ImageWithTitleCardGridView extends StatelessWidget {
     final double itemHeight = screenSize.height / cardHeightPart;
     final double itemWidth = screenSize.width / cardWidthPart;
 
-    return GridView.count(
-      padding: EdgeInsets.only(
-        top: 2.0,
-      ), // bottom: screenSize.height  /10
-      crossAxisCount: crossAxisCount,
-      childAspectRatio: (itemWidth / itemHeight),
-      children: List.generate(iconWithTitleList.length, (int index) {
-        return Container(
-          color: backgroundColor ?? Colors.blueGrey[50],
-          child:
-              ImageWithTitleCard(iconWithTitleModel: iconWithTitleList[index]),
-        );
-      }),
-    );
+
+
+//    return Wrap(children: iconWithTitleList.map((item) {
+//      return AspectRatio(
+//        aspectRatio: 3/2,
+//        child: Container(
+//          color: backgroundColor ?? Colors.blueGrey[50],
+//          child: ImageWithTitleCard(iconWithTitleModel: item),
+//        ),
+//      );
+//    }).toList(),);
+
+    return GridView.builder(
+        physics: NeverScrollableScrollPhysics(),
+        shrinkWrap: true,
+        padding: EdgeInsets.only(
+          top: 2.0,
+        ), // bottom: screenSize.height  /10
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: crossAxisCount,
+          childAspectRatio: (itemWidth / itemHeight),
+        ),
+        itemCount: iconWithTitleList.length,
+        itemBuilder: (context, index) {
+          return Container(
+            color: backgroundColor ?? Colors.blue[50],
+            child: ImageWithTitleCard(
+                iconWithTitleModel: iconWithTitleList[index]),
+          );
+        });
   }
 }

@@ -13,17 +13,17 @@ import 'marker/map_helper.dart';
 import 'marker/map_marker.dart';
 import 'marker/marker_location_list.dart';
 
-class AreaMap extends StatefulWidget {
+class MyGoogleMap extends StatefulWidget {
   final double heightPart;
   final bool myLocationEnabled;
 
-  const AreaMap({this.heightPart: 3, this.myLocationEnabled = false});
+  const MyGoogleMap({this.heightPart: 3, this.myLocationEnabled = false});
 
   @override
-  _AreaMapState createState() => _AreaMapState();
+  _MyGoogleMapState createState() => _MyGoogleMapState();
 }
 
-class _AreaMapState extends State<AreaMap> {
+class _MyGoogleMapState extends State<MyGoogleMap> {
   LocationUtils _locationUtils = LocationUtils();
 
   // variable for location
@@ -75,8 +75,8 @@ class _AreaMapState extends State<AreaMap> {
 
   @override
   void initState() {
-//    _getLocation();
-//    _initMarkers();
+    _getLocation();
+    _initMarkers();
     super.initState();
   }
 

@@ -23,7 +23,7 @@ class _CustomContainerTabBarState extends State<CustomContainerTabBar>
   void initState() {
     super.initState();
     _controller =
-        new TabController(length: widget.tabHeaders.length, vsync: this);
+    new TabController(length: widget.tabHeaders.length, vsync: this);
   }
 
   @override
@@ -47,7 +47,6 @@ class _CustomContainerTabBarState extends State<CustomContainerTabBar>
             unselectedLabelColor: Colors.blueGrey[300],
             controller: _controller,
             tabs: widget.tabHeaders,
-//            tabs: widget.tabHeaders == homePageTabHeader ? homePageTabHeader: shopPageTabHeader ,
           ),
         ),
 // home page container tab bodies

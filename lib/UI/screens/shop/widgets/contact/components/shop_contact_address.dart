@@ -9,6 +9,7 @@ class ShopContactAddress extends StatelessWidget {
   final ProductDetailPageModel detailPage;
 
   const ShopContactAddress({@required this.detailPage});
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -52,7 +53,42 @@ class ShopContactAddress extends StatelessWidget {
             padding: EdgeInsets.only(top: 20),
           ),
           Text(
-            detailPage.description,
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n'
+            '${detailPage.description}\n',
 //              overflow: TextOverflow.ellipsis,
 //              maxLines: 15,
             style: Theme.of(context).textTheme.body2.copyWith(height: 1.3),

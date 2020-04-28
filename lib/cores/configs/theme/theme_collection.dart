@@ -84,6 +84,7 @@ class CollectionTheme {
             ),
           ),
           chipTheme: ChipThemeData(
+
             backgroundColor: Color(0x1f000000),
             brightness: Brightness.light,
             deleteIconColor: Color(0xffdf3c20),

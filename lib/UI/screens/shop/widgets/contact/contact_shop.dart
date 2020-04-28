@@ -56,12 +56,13 @@ class _ContactShopState extends State<ContactShop> {
                 ),
           Expanded(
             child: ListView(
+              physics: const NeverScrollableScrollPhysics(),
               padding: EdgeInsets.all(2.0),
               children: <Widget>[
                 Container(
                     child: Stack(
                   children: <Widget>[
-                    AreaMap(
+                    MyGoogleMap(
                       heightPart: 2.8,
                     ),
                     Positioned(
