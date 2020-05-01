@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:geolocator/geolocator.dart' as geoLoc;
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
 import 'package:thikana_ki/cores/utils/location/current_location.dart';
@@ -51,6 +52,21 @@ class _MyGoogleMapState extends State<MyGoogleMap> {
   /// Color of the cluster text
   final Color _clusterTextColor = Colors.white;
 
+  Future<void> getCurrentLocation() async {
+    geoLoc.Position position = await geoLoc.Geolocator()
+        .getCurrentPosition(desiredAccuracy: geoLoc.LocationAccuracy.high);
+    print('\n\nMy Location: $position');
+    // camera position
+    setState(() {
+      _currentPosition = CameraPosition(
+        target: LatLng(position.latitude, position.longitude),
+        zoom: _currentZoom,
+      );
+    });
+
+
+  }
+
   Future _getLocation() async {
     try {
       location.onLocationChanged().listen((LocationData currentLocation) {
@@ -75,7 +91,8 @@ class _MyGoogleMapState extends State<MyGoogleMap> {
 
   @override
   void initState() {
-    _getLocation();
+    getCurrentLocation();
+//    _getLocation();
     _initMarkers();
     super.initState();
   }
@@ -95,7 +112,7 @@ class _MyGoogleMapState extends State<MyGoogleMap> {
                 child: Text(
                   'loading map..',
                   style: TextStyle(
-                      fontFamily: 'Avenir-Medium', color: Colors.grey[400]),
+                      fontFamily: 'Avenir-Medium', color: Colors.blueGrey[300]),
                 ),
               ),
             )

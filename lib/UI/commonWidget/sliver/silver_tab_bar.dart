@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-customTabBarHeader({List<Widget> tabHeaders}) {
+TabBar customTabBarHeader({List<Widget> tabHeaders}) {
   return TabBar(
 //        isScrollable: true,
     labelPadding: EdgeInsets.symmetric(vertical: 2.0, horizontal: 2.0),

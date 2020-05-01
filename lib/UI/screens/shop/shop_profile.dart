@@ -1,15 +1,9 @@
-import 'dart:io';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/UI/commonWidget/dialog/bottom_sheet.dart';
-import 'package:thikana_ki/UI/commonWidget/keyboard_input/normal_text_form_field.dart';
+
 import 'package:thikana_ki/UI/screens/shop/widgets/shop_info/components/app_bar_discount_leading.dart';
 import 'package:thikana_ki/cores/api/local_file_api.dart';
 import 'package:thikana_ki/cores/configs/router/router_path_constants.dart';
 import 'package:thikana_ki/cores/models/import_model.dart';
-
-import 'widgets/product/components/image_source_type_selector_form.dart';
 import 'widgets/shop_info/components/banner_image_edit_form.dart';
 import 'widgets/shop_info/components/edit_shop_widget.dart';
 import 'widgets/shop_page_body.dart';
@@ -62,7 +56,7 @@ class _ShopProfileState extends State<ShopProfile> {
             child: isEditor
                 ? IconButton(
                     icon: Icon(
-                      Icons.lock_outline,
+                      Icons.add_a_photo,
                       color: Colors.white,
                     ),
                     onPressed: ()=> editShopInfo(

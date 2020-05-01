@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:thikana_ki/UI/screens/shop/widget_list/shop_page_header_actions.dart';
 import 'package:thikana_ki/cores/utils/theme/device_screen_size.dart';
 
 class CustomSliverAppBar extends StatelessWidget {
-  final List<Widget> sliverHeadersList;
+  final List<Widget> sliverAppBarList;
   final List<Widget> headerActionList;
   final bool pined;
   final bool floating;
   final double heightPart;
 
   const CustomSliverAppBar(
-      {this.sliverHeadersList,
+      {@required this.sliverAppBarList,
       this.headerActionList,
       this.heightPart: 1.66,
       this.floating: false,
@@ -26,7 +27,7 @@ class CustomSliverAppBar extends StatelessWidget {
         background: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: sliverHeadersList,
+          children: sliverAppBarList,
         ),
       ),
       actions: headerActionList,

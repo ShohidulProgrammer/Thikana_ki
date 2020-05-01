@@ -10,6 +10,7 @@ import 'package:thikana_ki/UI/screens/login/login_page.dart';
 import 'package:thikana_ki/UI/screens/photo_preview/photo_preview.dart';
 import 'package:thikana_ki/UI/screens/popular/emergency_categroy_iem_list_factory.dart';
 import 'package:thikana_ki/UI/screens/screen.dart';
+import 'package:thikana_ki/UI/screens/shop/shop_details.dart';
 import 'package:thikana_ki/UI/screens/shop/shop_profile.dart';
 
 import '../../../UI/screens/category/category.dart';
@@ -30,7 +31,7 @@ class Router {
       case categoryPageRoute:
         return MaterialPageRoute(builder: (_) => Category());
       case shopProfilePageRoute:
-        return MaterialPageRoute(builder: (_) => ShopProfile());
+        return MaterialPageRoute(builder: (_) => ShopDetails());
       case aboutUsPageRoute:
       case '/About Us':
         return MaterialPageRoute(builder: (_) => AboutUs());

@@ -1,23 +1,22 @@
-//import 'package:flutter/material.dart';
-//import 'package:thikana_ki/UI/commonWidget/sliver/sliver_page.dart';
-//import 'package:thikana_ki/UI/widget_list/shop_details/shop_detail_page_sliver_banner_items.dart';
-//import 'package:thikana_ki/UI/widget_list/shop_details/shop_detail_tabs.dart';
-//import 'package:thikana_ki/cores/api/local_file_api.dart';
-//import 'package:thikana_ki/cores/models/import_model.dart';
-//
-//
-//class ShopDetails extends StatefulWidget {
-//  @override
-//  _ShopDetailsState createState() => _ShopDetailsState();
-//}
-//
-//class _ShopDetailsState extends State<ShopDetails> {
-//  bool _like = false;
+import 'package:flutter/material.dart';
+import 'package:thikana_ki/UI/commonWidget/tab_bar/custom_default_tab_bar.dart';
+import 'package:thikana_ki/cores/configs/auth/user_role.dart';
+
+import 'widget_list/shop_detail_page_header.dart';
+import 'widget_list/shop_page_header_actions.dart';
+import 'widget_list/shop_page_tab_bar_contents.dart';
+
+class ShopDetails extends StatelessWidget {
+  final USER_ROLE_TYPE userRoleType;
+
+  ShopDetails({this.userRoleType: USER_ROLE_TYPE.normalUser});
+
+  final bool _like = false;
+
 //  bool _showHour = false;
 //  ProductDetailPageModel _detailPage;
-//  bool isEditor = false;
 //  bool isOpen = false;
-//
+
 //  @override
 //  void initState() {
 //    _loadData();
@@ -34,16 +33,19 @@
 //      });
 //    }
 //  }
-//
-//  @override
-//  Widget build(BuildContext context) {
-//    return Scaffold(
-//      body: SafeArea(
-//        child: MyGenericSliverPage(
-//          sliverHeaderItems: shopDetailPageSliverBannerItems,
-//          sliverBodyItems: shopDetailPageSliverTabBarBodies,
-//        ),
-//      ),
-//    );
-//  }
-//}
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: CustomDefaultTabBar(
+        appBarHeaders: shopDetailPageAppBarHeaders,
+        headerActions: userRoleType == USER_ROLE_TYPE.editor
+            ? shopDetailPageEditorHeaderActions
+            : shopDetailPageUserHeaderActions(like: _like),
+        tabHeaders: shopPageTabHeader,
+        tabBodies: shopPageTabBarBodies,
+        scrollPhysics: NeverScrollableScrollPhysics(),
+      ),
+    );
+  }
+}

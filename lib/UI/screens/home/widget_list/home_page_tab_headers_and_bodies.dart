@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:thikana_ki/UI/commonWidget/grids/custom_grid_view.dart';
 import 'package:thikana_ki/cores/models/screen_models/icon_with_title_list.dart';
 
-final List<Widget> homePageTabHeader = [
+final List<Widget> homePageTabHeaders = [
   Tab(
 //      icon: Icon(Icons.category),
       text: "Category"),

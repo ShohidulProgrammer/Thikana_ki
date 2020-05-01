@@ -48,7 +48,7 @@ class CustomSeparatorListFactory extends StatelessWidget {
       padding: EdgeInsets.only(
         top: 2.0,
       ),
-//      shrinkWrap: true,
+      shrinkWrap: true,
 
       separatorBuilder: (context, index) => Divider(
         indent: 20,

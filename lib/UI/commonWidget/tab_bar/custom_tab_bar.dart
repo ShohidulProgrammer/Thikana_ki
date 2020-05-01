@@ -41,6 +41,7 @@ class _CustomContainerTabBarState extends State<CustomContainerTabBar>
 //      decoration: new BoxDecoration(color: Theme.of(context).primaryColor),
 // home page container tab header icons
           child: new TabBar(
+//            isScrollable: false,
             labelPadding: EdgeInsets.symmetric(vertical: 2.0, horizontal: 0.0),
             indicatorColor: Colors.red,
             labelColor: Colors.blueGrey[900],
@@ -56,6 +57,7 @@ class _CustomContainerTabBarState extends State<CustomContainerTabBar>
           height: MediaQuery.of(context).size.height / widget.heightPart,
 // math.max(MediaQuery.of(context).size.height-450.0, MediaQuery.of(context).size.height / widget.heightPart),
           child: new TabBarView(
+//            physics: NeverScrollableScrollPhysics(),
             controller: _controller,
             children: widget.tabBodies,
           ),

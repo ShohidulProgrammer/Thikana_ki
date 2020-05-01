@@ -6,6 +6,7 @@ import 'package:thikana_ki/UI/screens/shop/widget_list/video_url_list.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../../../../commonWidget/keyboard_input/normal_text_form_field.dart';
+import 'total_duration.dart';
 
 /// Creates list of video players
 class VideoList extends StatefulWidget {
@@ -14,29 +15,6 @@ class VideoList extends StatefulWidget {
 }
 
 class _VideoListState extends State<VideoList> {
-//  final List<YoutubePlayerController> _controllers = [
-//    'zAQobDr17ug',
-//    '0H25pV4vvJs',
-//    'x8R5ReR9A1E',
-//    '1n5CcRBdUf8',
-//    'x8R5ReR9A1E',
-//    'OscMyxCioZ8',
-//    'EnRhAvlb9a4',
-//    'oUb2UluKw7Q',
-//    '2w0EwNSpp68',
-//    'aIykbOVvdhI',
-//    'BOBxcX2Hwns',
-//    'VtJM8CIZJo4',
-//    '1zjasCaqYJs',
-//    'y0eUjXA_s2M&list=RD1zjasCaqYJs&index=12',
-//    'pyaf1vR0nm0',
-//    'zAQobDr17ug',
-//    '0H25pV4vvJs',
-//    'x8R5ReR9A1E',
-//    '1n5CcRBdUf8',
-//    '8cOi04y7LKY',
-//  ]
-
   final List<YoutubePlayerController> _controllers = videoUrls
       .map<YoutubePlayerController>(
         (videoId) => YoutubePlayerController(
@@ -49,6 +27,14 @@ class _VideoListState extends State<VideoList> {
       .toList();
 
   bool isEditor = true;
+  bool isPlaying = false;
+  int _rotation;
+
+  @override
+  void initState() {
+    _rotation = 0;
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -73,64 +59,59 @@ class _VideoListState extends State<VideoList> {
                   color: Colors.purpleAccent,
                 ),
           Expanded(
-            child: ListView.separated(
+            child: ListView.builder(
               physics: const NeverScrollableScrollPhysics(),
-              padding: EdgeInsets.only(
-                  top: 8.0, bottom: 180.0, left: 2.0, right: 2.0),
+              padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 2.0),
               itemBuilder: (context, index) {
-                return YoutubePlayer(
-                  key: ObjectKey(_controllers[index]),
-                  controller: _controllers[index],
-                  actionsPadding: EdgeInsets.only(left: 16.0),
-                  bottomActions: [
-                    CurrentPosition(),
-                    SizedBox(width: 10.0),
-                    ProgressBar(
-                      isExpanded: true,
-                      colors: ProgressBarColors(
-                        playedColor: Colors.red,
-                        handleColor: Colors.red,
-                        bufferedColor: Colors.white,
+                return Container(
+                  padding: EdgeInsets.symmetric(
+                    vertical: 5.0,
+                  ),
+                  child: Card(
+                    elevation: 10,
+                    child: YoutubePlayer(
+                      key: ObjectKey(_controllers[index]),
+                      controller: _controllers[index],
+                      actionsPadding: EdgeInsets.only(left: 16.0),
+                      bottomActions: [
+                        ProgressBar(
+                          isExpanded: true,
+                          colors: ProgressBarColors(
+                            playedColor: Colors.red,
+                            handleColor: Colors.red,
+                            bufferedColor: Colors.white,
 //                backgroundColor: Colors.yellow,
-                      ),
+                          ),
+                        ),
+                        SizedBox(width: 10.0),
+                        CurrentPosition(),
+                        SizedBox(width: 10.0),
+                        TotalDuration(),
+                        SizedBox(width: 10.0),
+                        SizedBox(width: 10.0),
+                        PlaybackSpeedButton(),
+                        SizedBox(width: 10.0),
+                        InkWell(
+                          onTap: () => _controllers[index].pause(),
+                          child: FullScreenButton(
+                            controller: _controllers[index],
+                          ),
+                        ),
+                      ],
+//                      onReady: () {
+//                        _isPlayerReady = true;
+//                      },
                     ),
-                    SizedBox(width: 10.0),
-                    RemainingDuration(),
-                    SizedBox(width: 10.0),
-                    PlaybackSpeedButton(),
-                    SizedBox(width: 10.0),
-//                     IconButton(
-//                       icon: Icon(
-//                         _rotation == 0 ? Icons.fullscreen : Icons.fullscreen_exit,
-//                         color: Colors.white,
-//                       ),
-//                       onPressed: () async {
-//                        _controllers[index].pause();
-//                         if (_rotation == 0) {
-//                           setState(() {
-//                             _rotation = 1;
-//                           });
-//                         } else {
-//                           setState(() {
-//                             _rotation = 0;
-//                           });
-//                         }
-//                       },
-//                     ),
-//                     InkWell(
-//                       onTap: () => _controllers[index].pause(),
-//                       child: FullScreenButton(
-//                         controller: _controllers[index],
-//                       ),
-//                     ),
-                  ],
-//            onReady: () {
-//              _isPlayerReady = true;
-//            },
+                  ),
                 );
               },
               itemCount: _controllers.length,
-              separatorBuilder: (context, _) => SizedBox(height: 10.0),
+//              separatorBuilder: (context, _) => Divider(
+//                indent: 8,
+//                endIndent: 8,
+//                thickness: 1.0,
+//                color: Colors.blueGrey[100],
+//              ),
             ),
           ),
         ],

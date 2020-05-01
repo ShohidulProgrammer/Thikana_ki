@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:thikana_ki/UI/commonWidget/painter/border_line.dart';
 import 'package:thikana_ki/UI/screens/login/widgets/business_sign_up.dart';
 import 'package:thikana_ki/UI/screens/login/widgets/gorgiusLogin/style/theme.dart'
     as Theme;

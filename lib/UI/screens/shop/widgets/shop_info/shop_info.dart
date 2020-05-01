@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:thikana_ki/UI/commonWidget/rating/app_star_rating.dart';
 import 'package:thikana_ki/UI/commonWidget/tag/app_tag.dart';
 import 'package:thikana_ki/cores/api/local_file_api.dart';
@@ -42,6 +43,7 @@ class _ShopInfoState extends State<ShopInfo> {
 
   @override
   Widget build(BuildContext context) {
+    bool _obscureText = true;
     if (_detailPage == null) {
       return Center(child: CircularProgressIndicator());
     }
@@ -129,8 +131,8 @@ class _ShopInfoState extends State<ShopInfo> {
               ),
               IconButton(
                 icon: Icon(
-                  Icons.phone,
-                  color: Theme.of(context).primaryColorLight,
+                  FontAwesomeIcons.phoneAlt,
+//                  color: Theme.of(context).primaryColorLight,
                 ),
                 onPressed: () => widget.isEditor
                     ? editShopTitle(
@@ -144,8 +146,8 @@ class _ShopInfoState extends State<ShopInfo> {
               ),
               IconButton(
                 icon: Icon(
-                  Icons.chat,
-                  color: Theme.of(context).primaryColorLight,
+                  FontAwesomeIcons.rocketchat,
+//                  color: Theme.of(context).primaryColorLight,
                 ),
                 onPressed: () => widget.isEditor
                     ? editShopTitle(
@@ -159,7 +161,8 @@ class _ShopInfoState extends State<ShopInfo> {
               ),
               widget.isEditor
                   ? IconButton(
-                      icon: Icon(Icons.publish),
+                      icon: Icon(_obscureText ? FontAwesomeIcons.eye : FontAwesomeIcons.eyeSlash,),
+//                      icon: Icon(Icons.publish),
                       tooltip: 'Publish',
                       onPressed: () {
                         // # ToDo: Publish ON/OFF

@@ -13,7 +13,7 @@
     <application
         android:name="io.flutter.app.FlutterApplication"
         android:icon="@mipmap/ic_launcher"
-        android:label="thikana_ki">
+        android:label="Thikana Ki">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDx-6dKlgI1KF9LsxpsazzrKKLdk8q_PC0" />
@@ -25,9 +25,12 @@
             android:theme="@style/LaunchTheme"
             android:windowSoftInputMode="adjustResize">
 
-            <meta-data
+            <!-- <meta-data
                 android:name="io.flutter.app.android.SplashScreenUntilFirstFrame"
-                android:value="true" />
+                android:value="true" /> -->
+            <meta-data
+                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+                android:resource="@drawable/launch_background"/>
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
