@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:thikana_ki/UI/screens/home/homePage.dart';
+import 'package:thikana_ki/UI/screens/shop/shop_details.dart';
 import '../../../cores/configs/router/router_path_constants.dart';
 import '../../../cores/models/model_location.dart';
 
@@ -18,10 +21,22 @@ class EmergencyCategoryListTileIem extends StatelessWidget {
       this.icon,
       this.iconColor});
 
+
+  static Future<void> show(BuildContext context) async {
+
+    await Navigator.of(context).push(
+      CupertinoPageRoute(
+        fullscreenDialog: false,
+        builder: (context) => ShopDetails(),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => Navigator.of(context).pushNamed(shopProfilePageRoute),
+      onTap: () =>show(context),
+//      onTap: () => Navigator.of(context).pushNamed(shopProfilePageRoute),
       child: ListTile(
         title: Text(title),
         subtitle: Text(subTitle),

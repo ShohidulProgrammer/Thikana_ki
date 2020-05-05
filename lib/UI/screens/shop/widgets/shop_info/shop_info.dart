@@ -43,7 +43,7 @@ class _ShopInfoState extends State<ShopInfo> {
 
   @override
   Widget build(BuildContext context) {
-    bool _obscureText = true;
+    bool _obscureText = false;
     if (_detailPage == null) {
       return Center(child: CircularProgressIndicator());
     }
@@ -51,10 +51,11 @@ class _ShopInfoState extends State<ShopInfo> {
       padding: EdgeInsets.only(left: 2, right: 20),
       color: Colors.white,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               FlatButton(
                 onPressed: () => widget.isEditor
@@ -82,7 +83,7 @@ class _ShopInfoState extends State<ShopInfo> {
             ],
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:thikana_ki/UI/commonWidget/buttons/app_button.dart';
+import 'package:thikana_ki/UI/commonWidget/keyboard_input/custom_text_form_field.dart';
 import 'package:thikana_ki/UI/commonWidget/keyboard_input/login_text_field.dart';
 import 'package:thikana_ki/UI/screens/login/widgets/password_text_field.dart';
 
@@ -22,48 +23,51 @@ class _UserSignUpState extends State<UserSignUp> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(18.0),
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 2.0),
       child: Column(
-        mainAxisSize: MainAxisSize.min,
+//        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Expanded(
-            child: ListView(
-              children: <Widget>[
-                MyFormTextField(
-                  hintText: 'name',
-                  icon: const Icon(Icons.perm_identity,  color: Colors.black,),
-                  fieldKey: _userNameFieldKey,
-                ),
-                MyFormTextField(
-                    hintText: 'phone',
-                    icon: Icon(Icons.phone,  color: Colors.black,),
-                    keyboardType: TextInputType.phone,
-                    fieldKey: _phoneFieldKey),
-                PasswordTextField(),
-                PasswordTextField(
-                  hintText: 'confirm_password',
-                ),
-              ],
+          MyFormTextField(
+            hintText: 'name',
+            icon: const Icon(
+              Icons.perm_identity,
+              color: Colors.black,
             ),
+              fieldKey: _userNameFieldKey,
+          ),
+          MyFormTextField(
+            hintText: 'phone',
+            icon: Icon(
+              Icons.phone,
+              color: Colors.black,
+            ),
+            keyboardType: TextInputType.phone,
+                fieldKey: _phoneFieldKey
+          ),
+          PasswordTextField(),
+          PasswordTextField(
+            hintText: 'confirm_password',
           ),
           AgreeCheckbox(),
-          _buildButton(),
+          AppButton(
+            text: 'Sign Up',
+            onPressed: () {},
+            disableTouchWhenLoading: true,
+          ),
           AlreadyHaveAccount(),
         ],
       ),
     );
   }
-
-  // sign up button
-  Widget _buildButton() {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: AppButton(
-        text: 'Sign Up',
-        onPressed: () {},
-        disableTouchWhenLoading: true,
-      ),
-    );
-  }
+//
+//  // sign up button
+//  Widget _buildButton() {
+//    return AppButton(
+//      text: 'Sign Up',
+//      onPressed: () {},
+//      disableTouchWhenLoading: true,
+//    );
+//  }
 }

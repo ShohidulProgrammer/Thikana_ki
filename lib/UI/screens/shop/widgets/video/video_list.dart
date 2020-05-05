@@ -15,16 +15,20 @@ class VideoList extends StatefulWidget {
 }
 
 class _VideoListState extends State<VideoList> {
-  final List<YoutubePlayerController> _controllers = videoUrls
-      .map<YoutubePlayerController>(
-        (videoId) => YoutubePlayerController(
-          initialVideoId: videoId,
-          flags: YoutubePlayerFlags(
-            autoPlay: false,
+  List<YoutubePlayerController> _controllers;
+
+  loadVideo() {
+    _controllers = videoUrls
+        .map<YoutubePlayerController>(
+          (videoId) => YoutubePlayerController(
+            initialVideoId: videoId,
+            flags: YoutubePlayerFlags(
+              autoPlay: false,
+            ),
           ),
-        ),
-      )
-      .toList();
+        )
+        .toList();
+  }
 
   bool isEditor = true;
   bool isPlaying = false;
@@ -33,11 +37,17 @@ class _VideoListState extends State<VideoList> {
   @override
   void initState() {
     _rotation = 0;
+    loadVideo();
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
+    if (_controllers == null) {
+      return Center(
+        child: CircularProgressIndicator(),
+      );
+    }
     return Container(
       child: Column(
         children: <Widget>[

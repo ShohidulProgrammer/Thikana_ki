@@ -6,6 +6,7 @@ import 'package:thikana_ki/UI/screens/login/widgets/gorgiusLogin/style/theme.dar
     as Theme;
 import 'package:thikana_ki/UI/screens/login/widgets/gorgiusLogin/utils/bubble_indication_painter.dart';
 import 'package:thikana_ki/UI/screens/login/widgets/user_sign_up.dart';
+import 'package:thikana_ki/cores/utils/theme/device_screen_size.dart';
 
 import 'widgets/login_text_field.dart';
 
@@ -57,16 +58,18 @@ class _LoginPageState extends State<LoginPage>
           child: Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height >= 775.0
-                ? MediaQuery.of(context).size.height + 100
-                : 775.0 + 100,
+                ? MediaQuery.of(context).size.height
+                : 775.0,
             child: Column(
-              mainAxisSize: MainAxisSize.max,
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 // logo
                 _buildLogo(),
                 _buildMenuBar(context),
                 Expanded(
-                  flex: 2,
+                  flex: 4,
                   child: PageView(
                     controller: _pageController,
                     onPageChanged: (i) {
@@ -688,14 +691,13 @@ class _LoginPageState extends State<LoginPage>
   }
 
   Widget _buildLogo() {
-    return Padding(
-      padding: EdgeInsets.only(top: 10.0),
+    return Expanded(
+      flex: 1,
       child: new Image(
 //          width: 250.0,
-//          height: 150.0,
-//          width: MediaQuery.of(context).size.width / 1.2,
+//          height: UIScreenSize.size.height/4,
           fit: BoxFit.contain,
-          image: new AssetImage('assets/images/thikana_ki_adjust_logo.png')),
+          image: const AssetImage('assets/images/logo.png')),
     );
   }
 }

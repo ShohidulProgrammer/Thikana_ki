@@ -12,7 +12,8 @@ class CustomSliverAppBar extends StatelessWidget {
   const CustomSliverAppBar(
       {@required this.sliverAppBarList,
       this.headerActionList,
-      this.heightPart: 1.66,
+      this.heightPart: 1.56,
+//      this.heightPart: 1.66,
       this.floating: false,
       this.pined: false});
 

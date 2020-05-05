@@ -10,15 +10,16 @@ class ImageWithTitleCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final TextStyle textStyle = Theme.of(context).textTheme.display1;
+    bool darkMode = false;
 
     return Card(
       semanticContainer: true,
-
       clipBehavior: Clip.antiAliasWithSaveLayer,
       child: InkWell(
         splashColor: Colors.blue.withAlpha(30),
         onTap: () {
-          Navigator.pushNamed(context, listProductPageRoute, arguments: 'Category Name');
+          Navigator.pushNamed(context, listProductPageRoute,
+              arguments: 'Category Name');
         },
         child: Center(
           child: Column(
@@ -39,12 +40,12 @@ class ImageWithTitleCard extends StatelessWidget {
               ),
               Expanded(
                 flex: 1,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    iconWithTitleModel.title,
-//                  style: textStyle
-                  ),
+                child: Text(
+                  iconWithTitleModel.title,
+                  style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.blueGrey,
+                      fontWeight: FontWeight.bold),
                 ),
               ),
             ],
@@ -53,9 +54,10 @@ class ImageWithTitleCard extends StatelessWidget {
       ),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0),
+        side: BorderSide(color: Colors.blueGrey[50], width: 1),
       ),
-//        elevation: 5,
-//        margin: EdgeInsets.all(5),
+      elevation: 3,
+      margin: EdgeInsets.all(5),
     );
   }
 }

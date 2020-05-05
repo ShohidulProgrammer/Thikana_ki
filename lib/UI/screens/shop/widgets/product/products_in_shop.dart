@@ -6,16 +6,21 @@ import 'package:thikana_ki/UI/commonWidget/buttons/app_button.dart';
 import 'package:thikana_ki/UI/commonWidget/keyboard_input/search_input_field.dart';
 import 'package:thikana_ki/UI/commonWidget/list/custom_sererator_list_factory.dart';
 import 'package:thikana_ki/UI/screens/shop/widgets/product/components/edit_product.dart';
+import 'package:thikana_ki/cores/configs/auth/user_role.dart';
 
 import 'components/product_list_tile.dart';
 
 class ProductsInShop extends StatefulWidget {
+  final USER_ROLE_TYPE userRoleType;
+
+  const ProductsInShop({this.userRoleType: USER_ROLE_TYPE.normalUser});
+
   @override
   _ProductsInShopState createState() => _ProductsInShopState();
 }
 
 class _ProductsInShopState extends State<ProductsInShop> {
-  bool isEditor = true;
+//  bool isEditor = true;
   File _image;
   bool _isImage = false;
 
@@ -27,7 +32,7 @@ class _ProductsInShopState extends State<ProductsInShop> {
       ),
       child: Column(
         children: <Widget>[
-          isEditor
+          widget.userRoleType == USER_ROLE_TYPE.editor
               ? Padding(
                   padding: const EdgeInsets.only(
                       left: 16.0, right: 16.0, bottom: 8.0),

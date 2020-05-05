@@ -18,7 +18,7 @@ const List<EmergencyMenuItem> allEmergencyMenuItems = <EmergencyMenuItem>[
     emergencyImageName: 'public_toilet.png',
   ),
   EmergencyMenuItem(
-      title: 'Police',
+      title: 'Emergency',
       emergencyImageName: 'national_emergency_service_999.PNG',
 //      emergencyImageName: 'emergency_call_999.jpg',
 

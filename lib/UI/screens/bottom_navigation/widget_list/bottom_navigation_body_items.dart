@@ -4,6 +4,7 @@ import 'package:thikana_ki/UI/screens/home/homePage.dart';
 import '../../message/message.dart';
 import '../../notification/notification.dart';
 import '../../wishlist/wishlist.dart';
+import 'bottom_menu_item.dart';
 
 List<Widget> bottomNavigationBodyItems = [
   HomePage(),
@@ -12,3 +13,5 @@ List<Widget> bottomNavigationBodyItems = [
   NotificationList(),
   DashBoardPage(),
 ];
+
+

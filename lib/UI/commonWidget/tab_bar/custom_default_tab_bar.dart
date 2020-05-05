@@ -54,34 +54,40 @@ class CustomDefaultTabBar extends StatelessWidget {
       this.headerActions,
       this.tabHeaders,
       this.tabBodies,
-      this.scrollPhysics
-      });
+      this.scrollPhysics});
 
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(statusBarColor: Colors.transparent));
-    return DefaultTabController(
-      length: tabHeaders.length ?? 0,
+      SystemUiOverlayStyle(
+        statusBarColor: Colors.red,
+        statusBarIconBrightness: Brightness.dark,
+          systemNavigationBarIconBrightness: Brightness.dark
+      ),
+    );
+    return SafeArea(
+      child: DefaultTabController(
+        length: tabHeaders.length ?? 0,
 //      length: tabBodiesList.length ?? 0,
-      child: NestedScrollView(
-        headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
-          return <Widget>[
-            CustomSliverAppBar(
-              sliverAppBarList: appBarHeaders,
-              headerActionList: headerActions,
-            ),
-            SliverPersistentHeader(
-              pinned: true,
-              delegate: CustomSliverTabBar(
-                tabBar: customTabBarHeader(tabHeaders: tabHeaders),
+        child: NestedScrollView(
+          headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
+            return <Widget>[
+              CustomSliverAppBar(
+                sliverAppBarList: appBarHeaders,
+                headerActionList: headerActions,
               ),
-            ),
-          ];
-        },
-        body: TabBarView(
-            physics: scrollPhysics,
-            children: tabBodies.map<Widget>((tabs) => tabs).toList()),
+              SliverPersistentHeader(
+                pinned: true,
+                delegate: CustomSliverTabBar(
+                  tabBar: customTabBarHeader(tabHeaders: tabHeaders),
+                ),
+              ),
+            ];
+          },
+          body: TabBarView(
+              physics: scrollPhysics,
+              children: tabBodies.map<Widget>((tabs) => tabs).toList()),
+        ),
       ),
     );
   }

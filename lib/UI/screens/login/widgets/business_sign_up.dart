@@ -22,69 +22,65 @@ class _BusinessSignUpState extends State<BusinessSignUp> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Container(
       padding: const EdgeInsets.all(18.0),
       child: Column(
+//        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Expanded(
-            child: ListView(
-              padding: const EdgeInsets.all(0.0),
-              children: <Widget>[
-                MyFormTextField(
-                  hintText: 'name',
-                  icon: const Icon(
-                    Icons.perm_identity,
-                    size: 22.0,
-                    color: Colors.black,
-                  ),
-                  fieldKey: _userNameFieldKey,
-                ),
-                MyFormTextField(
-                  hintText: 'business_name',
-                  icon: Icon(
-//              FontAwesomeIcons.coins,
-                    Icons.shop,
-                    size: 22.0,
-                    color: Colors.black,
-                  ),
-                  fieldKey: _businessNameFieldKey,
-                ),
-                MyFormTextField(
-                    hintText: 'phone',
-                    icon: Icon(
-//                FontAwesomeIcons.mobileAlt,
-                      Icons.phone,
-                      size: 22.0,
-                      color: Colors.black,
-                    ),
-                    keyboardType: TextInputType.phone,
-                    fieldKey: _phoneFieldKey),
-                PasswordTextField(),
-                PasswordTextField(
-                  hintText: 'confirm_password',
-                ),
-              ],
+          MyFormTextField(
+            hintText: 'name',
+            icon: const Icon(
+              Icons.perm_identity,
+              size: 22.0,
+              color: Colors.black,
             ),
+            fieldKey: _userNameFieldKey,
+          ),
+          MyFormTextField(
+            hintText: 'business_name',
+            icon: Icon(
+//              FontAwesomeIcons.coins,
+              Icons.shop,
+              size: 22.0,
+              color: Colors.black,
+            ),
+            fieldKey: _businessNameFieldKey,
+          ),
+          MyFormTextField(
+              hintText: 'phone',
+              icon: Icon(
+//                FontAwesomeIcons.mobileAlt,
+                Icons.phone,
+                size: 22.0,
+                color: Colors.black,
+              ),
+              keyboardType: TextInputType.phone,
+              fieldKey: _phoneFieldKey),
+          PasswordTextField(),
+          PasswordTextField(
+            hintText: 'confirm_password',
           ),
           AgreeCheckbox(),
-          _buildButton(),
+          AppButton(
+            text: 'Sign Up',
+            onPressed: () {},
+            disableTouchWhenLoading: true,
+          ),
           AlreadyHaveAccount(),
         ],
       ),
     );
   }
 
-  // sign up button
-  Widget _buildButton() {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: AppButton(
-        text: 'Sign Up',
-        onPressed: () {},
-        disableTouchWhenLoading: true,
-      ),
-    );
-  }
+//  // sign up button
+//  Widget _buildButton() {
+//    return AppButton(
+//      text: 'Sign Up',
+//      onPressed: () {},
+//      disableTouchWhenLoading: true,
+//    );
+//  }
 
   void signIn() async {
     if (_formKey.currentState.validate()) {

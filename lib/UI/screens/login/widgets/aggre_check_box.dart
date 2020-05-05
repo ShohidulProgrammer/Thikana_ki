@@ -10,46 +10,43 @@ class _AgreeCheckboxState extends State<AgreeCheckbox> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Wrap(
-        crossAxisAlignment: WrapCrossAlignment.center,
-        alignment: WrapAlignment.center,
-        direction: Axis.horizontal,
-        runSpacing: -30.0,
-        spacing: -10,
-        children: <Widget>[
-          Checkbox(
-            value: _termsChecked,
-            onChanged: _setAgreedToTOS,
-          ),
-          Text('I agree to the'),
-          FlatButton(
-            child: Text(
-              'Pricvacy Policy',
-              style: TextStyle(
-                fontWeight: FontWeight.w600,
-                fontSize: 14.0,
-                color: Colors.red,
-                decoration: TextDecoration.underline,
-              ),
+    return Wrap(
+      crossAxisAlignment: WrapCrossAlignment.center,
+      alignment: WrapAlignment.center,
+      direction: Axis.horizontal,
+      runSpacing: -30.0,
+      spacing: -10,
+      children: <Widget>[
+        Checkbox(
+          value: _termsChecked,
+          onChanged: _setAgreedToTOS,
+        ),
+        Text('I agree to the'),
+        FlatButton(
+          child: Text(
+            'Pricvacy Policy',
+            style: TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: 14.0,
+              color: Colors.red,
+              decoration: TextDecoration.underline,
             ),
-            onPressed: () {},
           ),
-          Text('And'),
-          FlatButton(
-            child: Text(
-              'Terms & Conditions',
-              style: TextStyle(
-                color: Colors.red,
-                decoration: TextDecoration.underline,
-              ),
+          onPressed: () {},
+        ),
+        Text('And'),
+        FlatButton(
+          child: Text(
+            'Terms & Conditions',
+            style: TextStyle(
+              color: Colors.red,
+              decoration: TextDecoration.underline,
             ),
-            onPressed: () {},
           ),
-          Text('of Thikana Ki'),
-        ],
-      ),
+          onPressed: () {},
+        ),
+        Text('of Thikana Ki'),
+      ],
     );
   }
 

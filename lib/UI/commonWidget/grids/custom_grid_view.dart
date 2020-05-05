@@ -43,9 +43,10 @@ class ImageWithTitleCardGridView extends StatelessWidget {
     return GridView.builder(
         physics: NeverScrollableScrollPhysics(),
         shrinkWrap: true,
-        padding: EdgeInsets.only(
-          top: 2.0,
-        ), // bottom: screenSize.height  /10
+        padding: EdgeInsets.symmetric(
+          vertical: 2.0, horizontal: 4.0
+        ), //
+        // bottom: screenSize.height  /10
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: crossAxisCount,
           childAspectRatio: (itemWidth / itemHeight),
@@ -53,6 +54,7 @@ class ImageWithTitleCardGridView extends StatelessWidget {
         itemCount: iconWithTitleList.length,
         itemBuilder: (context, index) {
           return Container(
+            padding: EdgeInsets.symmetric(horizontal: 2.0),
             color: backgroundColor ?? Colors.blue[50],
             child: ImageWithTitleCard(
                 iconWithTitleModel: iconWithTitleList[index]),

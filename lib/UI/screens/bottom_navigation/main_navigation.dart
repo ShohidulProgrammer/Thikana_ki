@@ -24,6 +24,8 @@ class _MainNavigationState extends State<MainNavigation> {
   @override
   Widget build(BuildContext context) {
     UIScreenSize.size = MediaQuery.of(context).size;
+    UIScreenSize.height = UIScreenSize.size.height;
+    UIScreenSize.weight = UIScreenSize.size.width;
     return Scaffold(
         drawer: DrawerMenu(),
         body: IndexedStack(
@@ -48,6 +50,7 @@ class _MainNavigationState extends State<MainNavigation> {
               )
               .toList(),
           currentIndex: _selectedIndex,
+
           type: BottomNavigationBarType.fixed,
           unselectedItemColor: Theme.of(context).unselectedWidgetColor,
           selectedItemColor: Theme.of(context).primaryColor,

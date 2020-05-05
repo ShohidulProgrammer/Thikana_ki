@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:thikana_ki/UI/screens/home/widget_list/emergency_menu_items.dart';
 import 'package:thikana_ki/cores/configs/router/router_path_constants.dart';
 
-
 import 'home_emergency_category_item.dart';
 
 class EmergencyCategoryIcons extends StatelessWidget {
@@ -38,7 +37,8 @@ class EmergencyCategoryIcons extends StatelessWidget {
             return HomeEmergencyCategoryItem(
               item: item,
               onPressed: (item) {
-                Navigator.pushNamed(context, emergencyCategoryListFactoryPageRoute);
+                Navigator.of(context, rootNavigator: true)
+                    .pushNamed(emergencyCategoryListFactoryPageRoute);
 //              onTapService(item, context);
               },
             );
