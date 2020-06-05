@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:thikana_ki/UI/commonWidget/buttons/app_button.dart';
-import 'package:thikana_ki/UI/commonWidget/dialog/dialog_utils.dart';
+import 'package:thikana_ki/UI/commonWidget/dialog/dialogue_utils.dart';
 import 'package:thikana_ki/UI/commonWidget/google_map/google_map.dart';
 import 'package:thikana_ki/cores/api/local_file_api.dart';
 import 'package:thikana_ki/cores/models/model_result_api.dart';
@@ -107,7 +107,7 @@ class _ContactShopState extends State<ContactShop> {
   }
 
   void editBusinessProfile() {
-    DialogUtils.showCustomDialog(context,
+    DialogueUtils.showCustomDialogue(context,
         title: "Edit Business Profile",
         okBtnText: "Save",
         cancelBtnText: "Cancel",

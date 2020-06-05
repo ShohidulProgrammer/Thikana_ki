@@ -1,317 +1,307 @@
 import 'package:flutter/material.dart';
+import 'package:thikana_ki/model/icon_with_title_model.dart';
 
-class IconWithTitleModel {
-  const IconWithTitleModel(
-      {this.title, this.category, this.imgUrl, this.icon, this.color});
-
-  final String title;
-  final String category;
-  final String imgUrl;
-  final IconData icon;
-  final Color color;
-}
-
-const List<IconWithTitleModel> iconWithTitleList = const <IconWithTitleModel>[
+const List<IconWithTitleModel> categoryList = const <IconWithTitleModel>[
   const IconWithTitleModel(
     title: 'Car',
     icon: Icons.directions_car,
-    color: Colors.blueGrey,
+    iconColor: Colors.blueGrey,
   ),
   const IconWithTitleModel(
-      title: 'Bicycle', icon: Icons.directions_bike, color: Colors.green),
+      title: 'Bicycle', icon: Icons.directions_bike, iconColor: Colors.green),
   const IconWithTitleModel(
-      title: 'Boat', icon: Icons.directions_boat, color: Colors.orange),
+      title: 'Boat', icon: Icons.directions_boat, iconColor: Colors.orange),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.greenAccent),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.greenAccent),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.directions_railway, color: Colors.red),
+      title: 'Train', icon: Icons.directions_railway, iconColor: Colors.red),
   const IconWithTitleModel(
-      title: 'Walk', icon: Icons.directions_walk, color: Colors.cyan),
+      title: 'Walk', icon: Icons.directions_walk, iconColor: Colors.cyan),
   const IconWithTitleModel(
-      title: 'Car', icon: Icons.directions_car, color: Colors.yellow),
+      title: 'Car', icon: Icons.directions_car, iconColor: Colors.yellow),
   const IconWithTitleModel(
-      title: 'Bicycle', icon: Icons.drafts, color: Colors.deepPurple),
-  const IconWithTitleModel(title: 'Boat', icon: Icons.dvr, color: Colors.amber),
+      title: 'Bicycle', icon: Icons.drafts, iconColor: Colors.deepPurple),
+  const IconWithTitleModel(title: 'Boat', icon: Icons.dvr, iconColor: Colors.amber),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.copyright, color: Colors.brown),
+      title: 'Bus', icon: Icons.copyright, iconColor: Colors.brown),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.lightBlue),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.lightBlue),
   const IconWithTitleModel(
-      title: 'Car', icon: Icons.directions_car, color: Colors.brown),
+      title: 'Car', icon: Icons.directions_car, iconColor: Colors.brown),
   const IconWithTitleModel(
-      title: 'Bicycle', icon: Icons.directions_bike, color: Colors.lime),
+      title: 'Bicycle', icon: Icons.directions_bike, iconColor: Colors.lime),
   const IconWithTitleModel(
-      title: 'Boat', icon: Icons.directions_boat, color: Colors.purpleAccent),
+      title: 'Boat', icon: Icons.directions_boat, iconColor: Colors.purpleAccent),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.deepPurple),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.deepPurple),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.directions_railway, color: Colors.pink),
+      title: 'Train', icon: Icons.directions_railway, iconColor: Colors.pink),
   const IconWithTitleModel(
-      title: 'Walk', icon: Icons.directions_walk, color: Colors.blueGrey),
+      title: 'Walk', icon: Icons.directions_walk, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Car', icon: Icons.directions_car, color: Colors.blueGrey),
+      title: 'Car', icon: Icons.directions_car, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Bicycle', icon: Icons.drafts, color: Colors.blueGrey),
+      title: 'Bicycle', icon: Icons.drafts, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Boat', icon: Icons.dvr, color: Colors.blueGrey),
+      title: 'Boat', icon: Icons.dvr, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.copyright, color: Colors.blueGrey),
+      title: 'Bus', icon: Icons.copyright, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Car', icon: Icons.directions_car, color: Colors.blueGrey),
+      title: 'Car', icon: Icons.directions_car, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Bicycle', icon: Icons.directions_bike, color: Colors.blueGrey),
+      title: 'Bicycle', icon: Icons.directions_bike, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Boat', icon: Icons.directions_boat, color: Colors.blueGrey),
+      title: 'Boat', icon: Icons.directions_boat, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.directions_bus, color: Colors.blueGrey),
+      title: 'Bus', icon: Icons.directions_bus, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.directions_railway, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.directions_railway, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Walk', icon: Icons.directions_walk, color: Colors.blueGrey),
+      title: 'Walk', icon: Icons.directions_walk, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Car', icon: Icons.directions_car, color: Colors.blueGrey),
+      title: 'Car', icon: Icons.directions_car, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Bicycle', icon: Icons.drafts, color: Colors.blueGrey),
+      title: 'Bicycle', icon: Icons.drafts, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Boat', icon: Icons.dvr, color: Colors.blueGrey),
+      title: 'Boat', icon: Icons.dvr, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Bus', icon: Icons.copyright, color: Colors.blueGrey),
+      title: 'Bus', icon: Icons.copyright, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
   const IconWithTitleModel(
-      title: 'Train', icon: Icons.cloud_off, color: Colors.blueGrey),
+      title: 'Train', icon: Icons.cloud_off, iconColor: Colors.blueGrey),
 ];

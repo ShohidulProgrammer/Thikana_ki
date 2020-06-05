@@ -4,7 +4,7 @@ import '../../configs/router/router_path_constants.dart';
 
 ///On select category
 void onTapService(item, BuildContext context) {
-  switch (item.route) {
+  switch (item.categoryName) {
     case emergencyCategoryListFactoryPageRoute:
       Navigator.pushNamed(context, emergencyCategoryListFactoryPageRoute);
       break;

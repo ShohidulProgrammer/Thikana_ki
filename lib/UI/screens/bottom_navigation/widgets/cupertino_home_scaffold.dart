@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:thikana_ki/UI/screens/bottom_navigation/widget_list/bottom_menu_item.dart';
-import 'package:thikana_ki/UI/screens/home/homePage.dart';
-import 'package:thikana_ki/UI/screens/shop/shop_details.dart';
 
 class CupertinoHomeScaffold extends StatelessWidget {
   const CupertinoHomeScaffold({
@@ -20,24 +18,27 @@ class CupertinoHomeScaffold extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CupertinoTabScaffold(
-      tabBar: CupertinoTabBar(
-        items: [
-          _buildItem(context: context, tabItem: TabItem.home),
-          _buildItem(context: context, tabItem: TabItem.wishList),
-          _buildItem(context: context, tabItem: TabItem.chat),
-          _buildItem(context: context, tabItem: TabItem.notification),
-          _buildItem(context: context, tabItem: TabItem.dashBoard),
-        ],
-        onTap: (index) => onSelectTab(TabItem.values[index]),
+    return WidgetsApp(
+      color: Colors.white,
+      home: CupertinoTabScaffold(
+        tabBar: CupertinoTabBar(
+          items: [
+            _buildItem(context: context, tabItem: TabItem.home),
+            _buildItem(context: context, tabItem: TabItem.wishList),
+            _buildItem(context: context, tabItem: TabItem.chat),
+            _buildItem(context: context, tabItem: TabItem.notification),
+            _buildItem(context: context, tabItem: TabItem.dashBoard),
+          ],
+          onTap: (index) => onSelectTab(TabItem.values[index]),
+        ),
+        tabBuilder: (context, index) {
+          final item = TabItem.values[index];
+          return CupertinoTabView(
+            navigatorKey: navigatorKeys[item],
+            builder: (context) => widgetBuilders[item](context),
+          );
+        },
       ),
-      tabBuilder: (context, index) {
-        final item = TabItem.values[index];
-        return CupertinoTabView(
-          navigatorKey: navigatorKeys[item],
-          builder: (context) => widgetBuilders[item](context),
-        );
-      },
     );
   }
 
@@ -58,7 +59,4 @@ class CupertinoHomeScaffold extends StatelessWidget {
       ),
     );
   }
-
-
-
 }

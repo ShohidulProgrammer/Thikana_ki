@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 
-Widget normalTextFormField({
+TextFormField normalTextFormField({
   @required String labelText,
   String hintText,
   TextInputType keyboardType,
   IconData suffixIcon,
   VoidCallback onPressedSuffixIcon,
   TextEditingController textController,
+  Function onSaved,
 }) {
   return TextFormField(
     controller: textController,
-    keyboardType:keyboardType ,
+    onSaved: onSaved,
+    keyboardType: keyboardType,
     decoration: InputDecoration(
       labelText: labelText,
       hintText: hintText,

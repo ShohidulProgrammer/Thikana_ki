@@ -44,7 +44,7 @@ class ShopDetails extends StatelessWidget {
             : shopDetailPageUserHeaderActions(like: _like),
         tabHeaders: shopPageTabHeader,
         tabBodies: shopPageTabBarBodies,
-        scrollPhysics: const AlwaysScrollableScrollPhysics (),
+        scrollPhysics: const AlwaysScrollableScrollPhysics(),
 //        scrollPhysics: NeverScrollableScrollPhysics(),
       ),
     );

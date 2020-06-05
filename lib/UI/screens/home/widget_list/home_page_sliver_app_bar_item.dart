@@ -7,9 +7,10 @@ import 'package:thikana_ki/UI/screens/home/widgets/category_icon.dart';
 import 'package:thikana_ki/UI/screens/home/widgets/thana.dart';
 
 List<Widget> homePageAppBarHeaders = [
-  MyGoogleMap(heightPart: 3),
+  MyGoogleMap(heightPart: 2.7), // 2.54
   SearchInputField(),
   ThanaName(),
+  BorderLine(),
   EmergencyCategoryIcons(),
   BorderLine(),
 //  CustomTabBarHeader(tabHeaders: homePageTabHeader),

@@ -36,8 +36,8 @@ class DrawerMenu extends StatelessWidget {
           // DrawerItem(
           //     title: 'Settings', icon: Icons.settings, iconColor: Colors.blue),
           DrawerMenuItem(
-            title: 'Emergency Call 999 \nFor Pulice, Fire and Ambulance',
-            icon: Icons.phone_forwarded,
+            title: 'Admin',
+            icon: Icons.dashboard,
             iconColor: Colors.purpleAccent,
           ),
           DrawerMenuItem(

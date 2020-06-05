@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:thikana_ki/UI/screens/about_us/about_us.dart';
+import 'package:thikana_ki/UI/screens/admin/dash_board.dart';
 import 'package:thikana_ki/UI/screens/bottom_navigation/main_navigation.dart';
-import 'package:thikana_ki/UI/screens/bottom_navigation/root_page.dart';
+
 import 'package:thikana_ki/UI/screens/chat/chat.dart';
 import 'package:thikana_ki/UI/screens/contact_us/contact_us.dart';
-import 'package:thikana_ki/UI/screens/dashboard/widgets/manage_shop.dart';
 import 'package:thikana_ki/UI/screens/gallery/gallery.dart';
 import 'package:thikana_ki/UI/screens/location/location.dart';
 import 'package:thikana_ki/UI/screens/login/login_page.dart';
@@ -12,7 +12,6 @@ import 'package:thikana_ki/UI/screens/photo_preview/photo_preview.dart';
 import 'package:thikana_ki/UI/screens/popular/emergency_categroy_iem_list_factory.dart';
 import 'package:thikana_ki/UI/screens/screen.dart';
 import 'package:thikana_ki/UI/screens/shop/shop_details.dart';
-import 'package:thikana_ki/UI/screens/shop/shop_profile.dart';
 import 'package:thikana_ki/cores/configs/auth/user_role.dart';
 
 import '../../../UI/screens/category/category.dart';
@@ -22,6 +21,7 @@ import 'router_path_constants.dart';
 
 class Router {
   static Route<dynamic> generateRoute(RouteSettings settings) {
+    print('${settings.name} was called');
     switch (settings.name) {
       case splashRoute:
         return MaterialPageRoute(builder: (_) => SplashScreen());
@@ -29,17 +29,26 @@ class Router {
 //        return MaterialPageRoute(builder: (_) => MainNavigationBottomNavBar());
       case mainNavigationRoute:
 //      case '/Home':
-        return MaterialPageRoute(builder: (_) => RootPage());
-//        return MaterialPageRoute(builder: (_) => MainNavigation());
+        print('$mainNavigationRoute was called');
+
+        return MaterialPageRoute(builder: (_) => MainNavigation());
+//        return MaterialPageRoute(builder: (_) => MyNavHomePage());
+//        return MaterialPageRoute(builder: (_) => MyCustomScaffold());
+//        return MaterialPageRoute(builder: (_) => RootPage());
       case categoryPageRoute:
         return MaterialPageRoute(builder: (_) => Category());
+      case adminPageRoute:
+        return MaterialPageRoute(builder: (_) => AdminDashBoard());
       case shopProfilePageRoute:
         return MaterialPageRoute(builder: (_) => ShopDetails());
       case aboutUsPageRoute:
       case '/About Us':
         return MaterialPageRoute(builder: (_) => AboutUs());
       case manageShopPageRoute:
-        return MaterialPageRoute(builder: (_) => ShopDetails(userRoleType: USER_ROLE_TYPE.editor,));
+        return MaterialPageRoute(
+            builder: (_) => ShopDetails(
+                  userRoleType: USER_ROLE_TYPE.editor,
+                ));
 
       case editProfilePageRoute:
 //      case '/Edit Profile':

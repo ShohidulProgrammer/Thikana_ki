@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/UI/commonWidget/dialog/dialog_utils.dart';
+import 'package:thikana_ki/UI/commonWidget/dialog/dialogue_utils.dart';
 import 'package:thikana_ki/UI/commonWidget/tag/app_tag.dart';
 import 'package:thikana_ki/UI/screens/shop/widgets/contact/components/open_close_time_editor.dart';
 

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:thikana_ki/UI/commonWidget/buttons/app_button.dart';
-import 'package:thikana_ki/UI/commonWidget/dialog/dialog_utils.dart';
+import 'package:thikana_ki/UI/commonWidget/dialog/dialogue_utils.dart';
 import 'package:thikana_ki/UI/screens/shop/widget_list/video_url_list.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
@@ -130,7 +130,7 @@ class _VideoListState extends State<VideoList> {
   }
 
   void addVideo() {
-    DialogUtils.showCustomDialog(context,
+    DialogueUtils.showCustomDialogue(context,
         title: "New Video",
         okBtnText: "Add",
         cancelBtnText: "Cancel",

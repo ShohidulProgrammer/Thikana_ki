@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:thikana_ki/UI/commonWidget/constants/style_constant.dart';
 
-class DialogUtils {
-  static DialogUtils _instance = new DialogUtils.internal();
+class DialogueUtils {
+  static DialogueUtils _instance = new DialogueUtils.internal();
 
-  DialogUtils.internal();
+  DialogueUtils.internal();
 
-  factory DialogUtils() => _instance;
+  factory DialogueUtils() => _instance;
 
-  static void showCustomDialog(BuildContext context,
+  static void showCustomDialogue(BuildContext context,
       {String title,
       Widget child,
       String okBtnText = "Ok",
       String cancelBtnText = "Cancel",
-      @required Function okBtnFunction}) {
+//      @required
+      Function okBtnFunction}) {
     showDialog(
         context: context,
         builder: (_) {
@@ -25,13 +26,17 @@ class DialogUtils {
                 /* Here add your custom widget  */
                 content: child,
                 actions: <Widget>[
-                  FlatButton(
-                    child: Text(okBtnText),
-                    onPressed: okBtnFunction,
-                  ),
-                  FlatButton(
-                      child: Text(cancelBtnText),
-                      onPressed: () => Navigator.pop(context))
+                  okBtnText == null
+                      ? null
+                      : FlatButton(
+                          child: Text(okBtnText),
+                          onPressed: okBtnFunction,
+                        ),
+                  cancelBtnText == null
+                      ? null
+                      : FlatButton(
+                          child: Text(cancelBtnText),
+                          onPressed: () => Navigator.pop(context))
                 ],
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(StyleConstant.padding),

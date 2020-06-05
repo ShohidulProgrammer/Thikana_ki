@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:thikana_ki/UI/commonWidget/keyboard_input/custom_text_input_field.dart';
 import 'package:thikana_ki/cores/utils/keyboard_input/clear_text_field.dart';
-import '../../../cores/models/import_model.dart';
-import '../../../cores/configs/router/router_path_constants.dart';
-import '../../../cores/utils/language/translate.dart';
-import '../../commonWidget/keyboard_input/app_text_input.dart';
+
 import '../../../UI/widgets/category/app_category_item.dart';
-import '../category/emergency_category_list_tile_item.dart';
 import '../../../cores/api/local_file_api.dart';
+import '../../../cores/configs/router/router_path_constants.dart';
+import '../../../cores/models/import_model.dart';
 import '../../../cores/models/screen_models/category_page_model.dart';
-import 'package:pull_to_refresh/pull_to_refresh.dart';
+import '../../../cores/utils/language/translate.dart';
+import '../category/emergency_category_list_tile_item.dart';
 
 class EmergencyCategoryListFactory extends StatefulWidget {
-  EmergencyCategoryListFactory({Key key, this.emergencyCategoryTitle}) : super(key: key);
+  EmergencyCategoryListFactory({Key key, this.emergencyCategoryTitle})
+      : super(key: key);
   final String emergencyCategoryTitle;
 
   @override
@@ -148,9 +149,7 @@ class _EmergencyCategoryListFactoryState
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
-//            '${widget.popularTitle}'
-            Translate.of(context).translate('category')),
+        title: Text(Translate.of(context).translate('category')),
       ),
       body: SafeArea(
         child: Column(

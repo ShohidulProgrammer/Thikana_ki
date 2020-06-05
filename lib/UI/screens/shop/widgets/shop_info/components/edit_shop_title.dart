@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
-import 'package:thikana_ki/UI/commonWidget/dialog/dialog_utils.dart';
+import 'package:thikana_ki/UI/commonWidget/dialog/dialogue_utils.dart';
 import 'package:thikana_ki/UI/commonWidget/keyboard_input/normal_text_form_field.dart';
 
 editShopTitle({@required BuildContext context, String title, String labelText, String hintText}) {
-  DialogUtils.showCustomDialog(context,
+  DialogueUtils.showCustomDialogue(context,
       title: title,
       okBtnText: "Save",
       cancelBtnText: "Cancel",

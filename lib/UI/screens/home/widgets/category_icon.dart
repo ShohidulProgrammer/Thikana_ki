@@ -13,9 +13,10 @@ class EmergencyCategoryIcons extends StatelessWidget {
   Widget build(BuildContext context) {
     if (allEmergencyMenuItems == null) {
       print('Emergency item was null');
-      return Wrap(
-        runSpacing: 10,
-        alignment: WrapAlignment.center,
+      return Row(
+//        runSpacing: 10,
+//        alignment: WrapAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: List.generate(4, (index) => index).map(
           (item) {
             return HomeEmergencyCategoryItem();
@@ -25,11 +26,12 @@ class EmergencyCategoryIcons extends StatelessWidget {
     }
 
     return Padding(
-      padding: const EdgeInsets.all(3.0),
-      child: Wrap(
-        runSpacing: 10,
-        alignment: WrapAlignment.center,
-//      children: homePageModel.category.map(
+      padding: const EdgeInsets.all(3.5),
+      child: Row(
+//        runSpacing: 10,
+//        alignment: WrapAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
         children: allEmergencyMenuItems.map(
           (item) {
 //          print(

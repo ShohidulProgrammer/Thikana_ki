@@ -1,51 +1,54 @@
 import 'package:flutter/material.dart';
+import 'package:geocoder/geocoder.dart';
+import 'package:thikana_ki/cores/utils/location/current_location.dart';
 
-class ThanaName extends StatelessWidget {
-  final String thana;
+class ThanaName extends StatefulWidget {
+  @override
+  _ThanaNameState createState() => _ThanaNameState();
+}
 
-  const ThanaName({this.thana = 'Dhanmondi'});
+class _ThanaNameState extends State<ThanaName> {
+  String thana = 'Thana';
+
+  @override
+  void initState() {
+    getTanaName();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical:8.0),
-      child: Container(
-//        decoration: BoxDecoration(
-//          border: Border(
-//            bottom: BorderSide( //                   <--- left side
-//              color: Colors.grey[400],
-//              width: 0.5,
-//            ),
-//          ),
-//        ),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Container(
-
-                child: Row(
-                  children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Icon(Icons.location_on,color: Colors.red,),
-                    ),
-                    Text(thana),
-                  ],
-                ),
-              ),
-              Text('Change location', style: TextStyle(color: Colors.red)),
-            ],
-          ),
+    return InkWell(
+      child: ListTile(
+        leading: Icon(
+          Icons.location_on,
+          color: Colors.red,
         ),
+        title: Align(
+          child: Text('$thana'),
+          alignment: Alignment(-1.5, 0),
+        ),
+        trailing: Text('Change location', style: TextStyle(color: Colors.red)),
       ),
+      onTap: changeLocation,
     );
+  }
 
-//      ListTile(
-//      leading: Icon(Icons.location_on),
-//      title: Text(thana),
-//      trailing: Text('Change location'),
-//    );
+  Future<void> getTanaName() async {
+    Address address = await LocationUtils.getCurrentLocation();
+    await Future.delayed(Duration(milliseconds: 100));
+    setState(() {
+      thana = address.subLocality;
+    });
+    print('\n\nMy Current Location: ${address.addressLine}');
+  }
+
+  changeLocation() {
+    // Todo: change location
+    // add dropdown for:
+    // Division name, thana name
+    // select thana name from dropdown
+
+    print('change location');
   }
 }

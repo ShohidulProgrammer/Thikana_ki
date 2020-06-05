@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/UI/commonWidget/dialog/dialog_utils.dart';
+import 'package:thikana_ki/UI/commonWidget/dialog/dialogue_utils.dart';
 
 editShopInfo({
   BuildContext context,
   String title,
   Widget child,
 }) {
-  DialogUtils.showCustomDialog(context,
+  DialogueUtils.showCustomDialogue(context,
       title: title,
       okBtnText: "Save",
       cancelBtnText: "Cancel",

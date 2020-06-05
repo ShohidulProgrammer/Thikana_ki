@@ -75,7 +75,7 @@ class _ThemeSettingState extends State<ThemeSetting> {
                                 Container(
                                   width: 24,
                                   height: 24,
-                                  color: item.color,
+                                  color: item.iconColor,
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(left: 10),

@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:thikana_ki/cores/utils/image/image_picker.dart';
 
 class ImageSourceTypeSelectorForm extends StatefulWidget {
   @override
@@ -36,7 +35,7 @@ class _ImageSourceTypeSelectorFormState extends State<ImageSourceTypeSelectorFor
   }
 
   Future<void> _getImage(ImageSource imageSource) async {
-    _image = await getImage(imageSource);
+    _image = await ImagePicker.pickImage(source: imageSource);
     setState(() {});
   }
 }
