@@ -4,6 +4,10 @@
 <dict>
     <key>io.flutter.embedded_views_preview</key>
     <string>YES</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Photo Library Usage Description in the visual editor.</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Camera Usage Description in the visual editor.</string>
     <key>NSLocationWhenInUseUsageDescription</key>
     <string>This app needs access to location when open.</string>
     <key>NSLocationAlwaysUsageDescription</key>

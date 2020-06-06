@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:thikana_ki/UI/commonWidget/dialog/bottom_sheet.dart';
-import 'package:thikana_ki/UI/screens/admin/model/category_model.dart';
 import 'package:thikana_ki/cores/utils/theme/device_screen_size.dart';
 
 class ImagePickerUtils extends StatefulWidget {
