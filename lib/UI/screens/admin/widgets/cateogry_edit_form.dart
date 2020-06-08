@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/UI/commonWidget/image/image_picker_utils.dart';
-import 'package:thikana_ki/UI/commonWidget/image/image_uploader_form_field_utils.dart';
 import 'package:thikana_ki/UI/commonWidget/keyboard_input/normal_text_form_field.dart';
 import 'package:thikana_ki/UI/screens/admin/model/category_model.dart';
-import 'package:image_selector_formfield/image_selector_formfield.dart';
+import 'package:thikana_ki/UI/commonWidget/image/image_selector_form_field_camera_gallery.dart';
 
 class CategoryEditForm extends StatefulWidget {
   final GlobalKey<FormState> formKey;
@@ -27,9 +25,7 @@ class _CategoryEditFormState extends State<CategoryEditForm> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-//            ImagePickerUtils(),
-//
-            buildImageSelector(
+            ImageSelectorFormField(
                 onSaved: (img) => widget.newCategory.imgUrl = img.path),
 
             // text input
