@@ -18,32 +18,28 @@ class DialogueUtils {
     showDialog(
         context: context,
         builder: (_) {
-          return Stack(
-            children: <Widget>[
-              AlertDialog(
-                title: Text(title ?? ''),
+          return AlertDialog(
+            title: Text(title ?? ''),
 
-                /* Here add your custom widget  */
-                content: child,
-                actions: <Widget>[
-                  okBtnText == null
-                      ? null
-                      : FlatButton(
-                          child: Text(okBtnText),
-                          onPressed: okBtnFunction,
-                        ),
-                  cancelBtnText == null
-                      ? null
-                      : FlatButton(
-                          child: Text(cancelBtnText),
-                          onPressed: () => Navigator.pop(context))
-                ],
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(StyleConstant.padding),
-                ),
-                elevation: 0.0,
-              ),
+            /* Here add your custom widget  */
+            content: child,
+            actions: <Widget>[
+              okBtnText == null
+                  ? null
+                  : FlatButton(
+                      child: Text(okBtnText),
+                      onPressed: okBtnFunction,
+                    ),
+              cancelBtnText == null
+                  ? null
+                  : FlatButton(
+                      child: Text(cancelBtnText),
+                      onPressed: () => Navigator.pop(context))
             ],
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(StyleConstant.padding),
+            ),
+            elevation: 0.0,
           );
         });
   }

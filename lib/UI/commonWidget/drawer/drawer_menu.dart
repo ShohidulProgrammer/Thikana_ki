@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:thikana_ki/UI/commonWidget/drawer/custom_user_account_drawer_header.dart';
+import 'package:thikana_ki/cores/configs/router/router_path_constants.dart';
 
 import 'drawer_menu_item.dart';
 
@@ -25,11 +26,11 @@ class DrawerMenu extends StatelessWidget {
 
           // Drawer body
 
-          DrawerMenuItem(title: 'Home', icon: Icons.home),
-          DrawerMenuItem(title: 'Login', icon: Icons.touch_app),
-          DrawerMenuItem(title: 'Edit Profile', icon: Icons.perm_identity),
-          DrawerMenuItem(
-              title: 'Change Password', icon: Icons.enhanced_encryption),
+          DrawerMenuItem(title: 'Home', icon: Icons.home,),
+          DrawerMenuItem(title: 'Login', icon: Icons.touch_app, route: signInPageRoute,),
+          DrawerMenuItem(title: 'Edit Profile', icon: Icons.perm_identity, ),
+//          DrawerMenuItem(
+//              title: 'Change Password', icon: Icons.enhanced_encryption),
           // DrawerMenuItem(title: 'Shop', icon: Icons.shopping_basket),
           Divider(),
           // menu
@@ -39,6 +40,7 @@ class DrawerMenu extends StatelessWidget {
             title: 'Admin',
             icon: Icons.dashboard,
             iconColor: Colors.purpleAccent,
+            route: adminPageRoute,
           ),
           DrawerMenuItem(
               title: 'About Us', icon: Icons.help, iconColor: Colors.green),

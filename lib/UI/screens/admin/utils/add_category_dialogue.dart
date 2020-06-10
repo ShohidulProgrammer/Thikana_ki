@@ -1,33 +1,51 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:thikana_ki/UI/commonWidget/dialog/dialogue_utils.dart';
 import 'package:thikana_ki/UI/screens/admin/model/category_model.dart';
 import 'package:thikana_ki/UI/screens/admin/widgets/cateogry_edit_form.dart';
+import 'package:thikana_ki/cores/firebase_api/ensure_login.dart';
+import 'package:thikana_ki/cores/firebase_api/image_storage.dart';
 
 void addCategoryDialogue(
-    {@required BuildContext context, String title, String okBtnTxt: 'Save'}) {
+    {@required BuildContext context,
+    String alertTitle,
+    String okBtnTxt: 'Save'}) {
   CategoryModel category = new CategoryModel();
   final GlobalKey<FormState> _formKey = new GlobalKey<FormState>();
   DialogueUtils.showCustomDialogue(
     context,
-    title: title,
-    okBtnText:  okBtnTxt,
+    title: alertTitle,
+    okBtnText: okBtnTxt,
     cancelBtnText: "Cancel",
     child: CategoryEditForm(
       newCategory: category,
       formKey: _formKey,
     ),
     /* call method in which you have write your logic and save process  */
-    okBtnFunction: () => _submitForm(_formKey, category),
+    okBtnFunction: () => _submitForm(
+        formKey: _formKey, category: category, collection: alertTitle),
   );
 }
 
-void _submitForm(GlobalKey<FormState> formKey, CategoryModel category) {
-  final FormState form = formKey.currentState;
-  // here want to access form input data
-  form.save();
+void _submitForm(
+    {@required GlobalKey<FormState> formKey,
+    @required CategoryModel category,
+    String collection}) {
+  formKey.currentState.save();
   print('image: ${category.imgUrl ?? 'no url'} category: ${category.title}');
-}
 
+  // remove word Add and white space
+  collection = collection.replaceAll("Add ", "").replaceAll(" ", "");
+  print('Collection: $collection');
+
+  ensureLoggedIn();
+
+  uploadImage(
+      collection: collection,
+      image: File(category.imgUrl),
+      imgName: category.title);
+}
 
 //void _submitForm() {
 //  final FormState form = _formKey.currentState;

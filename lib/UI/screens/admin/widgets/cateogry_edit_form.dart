@@ -17,30 +17,27 @@ class CategoryEditForm extends StatefulWidget {
 class _CategoryEditFormState extends State<CategoryEditForm> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-//      height: 250,
-      child: SingleChildScrollView(
-          child: Form(
-        key: widget.formKey,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            ImageSelectorFormField(
-                onSaved: (img) => widget.newCategory.imgUrl = img.path),
+    return SingleChildScrollView(
+        child: Form(
+      key: widget.formKey,
+      child: ListBody(
+//        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          ImageSelectorFormField(
+              onSaved: (img) => widget.newCategory.imgUrl = img.path),
 
-            // text input
-            normalTextFormField(
-                labelText: "Name*",
-                hintText: 'input name',
-                onSaved: (val) => widget.newCategory.title = val),
-            normalTextFormField(
-              labelText: "Keywords",
-              hintText: 'myTag',
+          // text input
+          normalTextFormField(
+              labelText: "Name*",
+              hintText: 'input name',
+              onSaved: (val) => widget.newCategory.title = val),
+          normalTextFormField(
+            labelText: "Keywords",
+            hintText: 'myTag',
 //                onSaved: (val) => widget.newCategory.tags = val,
-            ),
-          ],
-        ),
-      )),
-    );
+          ),
+        ],
+      ),
+    ));
   }
 }

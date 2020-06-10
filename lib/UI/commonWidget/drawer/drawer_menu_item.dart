@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:thikana_ki/cores/configs/router/open_route_page.dart';
 
 class DrawerMenuItem extends StatelessWidget {
   final IconData icon;
   final String title;
   final Color iconColor;
+  final String route;
 
-
-  DrawerMenuItem({this.title, this.icon, this.iconColor});
+  DrawerMenuItem({this.title, this.icon, this.iconColor, this.route});
 
   @override
   Widget build(BuildContext context) {
     return new InkWell(
-      onTap: () => Navigator.of(context).pushNamed('/$title'),
+      onTap: () => openRoutePage(context: context, route: route ?? '/$title'),
+//      onTap: () => Navigator.of(context).pushNamed('/$title'),
       child: ListTile(
         title: Text(title),
         leading: Icon(

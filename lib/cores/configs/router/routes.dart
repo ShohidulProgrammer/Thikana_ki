@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:thikana_ki/UI/screens/about_us/about_us.dart';
-import 'package:thikana_ki/UI/screens/admin/dash_board.dart';
+import 'package:thikana_ki/UI/screens/admin/admin_panel.dart';
 import 'package:thikana_ki/UI/screens/bottom_navigation/main_navigation.dart';
 
 import 'package:thikana_ki/UI/screens/chat/chat.dart';
 import 'package:thikana_ki/UI/screens/contact_us/contact_us.dart';
 import 'package:thikana_ki/UI/screens/gallery/gallery.dart';
 import 'package:thikana_ki/UI/screens/location/location.dart';
-import 'package:thikana_ki/UI/screens/login/login_page.dart';
+import 'package:thikana_ki/UI/screens/login/sign_in_page.dart';
+import 'package:thikana_ki/UI/screens/login/sign_up_page.dart';
+import 'package:thikana_ki/UI/screens/login/widgets/reset_password.dart';
 import 'package:thikana_ki/UI/screens/photo_preview/photo_preview.dart';
 import 'package:thikana_ki/UI/screens/popular/emergency_categroy_iem_list_factory.dart';
 import 'package:thikana_ki/UI/screens/screen.dart';
@@ -38,7 +40,7 @@ class Router {
       case categoryPageRoute:
         return MaterialPageRoute(builder: (_) => Category());
       case adminPageRoute:
-        return MaterialPageRoute(builder: (_) => AdminDashBoard());
+        return MaterialPageRoute(builder: (_) => AdminPanel());
       case shopProfilePageRoute:
         return MaterialPageRoute(builder: (_) => ShopDetails());
       case aboutUsPageRoute:
@@ -111,9 +113,14 @@ class Router {
           ),
         );
 
-      case loginPageRoute:
+      case signInPageRoute:
       case '/Edit Profile':
-        return MaterialPageRoute(builder: (_) => LoginPage());
+        return MaterialPageRoute(builder: (_) => SignInPage());
+      case signUpPageRoute:
+//      case '/Edit Profile':
+        return MaterialPageRoute(builder: (_) => SignUpPage());
+      case resetPasswordPageRoute:
+        return MaterialPageRoute(builder: (_) => ResetPasswordPage());
 //      case otpInputPageRoute:
 //        User user = settings.arguments;
 //        return MaterialPageRoute(builder: (_) => OTPInputPage(user: user));

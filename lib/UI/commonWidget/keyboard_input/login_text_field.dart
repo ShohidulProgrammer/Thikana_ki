@@ -4,7 +4,7 @@ import 'package:thikana_ki/cores/utils/import_utility_path.dart';
 
 import 'custom_text_form_field.dart';
 
-class MyFormTextField extends StatefulWidget {
+class MyTextFormField extends StatefulWidget {
   final String hintText;
   final ValidationType type;
   final Icon icon;
@@ -13,7 +13,7 @@ class MyFormTextField extends StatefulWidget {
   final TextInputType keyboardType;
   final fieldKey;
 
-  const MyFormTextField(
+  const MyTextFormField(
       {this.hintText,
       this.type,
       this.icon,
@@ -23,10 +23,10 @@ class MyFormTextField extends StatefulWidget {
       this.nextFocusNode});
 
   @override
-  _MyFormTextFieldState createState() => _MyFormTextFieldState();
+  _MyTextFormFieldState createState() => _MyTextFormFieldState();
 }
 
-class _MyFormTextFieldState extends State<MyFormTextField> {
+class _MyTextFormFieldState extends State<MyTextFormField> {
   final FocusNode _focusNode = FocusNode();
 
   final TextEditingController _textEditingController = TextEditingController();

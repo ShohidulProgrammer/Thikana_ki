@@ -7,7 +7,7 @@ import 'package:thikana_ki/cores/models/screen_models/icon_with_title_list.dart'
 import 'widget_list/menu_list.dart';
 import 'widgets/menu_card.dart';
 
-class AdminDashBoard extends StatelessWidget {
+class AdminPanel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Todo: Add grid view

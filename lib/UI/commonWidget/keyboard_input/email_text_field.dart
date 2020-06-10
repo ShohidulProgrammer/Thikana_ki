@@ -3,7 +3,7 @@ import 'package:thikana_ki/cores/utils/import_utility_path.dart';
 
 import 'login_text_field.dart';
 
-class EmailTextField extends MyFormTextField {
+class EmailTextField extends MyTextFormField {
   final FocusNode focusNode;
   final FocusNode nextFocusNode;
 

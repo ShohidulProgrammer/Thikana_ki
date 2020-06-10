@@ -1,23 +1,24 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:thikana_ki/UI/screens/login/widgets/business_sign_up.dart';
-import 'package:thikana_ki/UI/screens/login/widgets/gorgiusLogin/style/theme.dart'
-    as Theme;
+
 import 'package:thikana_ki/UI/screens/login/widgets/gorgiusLogin/utils/bubble_indication_painter.dart';
 import 'package:thikana_ki/UI/screens/login/widgets/user_sign_up.dart';
-import 'package:thikana_ki/cores/utils/theme/device_screen_size.dart';
+import 'package:thikana_ki/cores/configs/router/router_path_constants.dart';
 
-import 'widgets/login_text_field.dart';
+import 'widgets/have_account.dart';
+import 'widgets/app_logo.dart';
 
-class LoginPage extends StatefulWidget {
-  LoginPage({Key key}) : super(key: key);
+class SignUpPage extends StatefulWidget {
+  SignUpPage({Key key}) : super(key: key);
 
   @override
-  _LoginPageState createState() => new _LoginPageState();
+  _SignUpPageState createState() => new _SignUpPageState();
 }
 
-class _LoginPageState extends State<LoginPage>
+class _SignUpPageState extends State<SignUpPage>
     with SingleTickerProviderStateMixin {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
@@ -59,14 +60,14 @@ class _LoginPageState extends State<LoginPage>
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height >= 775.0
                 ? MediaQuery.of(context).size.height
-                : 775.0,
+                : 738.0,
             child: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 // logo
-                _buildLogo(),
+                AppLogo(),
                 _buildMenuBar(context),
                 Expanded(
                   flex: 4,
@@ -98,6 +99,11 @@ class _LoginPageState extends State<LoginPage>
                       ),
                     ],
                   ),
+                ),
+                HaveAccount(
+                  title: 'Already have an account?',
+                  btnText: 'Sign In',
+                  route: signInPageRoute,
                 ),
               ],
             ),
@@ -688,16 +694,5 @@ class _LoginPageState extends State<LoginPage>
     setState(() {
       _obscureTextSignupConfirm = !_obscureTextSignupConfirm;
     });
-  }
-
-  Widget _buildLogo() {
-    return Expanded(
-      flex: 1,
-      child: new Image(
-//          width: 250.0,
-//          height: UIScreenSize.size.height/4,
-          fit: BoxFit.contain,
-          image: const AssetImage('assets/images/logo.png')),
-    );
   }
 }

@@ -2,7 +2,9 @@
 const String splashRoute = 'screens.splash';
 const String mainNavigationBottomPageRoute = '/';
 const String mainNavigationRoute = '/mainNavigation';
-const String loginPageRoute = '/loginPage';
+const String signUpPageRoute = '/signUpPage';
+const String signInPageRoute = '/signInPage';
+const String resetPasswordPageRoute = '/resetPasswordPage';
 const String changePasswordPageRoute = '/changePassword';
 const String manageShopPageRoute = '/Manage Shop';
 const String changeLanguagePageRoute = '/changeLanguage';

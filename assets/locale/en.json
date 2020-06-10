@@ -21,6 +21,7 @@
   "item_not_found": "Item not found",
   "password": "Password",
   "change_password": "Change Password",
+  "old_password": "Old Password",
   "input_your_password": "Input your password",
   "confirm_password": "Confirm Password",
   "confirm_your_password": "Confirm your password",
