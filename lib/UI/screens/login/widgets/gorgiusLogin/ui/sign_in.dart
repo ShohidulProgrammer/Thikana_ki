@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:thikana_ki/UI/commonWidget/painter/border_line.dart';
 import 'package:thikana_ki/UI/screens/login/widgets/gorgiusLogin/style/theme.dart' as Theme;
 
-import '../../login_text_field.dart';
+import '../../../../../commonWidget/text_field/login_text_field.dart';
 
 class SignIn extends StatefulWidget {
   @override

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/UI/commonWidget/keyboard_input/custom_text_input_field.dart';
+import 'package:thikana_ki/UI/commonWidget/text_field/custom_text_input_field.dart';
 import 'package:thikana_ki/cores/utils/import_utility_path.dart';
 
 class SignInTextField extends StatefulWidget {

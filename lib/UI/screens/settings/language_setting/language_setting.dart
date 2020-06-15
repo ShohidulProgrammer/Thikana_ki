@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:thikana_ki/UI/commonWidget/keyboard_input/custom_text_input_field.dart';
+import 'package:thikana_ki/UI/commonWidget/text_field/custom_text_input_field.dart';
 import 'package:thikana_ki/cores/utils/language/language_setting.dart';
 import '../../../../cores/blocs/language/language_event.dart';
 import '../../../../cores/blocs/language/language_state.dart';

@@ -8,7 +8,7 @@ import 'package:thikana_ki/cores/configs/image.dart';
 import '../../../cores/blocs/bloc.dart';
 import '../../../cores/configs/config.dart';
 import '../../../cores/utils/import_utility_path.dart';
-import '../../commonWidget/keyboard_input/custom_text_input_field.dart';
+import '../../commonWidget/text_field/custom_text_input_field.dart';
 import '../../commonWidget/buttons/app_button.dart';
 
 class EditProfile extends StatefulWidget {

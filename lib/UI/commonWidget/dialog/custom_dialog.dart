@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/UI/commonWidget/constants/style_constant.dart';
+import 'package:thikana_ki/UI/commonWidget/style/style_constant.dart';
 
 class CustomDialog extends StatelessWidget {
   final Widget child;

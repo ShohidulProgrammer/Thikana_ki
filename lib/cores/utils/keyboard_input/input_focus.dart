@@ -7,6 +7,7 @@ class InputFocusChanger {
     FocusNode next,
   ) {
     current.unfocus();
+//    next != null ? FocusScope.of(context).requestFocus(next) : hiddenKeyboard(context);
     next == null
         ? FocusScope.of(context).nextFocus()
         : FocusScope.of(context).requestFocus(next);

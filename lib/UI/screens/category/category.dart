@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/UI/commonWidget/keyboard_input/custom_text_input_field.dart';
+import 'package:thikana_ki/UI/commonWidget/text_field/custom_text_input_field.dart';
 import '../../../cores/configs/router/router_path_constants.dart';
 import '../../../cores/models/model_category.dart';
 import '../../../cores/models/model_result_api.dart';
 import '../../../cores/utils/language/translate.dart';
-import '../../commonWidget/keyboard_input/app_text_input.dart';
 import '../../../UI/widgets/category/app_category_item.dart';
 import '../../commonWidget/drawer/drawer_menu.dart';
 import '../../../cores/api/local_file_api.dart';

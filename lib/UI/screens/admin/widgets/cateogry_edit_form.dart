@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/UI/commonWidget/keyboard_input/normal_text_form_field.dart';
+import 'package:thikana_ki/UI/commonWidget/text_field/normal_text_form_field.dart';
 import 'package:thikana_ki/UI/screens/admin/model/category_model.dart';
 import 'package:thikana_ki/UI/commonWidget/image/image_selector_form_field_camera_gallery.dart';
 

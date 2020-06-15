@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:geocoder/geocoder.dart';
 import 'package:thikana_ki/cores/utils/location/current_location.dart';
 
-import '../../../../../commonWidget/keyboard_input/normal_text_form_field.dart';
+import '../../../../../commonWidget/text_field/normal_text_form_field.dart';
 import 'open_close_time_editor.dart';
 
 class BusinessProfileEditForm extends StatefulWidget {

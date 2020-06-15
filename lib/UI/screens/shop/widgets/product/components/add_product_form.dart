@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:thikana_ki/UI/commonWidget/image/image_selector_form_field_camera_gallery.dart';
-import '../../../../../commonWidget/keyboard_input/normal_text_form_field.dart';
+import '../../../../../commonWidget/text_field/normal_text_form_field.dart';
 
 class ProductEditForm extends StatefulWidget {
   @override

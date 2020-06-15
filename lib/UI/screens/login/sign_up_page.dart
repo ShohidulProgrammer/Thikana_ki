@@ -2,13 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:thikana_ki/UI/screens/login/widgets/business_sign_up.dart';
+import 'package:thikana_ki/UI/screens/login/widgets/sign_up_business.dart';
 
 import 'package:thikana_ki/UI/screens/login/widgets/gorgiusLogin/utils/bubble_indication_painter.dart';
-import 'package:thikana_ki/UI/screens/login/widgets/user_sign_up.dart';
+import 'package:thikana_ki/UI/screens/login/widgets/sign_up_user.dart';
 import 'package:thikana_ki/cores/configs/router/router_path_constants.dart';
 
-import 'widgets/have_account.dart';
+import 'widgets/app_command_button.dart';
 import 'widgets/app_logo.dart';
 
 class SignUpPage extends StatefulWidget {

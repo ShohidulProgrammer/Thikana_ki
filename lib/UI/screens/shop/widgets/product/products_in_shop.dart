@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:thikana_ki/UI/commonWidget/buttons/app_button.dart';
-import 'package:thikana_ki/UI/commonWidget/keyboard_input/search_input_field.dart';
+import 'package:thikana_ki/UI/commonWidget/text_field/search_input_field.dart';
 import 'package:thikana_ki/UI/commonWidget/list/custom_sererator_list_factory.dart';
 import 'package:thikana_ki/UI/screens/shop/widgets/product/components/edit_product.dart';
 import 'package:thikana_ki/cores/configs/auth/user_role.dart';

@@ -10,6 +10,6 @@ export '../utils/logger.dart';
 export 'keyboard_input/input_focus.dart';
 export 'sharedpreferences/preferences.dart';
 export 'theme/theme.dart';
-export '../utils/keyboard_input/validate.dart';
+export 'validation/validate.dart';
 
 
