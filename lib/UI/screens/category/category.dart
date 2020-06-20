@@ -108,7 +108,7 @@ class _CategoryState extends State<Category> {
               padding: EdgeInsets.all(3.0),
               child: Text(
                 Translate.of(context).translate('category_not_found'),
-                style: Theme.of(context).textTheme.body2,
+                style: Theme.of(context).textTheme.bodyText1,
               ),
             ),
           ],

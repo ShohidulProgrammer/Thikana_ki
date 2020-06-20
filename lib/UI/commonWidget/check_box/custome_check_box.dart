@@ -24,7 +24,7 @@ class _MyCheckBoxState extends State<MyCheckBox> {
     });
     if (termsChecked) {
       print('item was checked!');
-      widget.onPressed;
+      // widget.onPressed;
     }
   }
 }

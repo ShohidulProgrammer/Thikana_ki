@@ -146,7 +146,7 @@ class _SettingState extends State<Setting> {
                     UtilLanguageName.getGlobalLanguageName(
                       AppLanguageSetting.defaultLanguage.languageCode,
                     ),
-                    style: Theme.of(context).textTheme.body2,
+                    style: Theme.of(context).textTheme.bodyText1,
                   ),
                   RotatedBox(
                     quarterTurns: UtilLanguageName.isRTL() ? 2 : 0,
@@ -190,7 +190,7 @@ class _SettingState extends State<Setting> {
                     Translate.of(context).translate(
                       UtilTheme.exportLangTheme(AppTheme.darkThemeOption),
                     ),
-                    style: Theme.of(context).textTheme.body2,
+                    style: Theme.of(context).textTheme.bodyText1,
                   ),
                   RotatedBox(
                     quarterTurns: UtilLanguageName.isRTL() ? 2 : 0,
@@ -211,7 +211,7 @@ class _SettingState extends State<Setting> {
                 children: <Widget>[
                   Text(
                     AppTheme.currentFont,
-                    style: Theme.of(context).textTheme.body2,
+                    style: Theme.of(context).textTheme.bodyText1,
                   ),
                   RotatedBox(
                     quarterTurns: UtilLanguageName.isRTL() ? 2 : 0,
@@ -230,7 +230,7 @@ class _SettingState extends State<Setting> {
                 children: <Widget>[
                   Text(
                     Application.version,
-                    style: Theme.of(context).textTheme.body2,
+                    style: Theme.of(context).textTheme.bodyText1,
                   ),
                   RotatedBox(
                     quarterTurns: UtilLanguageName.isRTL() ? 2 : 0,

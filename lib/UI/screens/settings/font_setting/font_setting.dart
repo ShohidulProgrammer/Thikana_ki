@@ -63,7 +63,7 @@ class _FontSettingState extends State<FontSetting> {
                     },
                     textStyle: Theme.of(context)
                         .textTheme
-                        .subhead
+                        .subtitle1
                         .copyWith(fontFamily: item),
                   );
                 },

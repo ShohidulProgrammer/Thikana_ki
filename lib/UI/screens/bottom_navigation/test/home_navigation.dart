@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/cores/configs/mobile_screen_size.dart';
 import 'package:thikana_ki/cores/utils/theme/device_screen_size.dart';
 import '../../../../cores/utils/language/translate.dart';
 import '../widget_list/bottom_menu_item.dart';

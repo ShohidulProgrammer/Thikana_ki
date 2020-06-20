@@ -1,15 +1,11 @@
 //give a navigator key to [MaterialApp] if you want to use the default navigation
 //anywhere in your app eg: line 15 & line 93
 import 'package:custom_navigator/custom_navigation.dart';
-import 'package:custom_navigator/custom_scaffold.dart';
 import 'package:flutter/material.dart';
 import 'package:thikana_ki/UI/screens/bottom_navigation/test/widget/page.dart';
 import 'package:thikana_ki/UI/screens/bottom_navigation/widget_list/bottom_menu_item.dart';
-import 'package:thikana_ki/UI/screens/dashboard/dashboard_page.dart';
 import 'package:thikana_ki/UI/screens/home/homePage.dart';
-import 'package:thikana_ki/UI/screens/message/message.dart';
-import 'package:thikana_ki/UI/screens/notification/notification.dart';
-import 'package:thikana_ki/UI/screens/wishlist/wishlist.dart';
+
 
 GlobalKey<NavigatorState> mainNavigatorKey = GlobalKey<NavigatorState>();
 

@@ -7,14 +7,13 @@ class InputFocusChanger {
     FocusNode next,
   ) {
     current.unfocus();
-//    next != null ? FocusScope.of(context).requestFocus(next) : hiddenKeyboard(context);
-    next == null
-        ? FocusScope.of(context).nextFocus()
-        : FocusScope.of(context).requestFocus(next);
+    next != null
+        ? FocusScope.of(context).requestFocus(next)
+        : hiddenKeyboard(context);
   }
 
   static hiddenKeyboard(BuildContext context) {
-    FocusScope.of(context).requestFocus(new FocusNode());
+    FocusManager.instance.primaryFocus.unfocus();
   }
 
   ///Singleton factory

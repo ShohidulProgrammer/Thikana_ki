@@ -72,12 +72,12 @@ class AppCategoryItem extends StatelessWidget {
                       item.title,
                       style: Theme.of(context)
                           .textTheme
-                          .subhead
+                          .subtitle1
                           .copyWith(fontWeight: FontWeight.w600),
                     ),
                     Text(
                       '${item.count} location',
-                      style: Theme.of(context).textTheme.body2,
+                      style: Theme.of(context).textTheme.bodyText1,
                     ),
                   ],
                 ),

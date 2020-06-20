@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:thikana_ki/UI/commonWidget/buttons/app_button.dart';
-import 'file:///F:/Programming%20WorkPlace/programming%20src/mobileBaseWorkplaceSourceCode/FlutterSourceCode/my_project/thikana%20ki%20src/thikana_ki/lib/UI/commonWidget/text_field/password_text_form_field.dart';
+import 'package:thikana_ki/UI/commonWidget/text_field/password_text_form_field.dart';
 import 'package:thikana_ki/cores/configs/router/router_path_constants.dart';
 
 import 'model/user_model.dart';
@@ -18,15 +18,22 @@ class _SignInPageState extends State<SignInPage> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final _focusPhone = FocusNode();
   final _focusPassword = FocusNode();
-  final _focusConfirmPassword = FocusNode();
 
-  final _phoneFieldKey = GlobalKey<FormFieldState<String>>();
-  final _passwordFieldKey = GlobalKey<FormFieldState<String>>();
+  // final _phoneFieldKey = GlobalKey<FormFieldState<String>>();
+  // final _passwordFieldKey = GlobalKey<FormFieldState<String>>();
+
+  @override
+  void dispose() {
+    _focusPhone.dispose();
+    _focusPassword.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     final UserModel user = UserModel();
-    bool _isValid = false;
+    // bool _isValid = false;
+//    InputFocusChanger.hiddenKeyboard(context);
 
     return Scaffold(
       body: Column(
@@ -46,13 +53,15 @@ class _SignInPageState extends State<SignInPage> {
               child: Form(
                 key: _formKey,
                 onChanged: () {
-                  final isValid = _formKey.currentState.validate();
-                  if (_isValid != isValid) {
-                    setState(() {
-                      _isValid = isValid;
-                      print('form is verified: $_isValid');
-                    });
-                  }
+                  _formKey.currentState.validate();
+
+                  // final isValid = _formKey.currentState.validate();
+//                  if (_isValid != isValid) {
+//                    setState(() {
+//                      _isValid = isValid;
+//                      print('form is verified: $_isValid');
+//                    });
+//                  }
                 },
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -60,9 +69,13 @@ class _SignInPageState extends State<SignInPage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     PhoneTextFormField(
-                        onSaved: (phone) => user.phone = phone.completeNumber),
+                      onSaved: (phone) => user.phone = phone.completeNumber,
+                      focusNode: _focusPhone,
+                      nextFocus: _focusPassword,
+                    ),
                     PasswordTextFormField(
                       onSaved: (pass) => user.password = pass,
+                      currentFocus: _focusPassword,
                     ),
                     AppButton(
                       text: 'SignIn',

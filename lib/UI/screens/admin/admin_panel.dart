@@ -1,8 +1,4 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/UI/commonWidget/cards/image_with_title_card.dart';
-import 'package:thikana_ki/cores/models/screen_models/icon_with_title_list.dart';
 
 import 'widget_list/menu_list.dart';
 import 'widgets/menu_card.dart';

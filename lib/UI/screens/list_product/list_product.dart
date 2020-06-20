@@ -4,7 +4,6 @@ import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
-import '../../../cores/configs/sort.dart';
 import '../../../cores/models/model_location.dart';
 import '../../../cores/models/model_result_api.dart';
 import '../../../cores/utils/language/translate.dart';
@@ -45,8 +44,8 @@ class _ListProductState extends State<ListProduct> {
   ProductType _modeView = ProductType.gird;
   ProductListPageModel _productList;
 
-  SortModel _currentSort = AppSort.defaultSort;
-  List<SortModel> _listSort = AppSort.listSortDefault;
+  // SortModel _currentSort = AppSort.defaultSort;
+  // List<SortModel> _listSort = AppSort.listSortDefault;
 
   @override
   void initState() {
@@ -660,7 +659,7 @@ class _ListProductState extends State<ListProduct> {
                         padding: EdgeInsets.only(right: 20, left: 20),
                         child: Text(
                           Translate.of(context).translate('filter'),
-                          style: Theme.of(context).textTheme.subtitle,
+                          style: Theme.of(context).textTheme.subtitle2,
                         ),
                       )
                     ],

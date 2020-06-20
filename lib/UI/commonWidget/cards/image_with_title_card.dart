@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/cores/configs/router/router_path_constants.dart';
-import 'package:thikana_ki/cores/models/screen_models/icon_with_title_list.dart';
-import 'package:thikana_ki/model/icon_with_title_model.dart';
 
 class ImageWithTitleCard extends StatelessWidget {
   const ImageWithTitleCard({

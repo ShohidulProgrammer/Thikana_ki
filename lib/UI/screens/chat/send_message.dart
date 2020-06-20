@@ -15,7 +15,7 @@ class SendMessage extends StatelessWidget {
         children: <Widget>[
           Text(
             item.date,
-            style: Theme.of(context).textTheme.body2,
+            style: Theme.of(context).textTheme.bodyText1,
           ),
           SizedBox(width: 8),
           Container(
@@ -47,7 +47,7 @@ class SendMessage extends StatelessWidget {
                     padding: EdgeInsets.all(16),
                     child: Text(
                       item.message,
-                      style: Theme.of(context).textTheme.body2.apply(
+                      style: Theme.of(context).textTheme.bodyText1.apply(
                             color: Colors.white,
                           ),
                     ),

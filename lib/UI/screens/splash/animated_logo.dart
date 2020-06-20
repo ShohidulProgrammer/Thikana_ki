@@ -28,8 +28,6 @@ class _AnimatedLogoState extends State<AnimatedLogo>
 
   @override
   Widget build(BuildContext context) {
-    final double screen_height = MediaQuery.of(context).size.height;
-    final double screen_width = MediaQuery.of(context).size.width;
     return Positioned(
       child: Align(
         alignment: FractionalOffset.center,

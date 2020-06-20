@@ -7,8 +7,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:thikana_ki/main.dart';
 import 'package:thikana_ki/UI/my_app.dart';
 
 void main() {

@@ -12,20 +12,20 @@ class ShopOpenCloseTimeEditor extends StatefulWidget {
 }
 
 class _ShopOpenCloseTimeEditorState extends State<ShopOpenCloseTimeEditor> {
-  String _monOpen,
-      _tuOpen,
-      _wedOpen,
-      _thurOpen,
-      _friOpen,
-      _satOpen,
-      _sunOpen,
-      _monClose,
-      _tuClose,
-      _wedClose,
-      _thurClose,
-      _friClose,
-      _satClose,
-      _sunClose;
+  // String _monOpen,
+  //     _tuOpen,
+  //     _wedOpen,
+  //     _thurOpen,
+  //     _friOpen,
+  //     _satOpen,
+  //     _sunOpen,
+  //     _monClose,
+  //     _tuClose,
+  //     _wedClose,
+  //     _thurClose,
+  //     _friClose,
+  //     _satClose,
+  //     _sunClose;
 
   @override
   Widget build(BuildContext context) {

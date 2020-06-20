@@ -60,7 +60,7 @@ class _ContactInfoShopOpenTimeState extends State<ContactInfoShopOpenTime> {
                               widget.hour,
                               style: Theme.of(context)
                                   .textTheme
-                                  .body2
+                                  .bodyText1
                                   .copyWith(fontWeight: FontWeight.w600),
                             ),
                           ],

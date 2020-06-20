@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:thikana_ki/UI/commonWidget/text_field/custom_text_input_field.dart';
 import '../../../cores/utils/import_utility_path.dart';
-import '../../widgets/widget.dart';
+
 
 class ContactUs extends StatefulWidget {
   @override
@@ -101,7 +101,7 @@ class ContactUsState extends State<ContactUs> {
                           Translate.of(context).translate('name'),
                           style: Theme.of(context)
                               .textTheme
-                              .subtitle
+                              .subtitle2
                               .copyWith(fontWeight: FontWeight.w600),
                         ),
                       ),
@@ -136,7 +136,7 @@ class ContactUsState extends State<ContactUs> {
                           Translate.of(context).translate('email'),
                           style: Theme.of(context)
                               .textTheme
-                              .subtitle
+                              .subtitle2
                               .copyWith(fontWeight: FontWeight.w600),
                         ),
                       ),
@@ -175,7 +175,7 @@ class ContactUsState extends State<ContactUs> {
                           Translate.of(context).translate('information'),
                           style: Theme.of(context)
                               .textTheme
-                              .subtitle
+                              .subtitle2
                               .copyWith(fontWeight: FontWeight.w600),
                         ),
                       ),

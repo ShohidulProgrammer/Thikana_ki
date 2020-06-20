@@ -37,9 +37,9 @@ class _PhoneTextFormFieldState extends State<PhoneTextFormField> {
 
   @override
   Widget build(BuildContext context) {
-    String errorText;
-    final TextEditingController _textEditingController =
-        TextEditingController();
+    // String errorText;
+    // final TextEditingController _textEditingController =
+    //     TextEditingController();
 
     return SizedBox(
       height: 70.0,
@@ -61,6 +61,7 @@ class _PhoneTextFormFieldState extends State<PhoneTextFormField> {
             Expanded(
               flex: 5,
               child: IntlPhoneField(
+
                 initialCountryCode: 'BD',
                 decoration: InputDecoration(
                   hintText: Translate.of(context).translate('phone'),

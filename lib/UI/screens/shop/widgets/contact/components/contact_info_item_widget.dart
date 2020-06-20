@@ -47,7 +47,7 @@ class ContactInfoItem extends StatelessWidget {
                       maxLines: 5,
                       style: Theme.of(context)
                           .textTheme
-                          .body2
+                          .bodyText1
                           .copyWith(fontWeight: FontWeight.w600),
                     ),
                   ],

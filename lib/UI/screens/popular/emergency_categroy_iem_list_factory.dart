@@ -112,7 +112,7 @@ class _EmergencyCategoryListFactoryState
               child: Text(
 //                  widget.popularTitle,
                 Translate.of(context).translate('category_not_found'),
-                style: Theme.of(context).textTheme.body2,
+                style: Theme.of(context).textTheme.bodyText1,
               ),
             ),
           ],
@@ -128,7 +128,7 @@ class _EmergencyCategoryListFactoryState
       ),
       itemCount: _category.length ?? 10,
       itemBuilder: (context, index) {
-        final item = _category[index];
+        // final item = _category[index];
         return Padding(
           padding: EdgeInsets.only(left: 10, right: 10, bottom: 15),
           child: EmergencyCategoryListTileIem(

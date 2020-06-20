@@ -87,14 +87,14 @@ class _GalleryState extends State<Gallery> {
                     "Standard Double Room",
                     style: Theme.of(context)
                         .textTheme
-                        .subtitle
+                        .subtitle2
                         .copyWith(color: Colors.white),
                   ),
                   Text(
                     "${_index + 1}/${widget.photo.length}",
                     style: Theme.of(context)
                         .textTheme
-                        .subtitle
+                        .subtitle2
                         .copyWith(color: Colors.white),
                   )
                 ],

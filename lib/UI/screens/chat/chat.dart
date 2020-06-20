@@ -237,7 +237,7 @@ class _ChatState extends State<Chat> {
                 children: <Widget>[
                   Text(
                     widget.user.name,
-                    style: Theme.of(context).textTheme.subhead.copyWith(
+                    style: Theme.of(context).textTheme.subtitle1.copyWith(
                         color: Colors.white, fontWeight: FontWeight.w600),
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,
@@ -246,7 +246,7 @@ class _ChatState extends State<Chat> {
                     "Online",
                     style: Theme.of(context)
                         .textTheme
-                        .subtitle
+                        .subtitle2
                         .apply(color: Theme.of(context).primaryColorLight),
                   )
                 ],

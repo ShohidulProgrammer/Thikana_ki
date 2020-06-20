@@ -72,7 +72,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                     Translate.of(context).translate('password'),
                     style: Theme.of(context)
                         .textTheme
-                        .subtitle
+                        .subtitle2
                         .copyWith(fontWeight: FontWeight.w600),
                   ),
                 ),
@@ -114,7 +114,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                     maxLines: 1,
                     style: Theme.of(context)
                         .textTheme
-                        .subtitle
+                        .subtitle2
                         .copyWith(fontWeight: FontWeight.w600),
                   ),
                 ),

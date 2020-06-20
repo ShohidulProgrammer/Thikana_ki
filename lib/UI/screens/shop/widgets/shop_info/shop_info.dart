@@ -69,7 +69,7 @@ class _ShopInfoState extends State<ShopInfo> {
                   _detailPage.title,
                   style: Theme.of(context)
                       .textTheme
-                      .title
+                      .headline6
                       .copyWith(fontWeight: FontWeight.w600),
                 ),
               ),
@@ -98,7 +98,7 @@ class _ShopInfoState extends State<ShopInfo> {
                         : null,
                     child: Text(
                       "${_detailPage.subtitle}",
-                      style: Theme.of(context).textTheme.body2,
+                      style: Theme.of(context).textTheme.bodyText1,
                     ),
                   ),
                   Padding(
@@ -124,7 +124,7 @@ class _ShopInfoState extends State<ShopInfo> {
                       Padding(padding: EdgeInsets.only(left: 5)),
                       Text(
                         "(${_detailPage.numRate})",
-                        style: Theme.of(context).textTheme.body2,
+                        style: Theme.of(context).textTheme.bodyText1,
                       ),
                     ],
                   )
@@ -162,7 +162,11 @@ class _ShopInfoState extends State<ShopInfo> {
               ),
               widget.isEditor
                   ? IconButton(
-                      icon: Icon(_obscureText ? FontAwesomeIcons.eye : FontAwesomeIcons.eyeSlash,),
+                      icon: Icon(
+                        _obscureText
+                            ? FontAwesomeIcons.eye
+                            : FontAwesomeIcons.eyeSlash,
+                      ),
 //                      icon: Icon(Icons.publish),
                       tooltip: 'Publish',
                       onPressed: () {

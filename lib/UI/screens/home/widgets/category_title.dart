@@ -22,7 +22,7 @@ class CategoryTitle extends StatelessWidget {
             Translate.of(context).translate(title),
             style: Theme.of(context)
                 .textTheme
-                .title
+                .headline6
                 .copyWith(fontWeight: FontWeight.w600),
           ),
           SizedBox(width: 10.0),

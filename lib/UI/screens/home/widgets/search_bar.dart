@@ -55,7 +55,7 @@ class _SearchBarState extends State<SearchBar> {
                             ),
                             style: Theme.of(context)
                                 .textTheme
-                                .subtitle
+                                .subtitle2
                                 .copyWith(fontWeight: FontWeight.w500),
                           ),
                         ),

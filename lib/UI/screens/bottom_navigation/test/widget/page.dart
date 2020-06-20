@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/UI/screens/popular/emergency_categroy_iem_list_factory.dart';
 
 class NavigationPage extends StatelessWidget {
   final Widget child;
@@ -11,14 +10,14 @@ class NavigationPage extends StatelessWidget {
     return child;
   }
 
-  //Use the navigator like you usually do with .of(context) method
-  _openDetailsPage(BuildContext context) =>
-      Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => DetailsPage(
-            child: EmergencyCategoryListFactory(),
-          )));
+//   //Use the navigator like you usually do with .of(context) method
+//   _openDetailsPage(BuildContext context) =>
+//       Navigator.of(context).push(MaterialPageRoute(
+//           builder: (context) => DetailsPage(
+//             child: EmergencyCategoryListFactory(),
+//           )));
 
-//  _openDetailsPage(BuildContext context) => mainNavigatorKey.currentState.push(MaterialPageRoute(builder: (context) => DetailsPage(title)));
+// //  _openDetailsPage(BuildContext context) => mainNavigatorKey.currentState.push(MaterialPageRoute(builder: (context) => DetailsPage(title)));
 
 }
 

@@ -73,7 +73,7 @@ class _PhotoPreviewState extends State<PhotoPreview> {
               "${Translate.of(context).translate('image')} ${currentIndex + 1}",
               style: Theme.of(context)
                   .textTheme
-                  .subtitle
+                  .subtitle2
                   .copyWith(color: Colors.white, fontWeight: FontWeight.w500),
             ),
           )

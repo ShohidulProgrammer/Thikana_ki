@@ -55,7 +55,7 @@ class AppCard extends StatelessWidget {
                 padding: EdgeInsets.all(10),
                 child: Text(
                   '$numberOfLocation $text',
-                  style: Theme.of(context).textTheme.subtitle.copyWith(
+                  style: Theme.of(context).textTheme.subtitle2.copyWith(
                         color: Colors.white,
                         fontWeight: FontWeight.w600,
                       ),

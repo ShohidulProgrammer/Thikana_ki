@@ -7,8 +7,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart' as geoLoc;
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:location/location.dart' ;
-import 'package:thikana_ki/cores/utils/location/current_location.dart';
+import 'package:location/location.dart';
+// import 'package:thikana_ki/cores/utils/location/current_location.dart';
 
 import 'marker/map_helper.dart';
 import 'marker/map_marker.dart';
@@ -25,7 +25,7 @@ class MyGoogleMap extends StatefulWidget {
 }
 
 class _MyGoogleMapState extends State<MyGoogleMap> {
-  LocationUtils _locationUtils = LocationUtils();
+  // LocationUtils _locationUtils = LocationUtils();
 
   // variable for location
   var currentLocation = LocationData;
@@ -63,31 +63,29 @@ class _MyGoogleMapState extends State<MyGoogleMap> {
         zoom: _currentZoom,
       );
     });
-
-
   }
 
-  Future _getLocation() async {
-    try {
-    location.onLocationChanged().listen((LocationData currentLocation) {
-        print('Latitude:${currentLocation.latitude}');
-        print('Longitude:${currentLocation.longitude}');
+  // Future _getLocation() async {
+  //   try {
+  //   location.onLocationChanged().listen((LocationData currentLocation) {
+  //       print('Latitude:${currentLocation.latitude}');
+  //       print('Longitude:${currentLocation.longitude}');
 
-        // camera position
-        setState(() {
-          _currentPosition = CameraPosition(
-            target: LatLng(currentLocation.latitude, currentLocation.longitude),
-            zoom: _currentZoom,
-          );
-        });
+  //       // camera position
+  //       setState(() {
+  //         _currentPosition = CameraPosition(
+  //           target: LatLng(currentLocation.latitude, currentLocation.longitude),
+  //           zoom: _currentZoom,
+  //         );
+  //       });
 
-        return _currentPosition;
-      });
-    } catch (e) {
-      print('ERROR:$e');
-      currentLocation = null;
-    }
-  }
+  //       return _currentPosition;
+  //     });
+  //   } catch (e) {
+  //     print('ERROR:$e');
+  //     currentLocation = null;
+  //   }
+  // }
 
   @override
   void initState() {

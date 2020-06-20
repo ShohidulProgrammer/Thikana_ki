@@ -5,6 +5,9 @@ class RegexpConstant {
   static RegExp usernamePattern =
       RegExp(r'^[a-zA-Z0-9][a-zA-Z0-9_.]+[a-zA-Z0-9]$');
 
+
+
+
   /// Name regex
   static RegExp namePattern = RegExp(
       r"^([A-Z][A-Za-z.'\-]+) (?:([A-Z][A-Za-z.'\-]+) )?([A-Z][A-Za-z.'\-]+)$");

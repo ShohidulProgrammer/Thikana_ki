@@ -154,7 +154,7 @@ class _EditProfileState extends State<EditProfile> {
                       Translate.of(context).translate('name'),
                       style: Theme.of(context)
                           .textTheme
-                          .subtitle
+                          .subtitle2
                           .copyWith(fontWeight: FontWeight.w600),
                     ),
                   ),
@@ -192,7 +192,7 @@ class _EditProfileState extends State<EditProfile> {
                       Translate.of(context).translate('email'),
                       style: Theme.of(context)
                           .textTheme
-                          .subtitle
+                          .subtitle2
                           .copyWith(fontWeight: FontWeight.w600),
                     ),
                   ),
@@ -229,7 +229,7 @@ class _EditProfileState extends State<EditProfile> {
                       Translate.of(context).translate('address'),
                       style: Theme.of(context)
                           .textTheme
-                          .subtitle
+                          .subtitle2
                           .copyWith(fontWeight: FontWeight.w600),
                     ),
                   ),
@@ -267,7 +267,7 @@ class _EditProfileState extends State<EditProfile> {
                       Translate.of(context).translate('website'),
                       style: Theme.of(context)
                           .textTheme
-                          .subtitle
+                          .subtitle2
                           .copyWith(fontWeight: FontWeight.w600),
                     ),
                   ),
@@ -305,7 +305,7 @@ class _EditProfileState extends State<EditProfile> {
                       Translate.of(context).translate('information'),
                       style: Theme.of(context)
                           .textTheme
-                          .subtitle
+                          .subtitle2
                           .copyWith(fontWeight: FontWeight.w600),
                     ),
                   ),

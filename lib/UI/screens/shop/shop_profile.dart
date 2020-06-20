@@ -19,7 +19,7 @@ class ShopProfile extends StatefulWidget {
 
 class _ShopProfileState extends State<ShopProfile> {
   bool _like = false;
-  bool _showHour = false;
+  // bool _showHour = false;
   ProductDetailPageModel _detailPage;
   bool isEditor = true;
   bool isOpen = false;
@@ -59,7 +59,7 @@ class _ShopProfileState extends State<ShopProfile> {
                       Icons.add_a_photo,
                       color: Colors.white,
                     ),
-                    onPressed: ()=> editShopInfo(
+                    onPressed: () => editShopInfo(
                       context: context,
                       title: 'Add Banner Image',
                       child: BannerImageEditForm(),
@@ -120,7 +120,6 @@ class _ShopProfileState extends State<ShopProfile> {
   void _onShareLocation() {}
 }
 
-
 //Widget _buildBannerImageEditForm() {
 //  return Container(
 //    height: 280.0,
@@ -141,9 +140,6 @@ class _ShopProfileState extends State<ShopProfile> {
 //        }),
 //  );
 //}
-
-
-
 
 //ListTile()
 

@@ -82,7 +82,7 @@ class _ThemeSettingState extends State<ThemeSetting> {
                                 ),
                                 Text(
                                   Translate.of(context).translate(item.name),
-                                  style: Theme.of(context).textTheme.subtitle,
+                                  style: Theme.of(context).textTheme.subtitle2,
                                 )
                               ],
                             ),

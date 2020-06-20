@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:thikana_ki/UI/commonWidget/buttons/app_button.dart';
+import 'package:thikana_ki/UI/commonWidget/list/app_list_title.dart';
 import 'package:thikana_ki/UI/commonWidget/text_field/custom_text_input_field.dart';
 import 'package:thikana_ki/cores/utils/language/language_setting.dart';
 import '../../../../cores/blocs/language/language_event.dart';
 import '../../../../cores/blocs/language/language_state.dart';
 import '../../../../cores/utils/import_utility_path.dart';
 import '../../../../cores/blocs/bloc.dart';
-import '../../../../cores/configs/config.dart';
-import '../../../widgets/widget.dart';
 
 class LanguageSetting extends StatefulWidget {
   LanguageSetting({Key key}) : super(key: key);
@@ -107,7 +107,7 @@ class _LanguageSettingState extends State<LanguageSetting> {
                     textStyle: item == _languageSelected
                         ? Theme.of(context)
                             .textTheme
-                            .subhead
+                            .subtitle1
                             .copyWith(color: Theme.of(context).primaryColor)
                         : null,
                     trailing: trailing,
