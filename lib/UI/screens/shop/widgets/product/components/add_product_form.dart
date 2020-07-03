@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/UI/commonWidget/image/image_selector_form_field_camera_gallery.dart';
+import 'package:thikana_ki/UI/commonWidget/image/image_picker_form_field.dart';
 import '../../../../../commonWidget/text_field/normal_text_form_field.dart';
 
 class ProductEditForm extends StatefulWidget {
@@ -17,7 +17,7 @@ class _ProductEditFormState extends State<ProductEditForm> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            ImageSelectorFormField(
+            ImagePickerFormField(
 //              onSaved: (img) => widget.newCategory.imgUrl = img.path,
             ),
             // text input

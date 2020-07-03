@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
     SystemChrome.setEnabledSystemUIOverlays([]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       title: 'Thikana Ki',

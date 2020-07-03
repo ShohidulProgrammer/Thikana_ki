@@ -44,6 +44,8 @@ dependencies:
   image_picker: ^0.6.6+1
   cached_network_image: ^2.2.0+1
   path: ^1.6.4
+  flare_flutter: ^2.0.3
+  pin_code_fields: ^3.1.2
   firebase_storage: ^3.1.6
   firebase_auth: ^0.16.1
   flutter_bloc: ^4.0.0
@@ -91,6 +93,7 @@ flutter:
     - assets/data/
     - assets/images/
     - assets/icons/
+    - assets/flare/
 
 
   fonts:

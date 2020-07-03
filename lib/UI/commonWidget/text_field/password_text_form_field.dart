@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:thikana_ki/UI/commonWidget/icon/app_icon.dart';
 import 'package:thikana_ki/UI/commonWidget/text_field/custom_text_form_field.dart';
+import 'package:thikana_ki/cores/utils/language/translate.dart';
 import 'package:thikana_ki/cores/utils/validation/i_validation.dart';
 import 'package:thikana_ki/cores/utils/validation/password_validation.dart';
 
@@ -24,7 +25,7 @@ class PasswordTextFormField extends StatefulWidget {
     Key key,
     this.fieldKey,
     this.controller,
-    this.hintText: 'password',
+    this.hintText,
     this.currentFocus,
     this.nextFocus,
     this.maxLength,
@@ -47,11 +48,11 @@ class _PasswordTextFormFieldState extends State<PasswordTextFormField> {
 
   @override
   Widget build(BuildContext context) {
-    
     return CustomTextFormField(
       key: widget.fieldKey,
       controller: widget.controller,
-      hintText: widget.hintText,
+      hintText: widget.hintText ??
+          Translate.of(context).translate('input_your_password'),
       currentFocus: widget.currentFocus,
       nextFocus: widget.nextFocus,
       obscureText: _visible,

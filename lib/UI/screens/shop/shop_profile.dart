@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:thikana_ki/UI/screens/shop/widgets/shop_info/components/app_bar_discount_leading.dart';
 import 'package:thikana_ki/cores/api/local_file_api.dart';
+import 'package:thikana_ki/cores/configs/router/go_next_page.dart';
 import 'package:thikana_ki/cores/configs/router/router_path_constants.dart';
 import 'package:thikana_ki/cores/models/import_model.dart';
 import 'widgets/shop_info/components/banner_image_edit_form.dart';
@@ -110,11 +111,16 @@ class _ShopProfileState extends State<ShopProfile> {
 
   ///On navigate map
   void _onLocation() {
-    Navigator.pushNamed(
-      context,
-      locationPageRoute,
+    openRoutePage(
+      context: context,
+      route: locationPageRoute,
       arguments: _detailPage.location,
     );
+    // Navigator.pushNamed(
+    //   context,
+    //   locationPageRoute,
+    //   arguments: _detailPage.location,
+    // );
   }
 
   void _onShareLocation() {}

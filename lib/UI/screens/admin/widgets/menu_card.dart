@@ -15,7 +15,7 @@ class MenuCard extends ImageWithTitleCard {
           backgroundColor: menuModel.backgroundColor,
           titleColor: Colors.white,
           iconColor: Colors.white,
-          onTap: () => addCategoryDialogue(
+          onTap: () => categoryHandler.addCategoryDialogue(
             context: context,
             alertTitle: menuModel.title,
           ),

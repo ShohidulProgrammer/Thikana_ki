@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:thikana_ki/cores/utils/language/translate.dart';
 
 class AppButton extends StatelessWidget {
   final VoidCallback onPressed;
@@ -29,7 +30,6 @@ class AppButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RaisedButton(
-
       onPressed: disableTouchWhenLoading && loading ? null : onPressed,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -37,10 +37,10 @@ class AppButton extends StatelessWidget {
         children: <Widget>[
           Text(
             text,
-            style: Theme.of(context)
-                .textTheme
-                .button
-                .copyWith(color: Colors.white,fontSize: 16.0, fontWeight: FontWeight.w600),
+            style: Theme.of(context).textTheme.button.copyWith(
+                color: Colors.white,
+                fontSize: 16.0,
+                fontWeight: FontWeight.w600),
           ),
           _buildLoading()
         ],

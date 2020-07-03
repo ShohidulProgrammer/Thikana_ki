@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/UI/screens/bottom_navigation/test/go_next_page.dart';
 import 'package:thikana_ki/UI/screens/shop/shop_details.dart';
+import 'package:thikana_ki/cores/configs/router/go_next_page.dart';
 
 import '../../../cores/models/model_location.dart';
 

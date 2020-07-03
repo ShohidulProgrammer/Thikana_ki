@@ -7,45 +7,91 @@ import 'package:thikana_ki/UI/screens/admin/widgets/cateogry_edit_form.dart';
 import 'package:thikana_ki/cores/firebase_api/ensure_login.dart';
 import 'package:thikana_ki/cores/firebase_api/image_storage.dart';
 
-void addCategoryDialogue(
-    {@required BuildContext context,
-    String alertTitle,
-    String okBtnTxt: 'Save'}) {
+class CategoryHandler {
   CategoryModel category = new CategoryModel();
-  final GlobalKey<FormState> _formKey = new GlobalKey<FormState>();
-  DialogueUtils.showCustomDialogue(
-    context,
-    title: alertTitle,
-    okBtnText: okBtnTxt,
-    cancelBtnText: "Cancel",
-    child: CategoryEditForm(
-      newCategory: category,
-      formKey: _formKey,
-    ),
-    /* call method in which you have write your logic and save process  */
-    okBtnFunction: () => _submitForm(
-        formKey: _formKey, category: category, collection: alertTitle),
-  );
+  final _formKey = new GlobalKey<FormState>();
+
+  void addCategoryDialogue(
+      {@required BuildContext context,
+      String alertTitle,
+      String okBtnTxt: 'Save'}) {
+    DialogueUtils.showCustomDialogue(
+      context,
+      title: alertTitle,
+      okBtnText: okBtnTxt,
+      cancelBtnText: "Cancel",
+      child: CategoryEditForm(
+        newCategory: category,
+        formKey: _formKey,
+      ),
+
+      /* call method in which you have write your logic and save process  */
+      okBtnFunction: () =>
+          _submitForm(category: category, collection: alertTitle),
+    );
+  }
+
+  void _submitForm({@required CategoryModel category, String collection}) {
+    print('image: ${category.imgUrl ?? 'no url'} category: ${category.title}');
+    // remove word Add and white space
+    collection = collection.replaceAll("Add ", "").replaceAll(" ", "");
+    print('Collection: $collection');
+
+    _formKey.currentState.save();
+    // ensureLoggedIn();
+
+    FirebaseImageStorage.uploadImage(
+        collection: collection,
+        image: File(category.imgUrl),
+        imgName: category.title);
+
+        
+  }
 }
 
-void _submitForm(
-    {@required GlobalKey<FormState> formKey,
-    @required CategoryModel category,
-    String collection}) {
-  formKey.currentState.save();
-  print('image: ${category.imgUrl ?? 'no url'} category: ${category.title}');
+CategoryHandler categoryHandler = new CategoryHandler();
 
-  // remove word Add and white space
-  collection = collection.replaceAll("Add ", "").replaceAll(" ", "");
-  print('Collection: $collection');
-
-  ensureLoggedIn();
-
-  uploadImage(
-      collection: collection,
-      image: File(category.imgUrl),
-      imgName: category.title);
-}
+//void addCategoryDialogue(
+//    {@required BuildContext context,
+//    String alertTitle,
+//    String okBtnTxt: 'Save'}) {
+//  CategoryModel category = new CategoryModel();
+//  final _formKey = new GlobalKey<FormState>();
+//
+//  DialogueUtils.showCustomDialogue(
+//    context,
+//    title: alertTitle,
+//    okBtnText: okBtnTxt,
+//    cancelBtnText: "Cancel",
+//    child: CategoryEditForm(
+//      newCategory: category,
+//      formKey: _formKey,
+//    ),
+//
+//    /* call method in which you have write your logic and save process  */
+//    okBtnFunction: () => _submitForm(
+//        formKey: _formKey, category: category, collection: alertTitle),
+//  );
+//}
+//
+//void _submitForm(
+//    {@required GlobalKey<FormState> formKey,
+//    @required CategoryModel category,
+//    String collection}) {
+//  formKey.currentState.save();
+//  print('image: ${category.imgUrl ?? 'no url'} category: ${category.title}');
+//
+//  // remove word Add and white space
+//  collection = collection.replaceAll("Add ", "").replaceAll(" ", "");
+//  print('Collection: $collection');
+//
+//  ensureLoggedIn();
+//
+//  uploadImage(
+//      collection: collection,
+//      image: File(category.imgUrl),
+//      imgName: category.title);
+//}
 
 //void _submitForm() {
 //  final FormState form = _formKey.currentState;

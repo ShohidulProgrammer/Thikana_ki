@@ -4,6 +4,8 @@ import 'package:thikana_ki/UI/commonWidget/icon/app_icon.dart';
 import 'package:thikana_ki/UI/commonWidget/text_field/custom_text_form_field.dart';
 import 'package:thikana_ki/UI/commonWidget/text_field/password_text_form_field.dart';
 import 'package:thikana_ki/UI/screens/login/model/user_model.dart';
+import 'package:thikana_ki/cores/utils/language/translate.dart';
+import 'package:thikana_ki/cores/utils/validation/confirm_password_validation.dart';
 import 'widgets/aggre_check_box.dart';
 import '../../commonWidget/text_field/phone_text_form_field.dart';
 
@@ -22,13 +24,9 @@ class _BusinessSignUpState extends State<BusinessSignUp> {
   final _focusPhone = FocusNode();
   final _focusPassword = FocusNode();
   final _focusConfirmPassword = FocusNode();
-  // final FocusScopeNode _node = FocusScopeNode();
 
-  // final _userNameFieldKey = GlobalKey<FormFieldState<String>>();
-  // final _businessNameFieldKey = GlobalKey<FormFieldState<String>>();
-  // final _phoneFieldKey = GlobalKey<FormFieldState<String>>();
-  // final _passwordFieldKey = GlobalKey<FormFieldState<String>>();
-  // final _confirmPasswordFieldKey = GlobalKey<FormFieldState<String>>();
+  final TextEditingController _passController = TextEditingController();
+  final TextEditingController _confPassController = TextEditingController();
 
   @override
   void dispose() {
@@ -59,14 +57,11 @@ class _BusinessSignUpState extends State<BusinessSignUp> {
               padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
               child: Form(
                 key: _formKey,
-                onChanged: () {
-                   _formKey.currentState.validate();
-//                  if (_isValid != isValid) {
-////                    setState(() {
-////                      _isValid = isValid;
-////                      print('form is verified: $_isValid');
-////                    });
-////                  }
+                onChanged: () async {
+                  await Future.delayed(Duration(milliseconds: 300));
+                  setState(() {
+                    _formKey.currentState.validate();
+                  });
                 },
                 child: Column(
 //                  mainAxisSize: MainAxisSize.min,
@@ -74,18 +69,19 @@ class _BusinessSignUpState extends State<BusinessSignUp> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     CustomTextFormField(
-                      hintText: 'name',
+                      hintText: Translate.of(context).translate('input_name'),
                       icon: const AppIcon(icon: Icons.perm_identity),
                       onSaved: (name) => _user.name = name,
                       currentFocus: _focusName,
                       nextFocus: _focusBusinessName,
                     ),
                     CustomTextFormField(
-                      hintText: 'business_name',
+                      hintText:
+                          Translate.of(context).translate('input_business_name'),
+                      icon: const AppIcon(icon: Icons.home),
                       onSaved: (bisName) => _user.businessName = bisName,
                       currentFocus: _focusBusinessName,
                       nextFocus: _focusPhone,
-                      icon: const AppIcon(icon: Icons.home),
                     ),
                     PhoneTextFormField(
                       onSaved: (phone) => _user.phone = phone.completeNumber,
@@ -96,19 +92,20 @@ class _BusinessSignUpState extends State<BusinessSignUp> {
                       onSaved: (pass) => _user.password = pass,
                       currentFocus: _focusPassword,
                       nextFocus: _focusConfirmPassword,
+                      controller: _passController,
                     ),
                     PasswordTextFormField(
-                      hintText: 'confirm_password',
-                      onSaved: (conPass) => _user.confirmPassword = conPass,
+                      hintText:
+                          Translate.of(context).translate('confirm_password'),
                       currentFocus: _focusConfirmPassword,
+                      iValidator: ConfirmPasswordValidator(
+                          password: _passController.text),
                       textInputAction: TextInputAction.done,
                     ),
-                    AgreeCheckbox(
-                      onSaved: (isChecked) => _user.termsAgreed = isChecked,
-                    ),
+                    AgreeCheckbox(),
                     AppButton(
-                      text: 'Sign Up',
-                      onPressed: () => _signUpBusiness(_formKey, _user),
+                      text: Translate.of(context).translate('sign_up'),
+                      onPressed: () => _signUpBusiness(_user),
                       disableTouchWhenLoading: true,
                     ),
                   ],
@@ -121,12 +118,12 @@ class _BusinessSignUpState extends State<BusinessSignUp> {
     );
   }
 
-  _signUpBusiness(GlobalKey<FormState> formKey, UserModel user) {
+  _signUpBusiness(UserModel user) {
     if (_formKey.currentState.validate()) {
       _formKey.currentState.save();
       print('valid form input has been saved');
       print(
-          'Name: ${user.name},  Business: ${user.businessName}, Phone: ${user.phone}, Password: ${user.password} Confirm Password: ${user.confirmPassword}');
+          'Name: ${user.name},  Business: ${user.businessName}, Phone: ${user.phone}, Password: ${user.password} ');
     } else {
       print('Invalid form input');
     }

@@ -84,7 +84,7 @@ class CustomTextFormField extends StatelessWidget {
         textInputAction: textInputAction,
         obscureText: obscureText,
         decoration: CommonStyle.textFieldStyle(
-          hintText: Translate.of(context).translate(hintText),
+          hintText: hintText,
           prefixIcon: icon,
           suffixIcon: suffixIcon,
           onTapSuffixIcon: onTapSuffixIcon,

@@ -26,7 +26,7 @@ class LocationUtils {
   var location = new area.Location();
   CameraPosition currentPosition;
 
-  CameraPosition getLocation()  {
+  CameraPosition getLocation() {
     try {
       location.onLocationChanged().listen((area.LocationData currentLocation) {
 //        print('Latitude:${currentLocation.latitude}');

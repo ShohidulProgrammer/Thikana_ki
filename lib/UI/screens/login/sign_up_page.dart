@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:thikana_ki/UI/screens/login/widgets/gorgiusLogin/utils/bubble_indication_painter.dart';
 import 'package:thikana_ki/cores/configs/router/router_path_constants.dart';
+import 'package:thikana_ki/cores/utils/language/translate.dart';
 
 import 'sign_up_business.dart';
 import 'sign_up_user.dart';
@@ -98,9 +99,9 @@ class _SignUpPageState extends State<SignUpPage>
                     ],
                   ),
                 ),
-                HaveAccount(
-                  title: 'Already have an account?',
-                  btnText: 'Sign In',
+                AppCommandButton(
+                  title: Translate.of(context).translate('have_account'),
+                  btnText: Translate.of(context).translate('sign_in'),
                   route: signInPageRoute,
                 ),
               ],

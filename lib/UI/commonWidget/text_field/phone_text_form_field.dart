@@ -61,10 +61,9 @@ class _PhoneTextFormFieldState extends State<PhoneTextFormField> {
             Expanded(
               flex: 5,
               child: IntlPhoneField(
-
                 initialCountryCode: 'BD',
                 decoration: InputDecoration(
-                  hintText: Translate.of(context).translate('phone'),
+                  hintText: Translate.of(context).translate('input_phone'),
                   contentPadding: EdgeInsets.all(10.0),
                   border: InputBorder.none,
                   errorStyle: TextStyle(height: 0.8),

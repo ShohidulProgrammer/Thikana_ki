@@ -1,34 +1,35 @@
 import 'package:thikana_ki/UI/commonWidget/dialog/bottom_sheet.dart';
+import 'package:thikana_ki/cores/image/image_handler.dart';
 import 'package:thikana_ki/cores/utils/theme/device_screen_size.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
-class ImageSelectorFormField extends StatefulWidget {
-  ImageSelectorFormField({
+class ImagePickerFormField extends StatefulWidget {
+  ImagePickerFormField({
     Key key,
     this.initialImage,
-    this.imageURL = "",
+    this.imageUrl = "",
     this.onSaved,
     this.onChanged,
     this.validator,
   }) : super(key: key);
 
   final File initialImage;
-  final String imageURL;
+  final String imageUrl;
 
   final void Function(File) onSaved;
   final void Function(File) onChanged;
   final String Function(File) validator;
 
   @override
-  _ImageSelectorFormFieldState createState() => _ImageSelectorFormFieldState();
+  _ImagePickerFormFieldState createState() => _ImagePickerFormFieldState();
 }
 
-class _ImageSelectorFormFieldState extends State<ImageSelectorFormField> {
+class _ImagePickerFormFieldState extends State<ImagePickerFormField> {
   File _imageFile;
-  String _imageURL;
+  String _imageUrl;
 
   void _setImage(img) {
     if (_imageFile != img && widget.onChanged != null) {
@@ -40,7 +41,7 @@ class _ImageSelectorFormFieldState extends State<ImageSelectorFormField> {
   @override
   void initState() {
     _imageFile = widget.initialImage;
-    _imageURL = widget.imageURL;
+    _imageUrl = widget.imageUrl;
     super.initState();
   }
 
@@ -57,7 +58,7 @@ class _ImageSelectorFormFieldState extends State<ImageSelectorFormField> {
         children: <Widget>[
           _InkWidget(
             imageFile: _imageFile,
-            imageURL: _imageURL,
+            imageURL: _imageUrl,
             setImage: _setImage,
             icon: Icon(
               Icons.add_a_photo,
@@ -101,20 +102,6 @@ class __InkWidgetState extends State<_InkWidget> {
     }
   }
 
-  Future<File> getImage(ImageSource imageSource) async {
-    File image;
-    final picker = ImagePicker();
-    final pickedFile = await picker.getImage(source: imageSource);
-    setState(() {
-      image = File(pickedFile.path);
-    });
-
-    if (image != null) {
-      return image;
-    }
-    return null;
-  }
-
   @override
   Widget build(BuildContext context) {
     return (_imageFile == null) &&
@@ -154,35 +141,41 @@ class __InkWidgetState extends State<_InkWidget> {
               );
   }
 
-  // bottom sheet image selector
+  // bottom sheet image picker  type
   Widget _buildImageSourceTypeSelector() {
-    return Container(
-      child: new Wrap(
-        children: <Widget>[
-          new ListTile(
-              leading: new Icon(Icons.photo_library),
-              title: new Text('Gallery Image'),
-              onTap: () async {
-                Navigator.pop(context);
-                await getImage(ImageSource.gallery).then((img) {
-                  _imageFile = img;
-                  widget.setImage(img);
-                });
-                setState(() {});
-              }),
-          new ListTile(
-              leading: new Icon(Icons.camera_enhance),
-              title: new Text('Take Photo'),
-              onTap: () async {
-                Navigator.pop(context);
-                await getImage(ImageSource.camera).then((img) {
-                  _imageFile = img;
-                  widget.setImage(img);
-                });
-                setState(() {});
-              }),
-        ],
-      ),
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: <Widget>[
+        _imageSourceChooserListTile(
+            icon: Icons.image,
+            title: 'Gallery Image',
+            imageSource: ImageSource.gallery),
+        // Divider(),
+        _imageSourceChooserListTile(
+            icon: Icons.camera_alt,
+            title: 'Take Photo',
+            imageSource: ImageSource.camera),
+        SizedBox(height: 10.0),
+      ],
     );
+  }
+
+  ListTile _imageSourceChooserListTile(
+      {IconData icon, String title, ImageSource imageSource}) {
+    return ListTile(
+        leading: new Icon(icon),
+        title: Align(
+          child: new Text(title),
+          alignment: Alignment(-1.2, 0),
+        ),
+        onTap: () async {
+          Navigator.pop(context);
+          await ImageHandler.pickImage(imageSource).then((img) {
+            _imageFile = img;
+            widget.setImage(img);
+          });
+          setState(() {});
+        });
   }
 }

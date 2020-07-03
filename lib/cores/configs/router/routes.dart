@@ -7,9 +7,10 @@ import 'package:thikana_ki/UI/screens/chat/chat.dart';
 import 'package:thikana_ki/UI/screens/contact_us/contact_us.dart';
 import 'package:thikana_ki/UI/screens/gallery/gallery.dart';
 import 'package:thikana_ki/UI/screens/location/location.dart';
+import 'package:thikana_ki/UI/screens/login/otp_input_page.dart';
+import 'package:thikana_ki/UI/screens/login/password_reset.dart';
 import 'package:thikana_ki/UI/screens/login/sign_in_page.dart';
 import 'package:thikana_ki/UI/screens/login/sign_up_page.dart';
-import 'package:thikana_ki/UI/screens/login/widgets/password_reset.dart';
 import 'package:thikana_ki/UI/screens/photo_preview/photo_preview.dart';
 import 'package:thikana_ki/UI/screens/popular/emergency_categroy_iem_list_factory.dart';
 import 'package:thikana_ki/UI/screens/screen.dart';
@@ -121,6 +122,8 @@ class Router {
         return MaterialPageRoute(builder: (_) => SignUpPage());
       case resetPasswordPageRoute:
         return MaterialPageRoute(builder: (_) => ResetPasswordPage());
+      case otpInputPageRoute:
+        return MaterialPageRoute(builder: (_) => OtpInputPage());
 //      case otpInputPageRoute:
 //        User user = settings.arguments;
 //        return MaterialPageRoute(builder: (_) => OTPInputPage(user: user));

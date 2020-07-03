@@ -4,24 +4,31 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:path/path.dart';
 
-Future<String> uploadImage(
-    {@required String collection, @required File image, String imgName}) async {
-  try {
-    final StorageReference imgRef =
-        FirebaseStorage.instance.ref().child("images/$collection");
-    var timeKey = DateTime.now();
-    final StorageUploadTask uploadTask = imgRef
-        .child("${imgName ?? basename(image.path)}_${timeKey.toString()}.jpg")
-        .putFile(image);
+class FirebaseImageStorage {
+  static Future<String> uploadImage(
+      {@required String collection,
+      @required File image,
+      String imgName}) async {
+    try {
+      final StorageReference imgRef =
+          FirebaseStorage.instance.ref().child("$collection");
 
-    var imageUrl = await (await uploadTask.onComplete).ref.getDownloadURL();
+      var timeKey = DateTime.now();
+      var at = timeKey.toString();
+      imgName = imgName ?? basename(image.path);
 
-    String url = imageUrl.toString();
+      final StorageUploadTask uploadTask =
+          imgRef.child("${imgName}_$at.jpg").putFile(image);
 
-    print("image Url: $url");
-    return url;
-  } catch (e) {
-    print(e);
-    return null;
+      var imageUrl = await (await uploadTask.onComplete).ref.getDownloadURL();
+
+      String url = imageUrl.toString();
+
+      print("image Url: $url");
+      return url;
+    } catch (e) {
+      print(e);
+      return null;
+    }
   }
 }

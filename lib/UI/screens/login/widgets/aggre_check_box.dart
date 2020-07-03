@@ -16,11 +16,11 @@ class AgreeCheckbox extends StatelessWidget {
       title: GestureDetector(
         child: RichText(
           text: TextSpan(
-            text: 'I accept ',
+            text: Translate.of(context).translate('I_accept'),
             style: DefaultTextStyle.of(context).style,
             children: <TextSpan>[
               TextSpan(
-                  text: 'Terms & Conditions',
+                  text: Translate.of(context).translate('terms_and_conditions'),
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 14.0,

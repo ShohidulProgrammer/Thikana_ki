@@ -5,8 +5,6 @@ class UserModel {
     this.businessName,
     this.phone,
     this.password,
-    this.confirmPassword,
-    this.termsAgreed,
   });
 
   String id;
@@ -14,6 +12,4 @@ class UserModel {
   String businessName;
   String phone;
   String password;
-  String confirmPassword;
-  bool termsAgreed;
 }

@@ -44,7 +44,7 @@ class _ContactShopState extends State<ContactShop> {
               ? Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: AppButton(
-                    text: 'Edit Business Profile',
+                    text: 'edit_business_profile',
                     onPressed: () {
                       editBusinessProfile();
                     },
@@ -108,7 +108,7 @@ class _ContactShopState extends State<ContactShop> {
 
   void editBusinessProfile() {
     DialogueUtils.showCustomDialogue(context,
-        title: "Edit Business Profile",
+        title: 'edit_business_profile',
         okBtnText: "Save",
         cancelBtnText: "Cancel",
         child: BusinessProfileEditForm(),

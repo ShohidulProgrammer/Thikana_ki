@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/cores/configs/router/open_route_page.dart';
+import 'package:thikana_ki/cores/configs/router/go_next_page.dart';
+
 
 class DrawerMenuItem extends StatelessWidget {
   final IconData icon;
